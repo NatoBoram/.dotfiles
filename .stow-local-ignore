@@ -1,4 +1,6 @@
 .git
+.gitattributes
+.github
 .gitignore
 .markdownlint.yaml
 .prettierrc.yaml
