@@ -1,5 +1,7 @@
 # Dotfiles
 
+My personal dotfiles
+
 ## Installation
 
 ```sh
