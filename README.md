@@ -2,6 +2,8 @@
 
 My personal dotfiles
 
+![Screenshot](https://github.com/NatoBoram/.dotfiles/assets/10495562/678b127f-5b95-49e3-82a0-6bd3fee885a6)
+
 ## Content
 
 - <https://github.com/llvm/llvm-project>
