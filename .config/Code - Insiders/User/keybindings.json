@@ -1,0 +1,43 @@
+[
+  { "key": "alt+c", "command": "editor.action.inlineSuggest.trigger" },
+  { "key": "alt+s j", "command": "json.sort" },
+  {
+    "key": "alt+s l",
+    "command": "editor.action.sortLinesAscending",
+    "when": "editorHasSelection && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "bookmarks.listFromAllFiles",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k l",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        { "command": "editor.action.clipboardCopyAction" },
+        { "command": "editor.action.insertLineAfter" },
+        {
+          "command": "editor.action.insertSnippet",
+          "args": { "langId": "typescript", "name": "Log copied variable" }
+        }
+      ],
+      "langId": "typescript",
+      "name": "Log copied variable"
+    }
+  },
+  { "key": "ctrl+q", "command": "-workbench.action.quit" },
+  { "key": "delete", "command": "deleteRight", "when": "textInputFocus" }
+]
