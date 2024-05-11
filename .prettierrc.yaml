@@ -1,0 +1,7 @@
+arrowParens: avoid
+plugins:
+  - "@prettier/plugin-xml"
+semi: false
+trailingComma: all
+useTabs: true
+xmlWhitespaceSensitivity: ignore

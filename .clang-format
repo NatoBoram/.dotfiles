@@ -1,0 +1,12 @@
+BasedOnStyle: Google
+
+AlignAfterOpenBracket: BlockIndent
+AlignEscapedNewlines: Left
+AlignOperands: Align
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Attach
+ContinuationIndentWidth: 2
+Cpp11BracedListStyle: true
+EmptyLineBeforeAccessModifier: LogicalBlock
+IncludeBlocks: Regroup
+SpacesInContainerLiterals: true

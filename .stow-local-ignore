@@ -1,5 +1,10 @@
 .git
+.gitignore
 .markdownlint.yaml
+.prettierrc.yaml
 .stow-local-ignore
 LICENSE.md
+node_modules
+package.json
+pnpm-lock.yaml
 README.md

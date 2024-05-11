@@ -1,0 +1,7 @@
+{
+	"name": "@natoboram/.dotfiles",
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"@prettier/plugin-xml": "^3.4.1"
+	}
+}
