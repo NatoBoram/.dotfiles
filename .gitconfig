@@ -21,7 +21,7 @@ versiontag = v
 [gpg]
 format = ssh
 [user]
-	signingkey = /home/nato/.ssh/id_ed25519
+signingkey = /home/nato/.ssh/id_ed25519
 [init]
 defaultBranch = main
 [filter "lfs"]
