@@ -1,2 +1,3 @@
-.themes linguist-generated
+.local/share/gedit/styles/** linguist-generated
+.themes/** linguist-generated
 pnpm-lock.yaml linguist-generated
