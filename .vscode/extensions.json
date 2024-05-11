@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"davidanson.vscode-markdownlint",
+		"esbenp.prettier-vscode",
+		"foxundermoon.shell-format",
+		"seatonjiang.gitmoji-vscode"
+	]
+}

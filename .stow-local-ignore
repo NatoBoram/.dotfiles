@@ -5,6 +5,7 @@
 .markdownlint.yaml
 .prettierrc.yaml
 .stow-local-ignore
+.vscode
 LICENSE.md
 node_modules
 package.json
