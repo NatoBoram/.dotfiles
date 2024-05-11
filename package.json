@@ -1,10 +1,41 @@
 {
 	"name": "@natoboram/.dotfiles",
+	"description": "My personal dotfiles",
+	"keywords": [
+		"dotfiles"
+	],
+	"homepage": "https://github.com/NatoBoram/.dotfiles",
+	"bugs": {
+		"url": "https://github.com/NatoBoram/.dotfiles/issues",
+		"email": "10495562+NatoBoram@users.noreply.github.com"
+	},
+	"license": "AGPL-3.0-or-later",
+	"author": {
+		"name": "Nato Boram",
+		"url": "https://github.com/NatoBoram",
+		"email": "10495562+NatoBoram@users.noreply.github.com"
+	},
+	"funding": [
+		{
+			"type": "individual",
+			"url": "https://github.com/sponsors/NatoBoram"
+		},
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/NatoBoram"
+		},
+		{
+			"type": "individual",
+			"url": "https://paypal.me/NatoBoram/5"
+		}
+	],
+	"repository": "github:NatoBoram/.dotfiles",
 	"scripts": {
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"prettier": "^3.2.5",
 		"@prettier/plugin-xml": "^3.4.1"
-	}
+	},
+	"type": "module"
 }
