@@ -1,30 +1,17 @@
 {
-  // Place your snippets for phoenix-heex here. Each snippet is defined under a snippet name and has a prefix, body and
-  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-  // same ids are connected.
-  // Example:
-  // "Print to console": {
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
-  // }
-  "Get Text": {
-    "prefix": ["gettext"],
-    "body": ["<%= gettext \"$1\" %>", "$0"],
-    "description": "Adds a gettext call to the template"
-  },
-  "IO Inspect": {
-    "prefix": ["|> IO", "ioi"],
-    "body": ["|> IO.inspect(label: \"${1/(.*)/${1:/upcase}/}\")"],
-    "description": "Appends `|> IO.inspect` with a label."
-  },
-  "SVG Icon": {
-    "prefix": ["svg_icon", "<%= svg_icon"],
-    "body": ["<%= svg_icon \"$1\" %>", "$0"],
-    "description": "Adds an svg_icon to the template"
-  }
+	"Get Text": {
+		"prefix": ["gettext"],
+		"body": ["<%= gettext \"$1\" %>", "$0"],
+		"description": "Adds a gettext call to the template"
+	},
+	"IO Inspect": {
+		"prefix": ["|> IO", "ioi"],
+		"body": ["|> IO.inspect(label: \"${1/(.*)/${1:/upcase}/}\")"],
+		"description": "Appends `|> IO.inspect` with a label."
+	},
+	"SVG Icon": {
+		"prefix": ["svg_icon", "<%= svg_icon"],
+		"body": ["<%= svg_icon \"$1\" %>", "$0"],
+		"description": "Adds an svg_icon to the template"
+	}
 }
