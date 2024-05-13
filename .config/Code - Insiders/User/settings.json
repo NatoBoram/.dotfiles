@@ -270,11 +270,13 @@
 	"screencastMode.verticalOffset": 5,
 	"security.workspace.trust.enabled": false,
 	"settingsSync.ignoredExtensions": [
-		"standard.vscode-standard",
-		"mtxr.sqltools-driver-pg",
-		"unifiedjs.vscode-mdx",
+		"circleci.circleci",
+		"ms-ossdata.vscode-postgresql",
 		"ms-vscode-remote.remote-wsl",
-		"circleci.circleci"
+		"mtxr.sqltools-driver-pg",
+		"phpactor.vscode-phpactor",
+		"standard.vscode-standard",
+		"unifiedjs.vscode-mdx"
 	],
 	"settingsSync.ignoredSettings": [
 		"git.scanRepositories",
