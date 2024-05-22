@@ -23,9 +23,6 @@
 	"[phoenix-heex]": {
 		"editor.defaultFormatter": "JakeBecker.elixir-ls"
 	},
-	"[sql]": {
-		"editor.wordWrap": "true"
-	},
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
@@ -50,7 +47,6 @@
 	"dart.triggerSignatureHelpAutomatically": true,
 	"dart.warnWhenEditingFilesOutsideWorkspace": false,
 	"debug.javascript.usePreview": true,
-	"diffEditor.diffAlgorithm": "experimental",
 	"diffEditor.ignoreTrimWhitespace": false,
 	"discord.idleTimeout": 900,
 	"dotnetAcquisitionExtension.existingDotnetPath": [
@@ -79,6 +75,7 @@
 	"editor.inlineSuggest.enabled": true,
 	"editor.insertSpaces": false,
 	"editor.lightbulb.enabled": "onCode",
+	"editor.lineNumbers": "relative",
 	"editor.semanticHighlighting.enabled": true,
 	"editor.smoothScrolling": true,
 	"editor.suggestSelection": "first",
@@ -263,6 +260,8 @@
 	"powershell.promptToUpdatePowerShell": false,
 	"prettier.arrowParens": "avoid",
 	"prettier.semi": false,
+	"prettier.trailingComma": "all",
+	"prettier.useTabs": true,
 	"redhat.telemetry.enabled": true,
 	"references.preferredLocation": "view",
 	"scm.defaultViewMode": "tree",
@@ -307,14 +306,13 @@
 		"zsh: correct 'test' to 'tests' [nyae]?": "n"
 	},
 	"terminal.integrated.defaultProfile.linux": "zsh",
-	"terminal.integrated.enableMultiLinePasteWarning": false,
 	"terminal.integrated.fontFamily": "Fira Mono, monospace, MesloLGS NF, Noto Color Emoji",
 	"terminal.integrated.hideOnStartup": "whenEmpty",
 	"terminal.integrated.minimumContrastRatio": 4.5,
 	"terminal.integrated.scrollback": 10000,
-	"terminal.integrated.shellIntegration.suggestEnabled": true,
 	"terminal.integrated.showExitAlert": false,
 	"terminal.integrated.stickyScroll.enabled": false,
+	"terminal.integrated.suggest.enabled": true,
 	"terminal.integrated.tabs.focusMode": "singleClick",
 	"tsco.addPublicModifierIfMissing": false,
 	"tsco.useRegions": false,
