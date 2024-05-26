@@ -31,3 +31,6 @@ process = git-lfs filter-process
 required = true
 [push]
 autoSetupRemote = true
+gpgSign = if-asked
+[tag]
+gpgSign = true
