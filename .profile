@@ -57,8 +57,8 @@ PATH="$HOME/Applications/flutter/bin:$PATH"
 eval "$(github-copilot-cli alias -- "$0")"
 
 # Go
-PATH="$HOME/Applications/go/bin:$PATH"
-PATH="$HOME/go/bin:$PATH"
+export GOPATH="$HOME/go:$PATH"
+PATH="$GOPATH/bin:$PATH"
 
 # Java
 PATH="$HOME/Applications/gradle/bin:$PATH"
