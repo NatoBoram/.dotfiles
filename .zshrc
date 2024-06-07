@@ -78,7 +78,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(adb asdf command-not-found docker docker-compose flutter git git-extras git-flow-avh golang gradle ipfs poetry vscode zsh-autosuggestions zsh-syntax-highlighting)
+export ZOXIDE_CMD_OVERRIDE=cd
+plugins=(adb asdf command-not-found docker docker-compose flutter git git-extras git-flow-avh golang gradle ipfs poetry vscode zoxide zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.profile
