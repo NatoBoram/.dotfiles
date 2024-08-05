@@ -79,9 +79,10 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 export ZOXIDE_CMD_OVERRIDE=cd
-plugins=(adb asdf command-not-found docker docker-compose flutter git git-extras git-flow-avh golang gradle ipfs poetry vscode zoxide zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(asdf command-not-found docker docker-compose flutter git git-extras git-flow-avh golang gradle ipfs poetry vscode zoxide zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+. ~/.asdf/plugins/dotnet/set-dotnet-env.zsh
 source ~/.profile
 
 #source /usr/share/doc/fzf/examples/key-bindings.zsh

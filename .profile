@@ -43,6 +43,9 @@ PATH="$HOME/.asdf/shims:$PATH"
 # Bun
 PATH="$HOME/.bun/bin:$PATH"
 
+# C#
+PATH="$HOME/.dotnet/tools:$PATH"
+
 # Dart
 PATH="$PATH:$HOME/.pub-cache/bin"
 

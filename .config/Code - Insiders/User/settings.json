@@ -1,9 +1,9 @@
 {
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][php][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.minimap.maxColumn": 80
 	},
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][php][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
 		"editor.rulers": [80]
 	},
 	"[dart]": {
@@ -32,6 +32,7 @@
 	"codesnap.showWindowTitle": true,
 	"codesnap.shutterAction": "copy",
 	"codesnap.transparentBackground": true,
+	"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
 	"css.format.maxPreserveNewLines": 1,
 	"dart.checkForSdkUpdates": false,
 	"dart.devToolsBrowser": "default",
@@ -74,7 +75,6 @@
 	"editor.inlineSuggest.enabled": true,
 	"editor.insertSpaces": false,
 	"editor.lightbulb.enabled": "onCode",
-	"editor.lineNumbers": "relative",
 	"editor.minimap.showMarkSectionHeaders": false,
 	"editor.semanticHighlighting.enabled": true,
 	"editor.smoothScrolling": true,
@@ -103,27 +103,31 @@
 		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts",
 		"*.ts": "${capture}.test.ts, ${capture}.test.ts.map, ${capture}.js",
 		".env": ".env.*",
+		".env.*": ".env.${capture}.local",
 		"minepkg.toml": ".minepkg-lock.toml",
 		"mix.exs": "mix.lock",
 		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
 		"tailwind.config.cjs": "tailwind.*.cjs, tailwind.*.json",
-		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo"
+		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+		"tsconfig.tsbuildinfo": "tsconfig.*.tsbuildinfo"
 	},
 	"explorer.incrementalNaming": "smart",
 	"explorer.openEditors.sortOrder": "alphabetical",
 	"files.associations": {
+		".env.*.local": "dotenv",
+		".env.*": "dotenv",
+		".gcloudignore": "ignore",
+		".markdownlintrc": "json",
 		"*.appxmanifest": "xml",
 		"*.ash": "shellscript",
-		"*.flutter-plugins": "properties",
 		"*.flutter-plugins-dependencies": "json",
+		"*.flutter-plugins": "properties",
 		"*.graphqlconfig": "json",
+		"*.mcmeta": "json",
 		"*.metadata": "yaml",
 		"*.mustache": "handlebars",
 		"*.pwsh": "powershell",
 		"*.sql": "sql",
-		".env.*.local": "env",
-		".gcloudignore": "ignore",
-		".markdownlintrc": "json",
 		"authorized_keys": "ssh_config",
 		"pubspec.lock": "yaml"
 	},
@@ -171,7 +175,7 @@
 	"githubPullRequests.assignCreated": "${user}",
 	"githubPullRequests.commentExpandState": "collapseAll",
 	"githubPullRequests.pullBranch": "never",
-	"githubPullRequests.pullRequestDescription": "Copilot",
+	"githubPullRequests.pullRequestDescription": "template",
 	"githubPullRequests.pushBranch": "always",
 	"gitlens.defaultDateFormat": "D MMMM YYYY h:mma",
 	"gitlens.defaultDateShortFormat": "D MMM YYYY",
@@ -205,7 +209,8 @@
 	"java.configuration.updateBuildConfiguration": "automatic",
 	"java.eclipse.downloadSources": true,
 	"java.inlayHints.parameterNames.enabled": "none",
-	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-17",
+	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-21",
+	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
 	"java.maxConcurrentBuilds": 12,
 	"java.refactor.renameFromFileExplorer": "autoApply",
 	"java.saveActions.organizeImports": true,
@@ -225,8 +230,11 @@
 		"no-inline-html": false,
 		"reference-links-images": false
 	},
+	"material-icon-theme.files.associations": {
+		"tsconfig.rollup.json": "tsconfig"
+	},
 	"material-icon-theme.languages.associations": {
-		"env": "tune"
+		"dotenv": "tune"
 	},
 	"npm.packageManager": "bun",
 	"platformSettings.autoLoad": true,
@@ -237,10 +245,12 @@
 		},
 		"linux": {
 			"nodes": {
+				"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
+				"csharpier.enableDebugLogs": true,
 				"git.scanRepositories": ["/home/nato/Code"],
 				"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
 				"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
-				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-17"
+				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-21"
 			}
 		},
 		"win32": {
@@ -280,6 +290,7 @@
 		"unifiedjs.vscode-mdx"
 	],
 	"settingsSync.ignoredSettings": [
+		"csharpier.dev.customPath",
 		"git.scanRepositories",
 		"gitProjectManager.baseProjectsFolders",
 		"gitProjectManager.unversionedProjects",
