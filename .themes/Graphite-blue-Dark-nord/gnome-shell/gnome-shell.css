@@ -95,6 +95,8 @@ stage {
 	background-color: rgba(255, 255, 255, 0.12);
 	border-image: none;
 	background-image: none;
+	border: none !important;
+	box-shadow: none !important;
 }
 
 .show-apps:active .overview-icon,
@@ -805,7 +807,7 @@ StWidget.focused .app-well-app-running-dot {
 .weather-button,
 .events-button {
 	padding: 12px !important;
-	margin: 4px 0 0 !important;
+	margin: 6px 0 0 !important;
 }
 
 .events-button .events-box {
@@ -4232,7 +4234,7 @@ StScrollBar StButton#hhandle:active {
 .screenshot-ui-close-button {
 	background-color: #2b303b;
 	color: white;
-	border-radius: 21px;
+	border-radius: 9999px;
 	padding: 3px;
 	height: 30px;
 	width: 30px;
