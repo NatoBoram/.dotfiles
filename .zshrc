@@ -73,6 +73,10 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+. ~/.asdf/plugins/dotnet/set-dotnet-env.zsh
+source ~/.profile
+ITERM_SHELL_INTEGRATION_INSTALLED=Yes
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -82,13 +86,8 @@ export ZOXIDE_CMD_OVERRIDE=cd
 plugins=(asdf command-not-found docker docker-compose flutter git git-extras git-flow-avh golang gradle ipfs poetry vscode zoxide zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-. ~/.asdf/plugins/dotnet/set-dotnet-env.zsh
-source ~/.profile
-
 #source /usr/share/doc/fzf/examples/key-bindings.zsh
 #source /usr/share/doc/fzf/examples/completion.zsh
-
-ITERM_SHELL_INTEGRATION_INSTALLED=Yes
 
 # User configuration
 
