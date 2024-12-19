@@ -28,6 +28,7 @@ fi
 
 # AMD
 PATH="$PATH:/opt/rocm-5.4.2/bin:/opt/rocm-5.4.2/opencl/bin"
+export HSA_OVERRIDE_GFX_VERSION='10.3.0'
 
 # Android
 export ANDROID_HOME="$HOME/Android/Sdk"
@@ -57,7 +58,7 @@ PATH="$HOME/.mix/escripts:$PATH"
 PATH="$HOME/Applications/flutter/bin:$PATH"
 
 # GitHub Copilot CLI
-eval "$(github-copilot-cli alias -- "$0")"
+source ~/.gh.zsh
 
 # Go
 export GOPATH="$HOME/go"
