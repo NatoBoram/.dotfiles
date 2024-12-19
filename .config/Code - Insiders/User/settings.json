@@ -31,6 +31,7 @@
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
 	"bloc.checkForUpdates": false,
+	"chat.editing.alwaysSaveWithGeneratedChanges": true,
 	"codesnap.containerPadding": "1em",
 	"codesnap.realLineNumbers": true,
 	"codesnap.showWindowTitle": true,
@@ -123,6 +124,8 @@
 	"files.associations": {
 		"*.appxmanifest": "xml",
 		"*.ash": "shellscript",
+		"*.compose.override.yaml": "dockercompose",
+		"*.compose.yaml": "dockercompose",
 		"*.flutter-plugins": "properties",
 		"*.flutter-plugins-dependencies": "json",
 		"*.graphqlconfig": "json",
@@ -132,8 +135,9 @@
 		"*.pwsh": "powershell",
 		"*.sql": "sql",
 		"*.stow-local-ignore": "ignore",
-		".env.*": "dotenv",
-		".env.*.local": "dotenv",
+		".env": "env",
+		".env.*": "env",
+		".env.*.local": "env",
 		".gcloudignore": "ignore",
 		".markdownlintrc": "json",
 		"authorized_keys": "ssh_config",
@@ -183,6 +187,20 @@
 	],
 	"gitProjectManager.storeRepositoriesBetweenSessions": true,
 	"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
+	"github.copilot.chat.codeGeneration.instructions": [],
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{ "file": "~/.dotfiles/copilot/gitmojis.yaml" },
+		{ "file": "~/.dotfiles/copilot/copilot-commit-message-instructions.md" }
+	],
+	"github.copilot.chat.reviewSelection.instructions": [],
+	"github.copilot.chat.temporalContext.enabled": true,
+	"github.copilot.chat.testGeneration.instructions": [
+		{ "file": ".prettierrc.yaml" },
+		{ "file": "package.json" },
+		{ "file": "tsconfig.eslint.json" },
+		{ "file": "tsconfig.json" },
+		{ "file": "vitest.config.ts" }
+	],
 	"github.copilot.enable": {
 		"*": true,
 		"markdown": true,
@@ -207,9 +225,14 @@
 	"gitlens.views.searchAndCompare.files.layout": "tree",
 	"gitmoji.showEmojiCode": true,
 	"gitpod.showReleaseNotes": false,
-	"go.formatTool": "goimports",
+	"go.inlayHints.compositeLiteralFields": true,
+	"go.inlayHints.functionTypeParameters": true,
+	"go.inlayHints.rangeVariableTypes": true,
 	"go.toolsManagement.autoUpdate": true,
 	"go.useLanguageServer": true,
+	"gopls": {
+		"formatting.gofumpt": true
+	},
 	"holiday.gearIconStyle": "santa hat",
 	"html.format.indentHandlebars": true,
 	"html.format.maxPreserveNewLines": 1,
@@ -302,7 +325,8 @@
 		"mtxr.sqltools-driver-pg",
 		"phpactor.vscode-phpactor",
 		"standard.vscode-standard",
-		"unifiedjs.vscode-mdx"
+		"unifiedjs.vscode-mdx",
+		"llvm-vs-code-extensions.vscode-clangd"
 	],
 	"settingsSync.ignoredSettings": [
 		"csharpier.dev.customPath",
@@ -334,6 +358,7 @@
 		"zsh: correct 'test' to 'tests' [nyae]?": "n"
 	},
 	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.enableMultiLinePasteWarning": false,
 	"terminal.integrated.fontFamily": "Fira Mono, monospace, MesloLGS NF, Noto Color Emoji",
 	"terminal.integrated.hideOnStartup": "whenEmpty",
 	"terminal.integrated.minimumContrastRatio": 4.5,
@@ -341,6 +366,7 @@
 	"terminal.integrated.showExitAlert": false,
 	"terminal.integrated.stickyScroll.enabled": false,
 	"terminal.integrated.suggest.enabled": true,
+	"terminal.integrated.tabStopWidth": 2,
 	"terminal.integrated.tabs.focusMode": "singleClick",
 	"tsco.addPublicModifierIfMissing": false,
 	"tsco.useRegions": false,
