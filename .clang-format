@@ -1,6 +1,9 @@
 BasedOnStyle: Google
 
 AlignAfterOpenBracket: BlockIndent
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
 AlignEscapedNewlines: Left
 AlignOperands: Align
 BreakBeforeBinaryOperators: None
