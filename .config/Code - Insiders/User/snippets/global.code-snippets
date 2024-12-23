@@ -1,6 +1,8 @@
 {
 	"Version 4 UUID": {
 		"prefix": "uuid",
-		"body": ["\"$UUID\""],
+		"body": [
+			"\"$UUID\""
+		],
 	},
 }

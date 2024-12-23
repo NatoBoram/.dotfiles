@@ -187,12 +187,19 @@
 	],
 	"gitProjectManager.storeRepositoriesBetweenSessions": true,
 	"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
-	"github.copilot.chat.codeGeneration.instructions": [],
-	"github.copilot.chat.commitMessageGeneration.instructions": [
-		{ "file": "~/.dotfiles/copilot/gitmojis.yaml" },
-		{ "file": "~/.dotfiles/copilot/copilot-commit-message-instructions.md" }
+	"github.copilot.chat.codeGeneration.instructions": [
+		{ "file": ".prettierrc.yaml" },
+		{ "file": "~/.dotfiles/copilot/copilot-instructions.md" },
+		{ "file": "~/Code/github.com/coderabbitai/StyleGuide/README.md" }
 	],
-	"github.copilot.chat.reviewSelection.instructions": [],
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{ "file": "~/.dotfiles/copilot/copilot-commit-message-instructions.md" },
+		{ "file": "~/.dotfiles/copilot/gitmojis.yaml" }
+	],
+	"github.copilot.chat.reviewSelection.instructions": [
+		{ "file": "~/.dotfiles/copilot/copilot-instructions.md" },
+		{ "file": "~/Code/github.com/coderabbitai/StyleGuide/README.md" }
+	],
 	"github.copilot.chat.temporalContext.enabled": true,
 	"github.copilot.chat.testGeneration.instructions": [
 		{ "file": ".prettierrc.yaml" },
