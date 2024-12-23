@@ -6,6 +6,7 @@
 .prettierrc.yaml
 .stow-local-ignore
 .vscode
+copilot
 flakes
 LICENSE.md
 node_modules
