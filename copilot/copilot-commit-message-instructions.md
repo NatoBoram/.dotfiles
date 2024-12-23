@@ -1,27 +1,40 @@
-Write a concise and descriptive commit message based solely on the provided changes. Follow these rules:
+Write a concise and descriptive commit message based solely on the provided changes. Follow these strict rules:
 
 - **Use the correct gitmoji** from the provided list to represent the type of change.
 - Use the **imperative mood** in the subject line.
 - Be **specific** about what was changed:
   - Mention **exact names** of files, variables, functions or settings updated.
-  - Include exact values where applicable.
-  - Avoid vague terms like "enhance", "update", "improve", or "better". Instead, state exactly what was added, removed, or modified.
-  - Describe the modification precisely.
-- **Do not include speculative or vague justifications** like "to improve A", "for better B", "for improved C", "to enhance D".
-- If multiple changes are made, summarize the key actions concisely but clearly, maintaining specificity for the whole.
+  - Include **exact values** or details where applicable.
+  - Describe **code changes** precisely.
+- **Avoid vague terms** like "update", "enhance", "improve", or "better".
+- **Do not include speculative justifications** like "to improve A", "for better B", "for improved C", "to enhance D". Instead, **only describe what was done**.
+- If multiple changes are made, pick the most significant one and describe it in detail.
+
+## Important: Avoid these patterns at all costs
+
+- "Update settings" → Always describe **what was updated**.
+- "Improve formatting" → Always describe the **specific formatting changes**.
+- "Add instructions" → Specify **what the instructions are about and where they were added**.
+
+## Rewrite vague messages into specific messages
+
+- **Bad:** 🔧 Update GitHub Copilot settings and instructions for improved code generation and review selection
+  **Good:** 🔧 Link to 7 files under `github.copilot.chat` in VSCode's GitHub Copilot settings
+
+- **Bad:** 🔧 Update configuration files for better formatting
+  **Good:** 🔧 Set `printWidth` to 80 in `.prettierrc.yaml`
+
+- **Bad:** 🎨 Reformat files for better consistency
+  **Good:** 🎨 Reformat `index.html` with tabs instead of 2 spaces
+
+- **Bad:** 🔥 Remove unused variables
+  **Good:** 🔥 Remove `unusedHelper` in `utils.js`
 
 ## Examples of good commit messages
 
 - ♻️ Refactor `calculateSum` in `mathUtils.js`
-- ✨ Add `zsh-syntax-highlighting` to `.zshrc`
-- 🔧 Set `printWidth` to 80 in `.prettierrc.yaml`
 - ⚡️ Use `source` instead of `eval` to initialize the GitHub Copilot CLI in `.profile`
-- 🔥 Remove `unusedHelper` from `utils.js`
+- ✨ Add `zsh-syntax-highlighting` to `.zshrc`
 - 🎨 Reformat `index.html` with tabs instead of 2 spaces
-- 📝 Add installation instructions to `README.md`
-
-## Examples of bad commit messages (to avoid)
-
-- 🎨 Reformat files for better consistency
-- 🔥 Remove unused variables
-- 🔧 Update configuration files for better formatting and to enhance configurations
+- 🔥 Remove `unusedHelper` from `utils.js`
+- 🔧 Set `printWidth` to 80 in `.prettierrc.yaml`
