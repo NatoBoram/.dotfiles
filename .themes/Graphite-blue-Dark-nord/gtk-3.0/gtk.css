@@ -1047,7 +1047,6 @@ treeview entry:focus {
 	}
 }
 
-.xfce4-panel.background button,
 .raven-mpris button.image-button,
 .mate-panel-menu-bar button,
 infobar.warning > revealer > box button,
@@ -1055,33 +1054,27 @@ infobar.warning:backdrop > revealer > box button {
 	color: rgba(255, 255, 255, 0.7);
 }
 
-.xfce4-panel.background button:focus,
 .raven-mpris button.image-button:focus,
 .mate-panel-menu-bar button:focus,
 infobar.warning > revealer > box button:focus,
-.xfce4-panel.background button:hover,
 .raven-mpris button.image-button:hover,
 .mate-panel-menu-bar button:hover,
 infobar.warning > revealer > box button:hover,
-.xfce4-panel.background button:active,
 .raven-mpris button.image-button:active,
 .mate-panel-menu-bar button:active,
 infobar.warning > revealer > box button:active,
-.xfce4-panel.background button:checked,
 .raven-mpris button.image-button:checked,
 .mate-panel-menu-bar button:checked,
 infobar.warning > revealer > box button:checked {
 	color: white;
 }
 
-.xfce4-panel.background button:disabled,
 .raven-mpris button.image-button:disabled,
 .mate-panel-menu-bar button:disabled,
 infobar.warning > revealer > box button:disabled {
 	color: rgba(255, 255, 255, 0.3);
 }
 
-.xfce4-panel.background button:checked:disabled,
 .raven-mpris button.image-button:checked:disabled,
 .mate-panel-menu-bar button:checked:disabled,
 infobar.warning > revealer > box button:checked:disabled {
@@ -1919,11 +1912,7 @@ button.suggested-action:disabled {
 }
 
 button.suggested-action:hover {
-	box-shadow:
-		inset 0 0 0 9999px transparent,
-		0 2px 2.4px -1px rgba(137, 163, 194, 0.2),
-		0 4px 3px 0 rgba(137, 163, 194, 0.14),
-		0 1px 6px 0 rgba(137, 163, 194, 0.12);
+	box-shadow: inset 0 0 0 9999px transparent;
 }
 
 button.suggested-action:checked {
@@ -1931,11 +1920,7 @@ button.suggested-action:checked {
 }
 
 button.suggested-action:checked:hover {
-	box-shadow:
-		inset 0 0 0 9999px transparent,
-		0 3px 3px -3px rgba(137, 163, 194, 0.3),
-		0 2px 3px -1px rgba(137, 163, 194, 0.24),
-		0 2px 5px 0 rgba(137, 163, 194, 0.12);
+	box-shadow: inset 0 0 0 9999px transparent;
 }
 
 button.suggested-action:focus {
@@ -1970,11 +1955,7 @@ button.destructive-action:disabled {
 }
 
 button.destructive-action:hover {
-	box-shadow:
-		inset 0 0 0 9999px transparent,
-		0 2px 2.4px -1px rgba(242, 139, 130, 0.2),
-		0 4px 3px 0 rgba(242, 139, 130, 0.14),
-		0 1px 6px 0 rgba(242, 139, 130, 0.12);
+	box-shadow: inset 0 0 0 9999px transparent;
 }
 
 button.destructive-action:checked {
@@ -1982,11 +1963,7 @@ button.destructive-action:checked {
 }
 
 button.destructive-action:checked:hover {
-	box-shadow:
-		inset 0 0 0 9999px transparent,
-		0 3px 3px -3px rgba(242, 139, 130, 0.3),
-		0 2px 3px -1px rgba(242, 139, 130, 0.24),
-		0 2px 5px 0 rgba(242, 139, 130, 0.12);
+	box-shadow: inset 0 0 0 9999px transparent;
 }
 
 button.destructive-action:focus {
@@ -4269,7 +4246,8 @@ scale.horizontal.marks-before:not(.marks-after) slider:active {
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-horz-marks-before-slider-dark.png"),
 			url("assets/scale-horz-marks-before-slider-dark@2.png")
 		),
@@ -4277,7 +4255,8 @@ scale.horizontal.marks-before:not(.marks-after) slider {
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider:disabled {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-horz-marks-before-slider-disabled-dark.png"),
 			url("assets/scale-horz-marks-before-slider-disabled-dark@2.png")
 		),
@@ -4285,7 +4264,8 @@ scale.horizontal.marks-before:not(.marks-after) slider:disabled {
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider:active {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-horz-marks-before-slider-dark.png"),
 			url("assets/scale-horz-marks-before-slider-dark@2.png")
 		),
@@ -4341,7 +4321,8 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-horz-marks-after-slider-dark.png"),
 			url("assets/scale-horz-marks-after-slider-dark@2.png")
 		),
@@ -4349,7 +4330,8 @@ scale.horizontal.marks-after:not(.marks-before) slider {
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider:disabled {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-horz-marks-after-slider-disabled-dark.png"),
 			url("assets/scale-horz-marks-after-slider-disabled-dark@2.png")
 		),
@@ -4357,7 +4339,8 @@ scale.horizontal.marks-after:not(.marks-before) slider:disabled {
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider:active {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-horz-marks-after-slider-dark.png"),
 			url("assets/scale-horz-marks-after-slider-dark@2.png")
 		),
@@ -4413,7 +4396,8 @@ scale.vertical.marks-before:not(.marks-after) slider:active {
 }
 
 scale.vertical.marks-before:not(.marks-after) slider {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-vert-marks-before-slider-dark.png"),
 			url("assets/scale-vert-marks-before-slider-dark@2.png")
 		),
@@ -4421,7 +4405,8 @@ scale.vertical.marks-before:not(.marks-after) slider {
 }
 
 scale.vertical.marks-before:not(.marks-after) slider:disabled {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-vert-marks-before-slider-disabled-dark.png"),
 			url("assets/scale-vert-marks-before-slider-disabled-dark@2.png")
 		),
@@ -4429,7 +4414,8 @@ scale.vertical.marks-before:not(.marks-after) slider:disabled {
 }
 
 scale.vertical.marks-before:not(.marks-after) slider:active {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-vert-marks-before-slider-dark.png"),
 			url("assets/scale-vert-marks-before-slider-dark@2.png")
 		),
@@ -4485,7 +4471,8 @@ scale.vertical.marks-after:not(.marks-before) slider:active {
 }
 
 scale.vertical.marks-after:not(.marks-before) slider {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-vert-marks-after-slider-dark.png"),
 			url("assets/scale-vert-marks-after-slider-dark@2.png")
 		),
@@ -4493,7 +4480,8 @@ scale.vertical.marks-after:not(.marks-before) slider {
 }
 
 scale.vertical.marks-after:not(.marks-before) slider:disabled {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-vert-marks-after-slider-disabled-dark.png"),
 			url("assets/scale-vert-marks-after-slider-disabled-dark@2.png")
 		),
@@ -4501,7 +4489,8 @@ scale.vertical.marks-after:not(.marks-before) slider:disabled {
 }
 
 scale.vertical.marks-after:not(.marks-before) slider:active {
-	background-image: -gtk-scaled(
+	background-image:
+		-gtk-scaled(
 			url("assets/scale-vert-marks-after-slider-dark.png"),
 			url("assets/scale-vert-marks-after-slider-dark@2.png")
 		),
@@ -5302,8 +5291,8 @@ paned > separator.wide {
 	min-width: 6px;
 	min-height: 6px;
 	background-color: #313744;
-	background-image: image(rgba(255, 255, 255, 0.12)),
-		image(rgba(255, 255, 255, 0.12));
+	background-image:
+		image(rgba(255, 255, 255, 0.12)), image(rgba(255, 255, 255, 0.12));
 	background-size:
 		1px 1px,
 		1px 1px;
@@ -10892,6 +10881,26 @@ calendar.raven-calendar:selected {
 /***************
  * xfce4-panel *
  ***************/
+.xfce4-panel.background button {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.xfce4-panel.background button:focus,
+.xfce4-panel.background button:hover,
+.xfce4-panel.background button:active,
+.xfce4-panel.background button:checked {
+	color: white;
+}
+
+.xfce4-panel.background button:disabled {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.xfce4-panel.background button:checked:disabled {
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.5);
+}
+
 .xfce4-panel.background {
 	border: none;
 	background-color: #292e38;
