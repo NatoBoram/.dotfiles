@@ -7,8 +7,8 @@ Write a concise and descriptive commit message based solely on the provided chan
   - Include **exact values** or details where applicable.
   - Describe **code changes** precisely.
 - **Avoid vague terms** like "update", "enhance", "improve", or "better".
-- **Do not include speculative justifications** like "to improve A", "for better B", "for improved C", "to enhance D". Instead, **only describe what was done**.
-- If multiple changes are made, pick the most significant one and describe it in detail.
+- **Do not end with a justifications** like "to improve A", "for better B", "for improved C", "to enhance D". Instead, **only describe what was done**.
+- If multiple changes are made, pick the most significant one and describe it briefly.
 
 ## Important: Avoid these patterns at all costs
 
@@ -29,6 +29,9 @@ Write a concise and descriptive commit message based solely on the provided chan
 
 - **Bad:** 🔥 Remove unused variables
   **Good:** 🔥 Remove `unusedHelper` in `utils.js`
+
+- **Bad:** 🩹 Replace logger.http with logger.info for improved logging consistency
+  **Good:** 🔊 Replace `logger.http` with `logger.info` when handling GitHub and GitLab
 
 ## Examples of good commit messages
 
