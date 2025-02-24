@@ -30,6 +30,7 @@
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
+	"#github.copilot.chat.edits.codesearch.enabled": true,
 	"bloc.checkForUpdates": false,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
 	"codesnap.containerPadding": "1em",
@@ -55,6 +56,7 @@
 	"debug.javascript.usePreview": true,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"discord.idleTimeout": 900,
+	"dotnet.formatting.organizeImportsOnFormat": true,
 	"dotnetAcquisitionExtension.existingDotnetPath": [
 		{
 			"extensionId": "vscodeintellicode-insiders",
@@ -102,6 +104,8 @@
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
+		".env": ".env.*",
+		".env.*": ".env.${capture}.local",
 		"*.ex": "${capture}.eex, ${capture}.html.heex",
 		"*.go": "${capture}_test.go",
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
@@ -109,8 +113,6 @@
 		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
 		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts",
 		"*.ts": "${capture}.test.ts, ${capture}.test.ts.map, ${capture}.js",
-		".env": ".env.*",
-		".env.*": ".env.${capture}.local",
 		"compose.yaml": "compose.override.yaml, *.compose.yaml, *.compose.override.yaml",
 		"minepkg.toml": ".minepkg-lock.toml",
 		"mix.exs": "mix.lock",
@@ -121,7 +123,24 @@
 	},
 	"explorer.incrementalNaming": "smart",
 	"explorer.openEditors.sortOrder": "alphabetical",
+	"extensions.trustedPublishers": [
+		"bradlc",
+		"dart-code",
+		"eamodio",
+		"gitlab",
+		"jakebecker",
+		"prisma",
+		"redhat",
+		"rust-lang",
+		"traycer",
+		"usernamehw"
+	],
 	"files.associations": {
+		".env": "env",
+		".env.*": "env",
+		".env.*.local": "env",
+		".gcloudignore": "ignore",
+		".markdownlintrc": "json",
 		"*.appxmanifest": "xml",
 		"*.ash": "shellscript",
 		"*.compose.override.yaml": "dockercompose",
@@ -135,22 +154,17 @@
 		"*.pwsh": "powershell",
 		"*.sql": "sql",
 		"*.stow-local-ignore": "ignore",
-		".env": "env",
-		".env.*": "env",
-		".env.*.local": "env",
-		".gcloudignore": "ignore",
-		".markdownlintrc": "json",
 		"authorized_keys": "ssh_config",
 		"pubspec.lock": "yaml"
 	},
 	"files.autoSave": "onWindowChange",
 	"files.exclude": {
+		"_build": true,
+		".elixir_ls": true,
 		"**/.classpath": true,
 		"**/.factorypath": true,
 		"**/.project": true,
 		"**/.settings": true,
-		".elixir_ls": true,
-		"_build": true,
 		"deps": true,
 		"node_modules": false,
 		"vendor": true
@@ -162,9 +176,9 @@
 	"formatContextMenu.closeAfterSave": true,
 	"formattingToggle.affects": ["formatOnSave"],
 	"git.allowForcePush": true,
+	"git.autofetch": true,
 	"git.autoRepositoryDetection": "subFolders",
 	"git.autoStash": true,
-	"git.autofetch": true,
 	"git.confirmForcePush": false,
 	"git.confirmSync": false,
 	"git.enableCommitSigning": true,
@@ -177,6 +191,86 @@
 	"git.repositoryScanMaxDepth": 4,
 	"git.scanRepositories": ["/home/nato/Code"],
 	"git.timeline.showUncommitted": true,
+	"github.copilot.chat.codeGeneration.instructions": [
+		{
+			"file": ".prettierrc.yaml"
+		},
+		{
+			"file": "~/.dotfiles/copilot/copilot-instructions.md"
+		},
+		{
+			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
+		}
+	],
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{
+			"file": "~/.dotfiles/copilot/copilot-commit-message-instructions.md"
+		},
+		{
+			"file": "~/.dotfiles/copilot/gitmojis.yaml"
+		}
+	],
+	"github.copilot.chat.editor.temporalContext.enabled": true,
+	"github.copilot.chat.enableUserPreferences": true,
+	"github.copilot.chat.generateTests.codeLens": true,
+	"github.copilot.chat.localeOverride": "en-CA",
+	"github.copilot.chat.reviewSelection.instructions": [
+		{
+			"file": "~/.dotfiles/copilot/copilot-instructions.md"
+		},
+		{
+			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
+		}
+	],
+	"github.copilot.chat.search.semanticTextResults": true,
+	"github.copilot.chat.testGeneration.instructions": [
+		{
+			"file": ".prettierrc.yaml"
+		},
+		{
+			"file": "package.json"
+		},
+		{
+			"file": "tsconfig.eslint.json"
+		},
+		{
+			"file": "tsconfig.json"
+		},
+		{
+			"file": "vitest.config.ts"
+		}
+	],
+	"github.copilot.enable": {
+		"*": true,
+		"markdown": true,
+		"plaintext": true,
+		"scminput": true
+	},
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"github.gitProtocol": "ssh",
+	"githubPullRequests.assignCreated": "${user}",
+	"githubPullRequests.commentExpandState": "collapseAll",
+	"githubPullRequests.createDefaultBaseBranch": "createdFromBranch",
+	"githubPullRequests.defaultMergeMethod": "squash",
+	"githubPullRequests.experimental.chat": true,
+	"githubPullRequests.experimental.notificationsView": true,
+	"githubPullRequests.pullBranch": "never",
+	"githubPullRequests.pullRequestDescription": "template",
+	"githubPullRequests.pushBranch": "always",
+	"githubPullRequests.remotes": ["origin"],
+	"gitlens.advanced.messages": {
+		"suppressIntegrationRequestTimedOutWarning": true
+	},
+	"gitlens.defaultDateFormat": "D MMMM YYYY h:mma",
+	"gitlens.defaultDateLocale": "en-CA",
+	"gitlens.defaultDateShortFormat": "D MMM YYYY",
+	"gitlens.defaultTimeFormat": "h:mma",
+	"gitlens.plusFeatures.enabled": false,
+	"gitlens.showWelcomeOnInstall": false,
+	"gitlens.showWhatsNewAfterUpgrades": false,
+	"gitlens.views.searchAndCompare.files.layout": "tree",
+	"gitmoji.showEmojiCode": true,
+	"gitpod.showReleaseNotes": false,
 	"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
 	"gitProjectManager.ignoredFolders": [
 		"build",
@@ -187,51 +281,6 @@
 	],
 	"gitProjectManager.storeRepositoriesBetweenSessions": true,
 	"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
-	"github.copilot.chat.codeGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" },
-		{ "file": "~/.dotfiles/copilot/copilot-instructions.md" },
-		{ "file": "~/Code/github.com/coderabbitai/StyleGuide/README.md" }
-	],
-	"github.copilot.chat.commitMessageGeneration.instructions": [
-		{ "file": "~/.dotfiles/copilot/copilot-commit-message-instructions.md" },
-		{ "file": "~/.dotfiles/copilot/gitmojis.yaml" }
-	],
-	"github.copilot.chat.reviewSelection.instructions": [
-		{ "file": "~/.dotfiles/copilot/copilot-instructions.md" },
-		{ "file": "~/Code/github.com/coderabbitai/StyleGuide/README.md" }
-	],
-	"github.copilot.chat.temporalContext.enabled": true,
-	"github.copilot.chat.testGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" },
-		{ "file": "package.json" },
-		{ "file": "tsconfig.eslint.json" },
-		{ "file": "tsconfig.json" },
-		{ "file": "vitest.config.ts" }
-	],
-	"github.copilot.enable": {
-		"*": true,
-		"markdown": true,
-		"plaintext": true,
-		"scminput": true
-	},
-	"github.gitProtocol": "ssh",
-	"githubPullRequests.assignCreated": "${user}",
-	"githubPullRequests.commentExpandState": "collapseAll",
-	"githubPullRequests.pullBranch": "never",
-	"githubPullRequests.pullRequestDescription": "template",
-	"githubPullRequests.pushBranch": "always",
-	"gitlens.advanced.messages": {
-		"suppressIntegrationRequestTimedOutWarning": true
-	},
-	"gitlens.defaultDateFormat": "D MMMM YYYY h:mma",
-	"gitlens.defaultDateShortFormat": "D MMM YYYY",
-	"gitlens.defaultTimeFormat": "h:mma",
-	"gitlens.plusFeatures.enabled": false,
-	"gitlens.showWelcomeOnInstall": false,
-	"gitlens.showWhatsNewAfterUpgrades": false,
-	"gitlens.views.searchAndCompare.files.layout": "tree",
-	"gitmoji.showEmojiCode": true,
-	"gitpod.showReleaseNotes": false,
 	"go.inlayHints.compositeLiteralFields": true,
 	"go.inlayHints.functionTypeParameters": true,
 	"go.inlayHints.rangeVariableTypes": true,
@@ -324,6 +373,7 @@
 	"scm.defaultViewMode": "tree",
 	"screencastMode.fontSize": 40,
 	"screencastMode.verticalOffset": 5,
+	"scss.format.maxPreserveNewLines": 1,
 	"security.workspace.trust.enabled": false,
 	"settingsSync.ignoredExtensions": [
 		"circleci.circleci",
@@ -373,13 +423,15 @@
 	"terminal.integrated.showExitAlert": false,
 	"terminal.integrated.stickyScroll.enabled": false,
 	"terminal.integrated.suggest.enabled": true,
-	"terminal.integrated.tabStopWidth": 2,
 	"terminal.integrated.tabs.focusMode": "singleClick",
+	"terminal.integrated.tabStopWidth": 2,
+	"traycer.commentIndicator": "Hover",
 	"tsco.addPublicModifierIfMissing": false,
 	"tsco.useRegions": false,
+	"typescript.locale": "en-CA",
 	"typescript.npm": "/home/nato/.asdf/shims/bun",
-	"typescript.preferGoToSourceDefinition": true,
 	"typescript.preferences.preferTypeOnlyAutoImports": true,
+	"typescript.preferGoToSourceDefinition": true,
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"update.mode": "manual",
 	"vim.easymotion": true,
