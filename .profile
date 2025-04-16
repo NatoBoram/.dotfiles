@@ -80,3 +80,6 @@ PATH="$HOME/.cargo/bin:$PATH"
 
 # Swift
 PATH="$HOME/Applications/swift/usr/bin:$PATH"
+
+# StarCraft II
+export SC2PATH="$HOME/.steam/debian-installation/steamapps/compatdata/3430940832/pfx/drive_c/Program Files (x86)/StarCraft II"
