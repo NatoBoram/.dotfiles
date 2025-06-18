@@ -21,16 +21,21 @@
 		"editor.minimap.maxColumn": 80,
 		"editor.rulers": [80]
 	},
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
 	"[markdown]": {
 		"gitlens.codeLens.scopes": ["document"]
 	},
 	"[phoenix-heex]": {
 		"editor.defaultFormatter": "JakeBecker.elixir-ls"
 	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+	},
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
-	"#github.copilot.chat.edits.codesearch.enabled": true,
 	"bloc.checkForUpdates": false,
 	"chat.agent.maxRequests": 30,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
@@ -102,6 +107,9 @@
 		"svelte": "html"
 	},
 	"emmet.triggerExpansionOnTab": true,
+	"errorLens.messageTemplate": "$message ($source)",
+	"errorLens.onSave": true,
+	"errorLens.searchForProblemQuery": "https://www.google.ca/search?q=$message",
 	"explorer.compactFolders": false,
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.fileNesting.enabled": true,
@@ -110,7 +118,7 @@
 		".env.*": ".env.${capture}.local",
 		"*.ex": "${capture}.eex, ${capture}.html.heex",
 		"*.go": "${capture}_test.go",
-		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
+		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
 		"*.mjs": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs.map",
 		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
 		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts",
@@ -182,6 +190,8 @@
 	"git.autofetch": true,
 	"git.autoRepositoryDetection": "subFolders",
 	"git.autoStash": true,
+	"git.blame.editorDecoration.enabled": true,
+	"git.blame.editorDecoration.template": "${authorName}: ${subject} (${authorDateAgo})",
 	"git.confirmForcePush": false,
 	"git.confirmSync": false,
 	"git.enableCommitSigning": true,
@@ -212,6 +222,7 @@
 		}
 	],
 	"github.copilot.chat.editor.temporalContext.enabled": true,
+	"github.copilot.chat.edits.codesearch.enabled": true,
 	"github.copilot.chat.enableUserPreferences": true,
 	"github.copilot.chat.generateTests.codeLens": true,
 	"github.copilot.chat.localeOverride": "en-CA",
@@ -243,7 +254,7 @@
 			"file": "vitest.config.ts"
 		},
 		{
-			"file": "~/.dotfiles/copilot/copilot-test-generation-instructions.md"
+			"text": "# Tests\n\n## TypeScript\n\nTests in TypeScript use `vitest`.\n\n- Use `describe` to name the function that it's testing and `test` to name the value of the variable that's changing.\n- Don't duplicate code; import existing code instead, even if it's private. I'll most likely import it myself.\n- Always use the `expect` that comes from `test` instead of importing it from `vitest`.\n\n### Examples\n\n```ts\nimport { describe, test } from \"vitest\"\nimport { getLeftPadding } from \"./apply_docstrings.ts\"\n\ndescribe(\"getLeftPadding\", () => {\n\ttest(\"spaces\", ({ expect }) => {\n\t\tconst padding = getLeftPadding(\"    hello\")\n\t\texpect(padding).toBe(\"    \")\n\t})\n\n\ttest(\"tabs\", ({ expect }) => {\n\t\tconst padding = getLeftPadding(\"\\thello\")\n\t\texpect(padding).toBe(\"\\t\")\n\t})\n})\n```"
 		}
 	],
 	"github.copilot.enable": {
@@ -252,6 +263,8 @@
 		"plaintext": true,
 		"scminput": true
 	},
+	"github.copilot.nextEditSuggestions.enabled": false,
+	"github.copilot.selectedCompletionModel": "gemini-2.5-pro",
 	"github.gitProtocol": "ssh",
 	"githubPullRequests.assignCreated": "${user}",
 	"githubPullRequests.commentExpandState": "collapseAll",
@@ -264,6 +277,7 @@
 	"githubPullRequests.pushBranch": "always",
 	"githubPullRequests.remotes": ["origin"],
 	"gitlens.advanced.messages": {
+		"suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true,
 		"suppressIntegrationRequestTimedOutWarning": true
 	},
 	"gitlens.ai.model": "vscode",
@@ -299,10 +313,10 @@
 	"html.format.maxPreserveNewLines": 1,
 	"html.format.templating": true,
 	"hungryDelete.keepOneSpace": true,
-	"java.cleanup.actionsOnSave": ["addOverride"],
+	"java.cleanup.actions": ["addOverride", "renameFileToType"],
 	"java.completion.guessMethodArguments": true,
-	"java.configuration.updateBuildConfiguration": "automatic",
 	"java.eclipse.downloadSources": true,
+	"java.format.settings.url": ".java-formatter.xml",
 	"java.inlayHints.parameterNames.enabled": "none",
 	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-21",
 	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
@@ -396,13 +410,15 @@
 	],
 	"remote.SSH.remotePlatform": {
 		"helion": "linux",
-		"marie": "linux"
+		"marie": "linux",
+		"phantom": "linux"
 	},
 	"remote.SSH.useLocalServer": false,
 	"scm.defaultViewMode": "tree",
 	"screencastMode.fontSize": 40,
 	"screencastMode.verticalOffset": 5,
 	"scss.format.maxPreserveNewLines": 1,
+	"search.defaultViewMode": "tree",
 	"security.workspace.trust.enabled": false,
 	"settingsSync.ignoredExtensions": [
 		"circleci.circleci",
@@ -460,7 +476,6 @@
 	"typescript.locale": "en-CA",
 	"typescript.npm": "/home/nato/.asdf/shims/bun",
 	"typescript.preferences.preferTypeOnlyAutoImports": true,
-	"typescript.preferGoToSourceDefinition": true,
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"update.mode": "manual",
 	"vim.easymotion": true,
@@ -474,18 +489,20 @@
 		"[Nord]": {
 			"editorBracketHighlight.foreground1": "#EBCB8B",
 			"editorBracketHighlight.foreground2": "#B48EAD",
-			"editorBracketHighlight.foreground3": "#87CEFA",
+			"editorBracketHighlight.foreground3": "#88C0D0",
 			"editorBracketHighlight.foreground4": "#EBCB8B",
 			"editorBracketHighlight.foreground5": "#B48EAD",
-			"editorBracketHighlight.foreground6": "#87CEFA",
+			"editorBracketHighlight.foreground6": "#88C0D0",
 			"editorBracketHighlight.unexpectedBracket.foreground": "#BF616A",
 			"errorLens.errorBackground": "#BF616A1B",
 			"errorLens.errorForeground": "#BF616A",
 			"errorLens.warningBackground": "#EBCB8B1B",
-			"errorLens.warningForeground": "#EBCB8B"
+			"errorLens.warningForeground": "#EBCB8B",
+			"git.blame.editorDecorationForeground": "#D8DEE940"
 		}
 	},
 	"workbench.colorTheme": "Nord",
+	"workbench.editor.defaultBinaryEditor": "default",
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.revealIfOpen": true,
