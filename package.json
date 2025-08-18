@@ -34,8 +34,9 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@prettier/plugin-xml": "^3.4.1",
-		"prettier": "^3.5.2"
+		"@prettier/plugin-xml": "^3.4.2",
+		"prettier": "^3.6.2"
 	},
-	"type": "module"
+	"type": "module",
+	"private": true
 }
