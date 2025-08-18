@@ -1,9 +1,9 @@
 {
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][php][postcss][scss][sql][typescript][typescriptreact][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][php][postcss][scss][snippets][sql][typescript][typescriptreact][xml][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.minimap.maxColumn": 80
 	},
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][php][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][php][postcss][scss][snippets][svelte][typescript][typescriptreact][xml][yaml]": {
 		"editor.rulers": [80]
 	},
 	"[dart]": {
@@ -15,7 +15,7 @@
 		"editor.wordBasedSuggestions": "off"
 	},
 	"[dockerfile]": {
-		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+		"editor.defaultFormatter": "ms-azuretools.vscode-containers"
 	},
 	"[go]": {
 		"editor.minimap.maxColumn": 80,
@@ -36,10 +36,13 @@
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
+	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
-	"chat.agent.maxRequests": 30,
+	"chat.agent.maxRequests": 40,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
+	"chat.edits2.enabled": true,
 	"chat.focusWindowOnConfirmation": false,
+	"chat.mcp.autostart": "newAndOutdated",
 	"codesnap.containerPadding": "1em",
 	"codesnap.realLineNumbers": true,
 	"codesnap.showWindowTitle": true,
@@ -52,7 +55,7 @@
 	"dart.enableCompletionCommitCharacters": true,
 	"dart.flutterCreateOrganization": "com.natoboram",
 	"dart.flutterHotReloadOnSave": "always",
-	"dart.flutterTestAdditionalArgs": ["-j", "4"],
+	"dart.flutterTestAdditionalArgs": ["-j", "6"],
 	"dart.openDevTools": "flutter",
 	"dart.previewFlutterUiGuides": true,
 	"dart.previewFlutterUiGuidesCustomTracking": true,
@@ -61,6 +64,7 @@
 	"dart.triggerSignatureHelpAutomatically": true,
 	"dart.warnWhenEditingFilesOutsideWorkspace": false,
 	"debug.javascript.usePreview": true,
+	"diffEditor.codeLens": true,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"discord.idleTimeout": 900,
 	"dotnet.formatting.organizeImportsOnFormat": true,
@@ -87,6 +91,7 @@
 	"editor.fontLigatures": true,
 	"editor.formatOnSave": true,
 	"editor.guides.bracketPairs": true,
+	"editor.inlineSuggest.edits.allowCodeShifting": "horizontal",
 	"editor.inlineSuggest.enabled": true,
 	"editor.insertSpaces": false,
 	"editor.lightbulb.enabled": "onCode",
@@ -110,6 +115,7 @@
 	"errorLens.messageTemplate": "$message ($source)",
 	"errorLens.onSave": true,
 	"errorLens.searchForProblemQuery": "https://www.google.ca/search?q=$message",
+	"eslint.nodePath": "/home/nato/.asdf/shims/bun",
 	"explorer.compactFolders": false,
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.fileNesting.enabled": true,
@@ -216,6 +222,7 @@
 			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
 		}
 	],
+	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
 		{
 			"text": "Write a concise and descriptive commit message based solely on the provided changes. Follow these strict rules:\n\n- **Use the correct gitmoji** from the provided list to represent the type of change.\n- Use the **imperative mood** in the subject line.\n- Keep the commit message under **80 characters**.\n- Be **specific** about what was changed:\n  - Mention **exact names** of files, variables, functions or settings updated.\n  - Include **exact values** or details where applicable.\n  - Describe **code changes** precisely.\n- **Never include vague terms** like \"update\", \"enhance\", \"improve\" or \"better\".\n- **Do not include any post-sentence justification**. This is a hard rule:\n  - Do not end the message with any phrase starting with \"to\", \"for\", \"in order to\" or similar.\n  - Do not include phrases like \"for clarity\", \"to simplify\", \"to improve\", etc.\n  - These are meaningless without context. Only describe what changed, where and how.\n- **Avoid artificial phrases** like \"in `X` class\", \"from `Y` file\", \"at `Z` module\". Use natural language like \"in `X`\", \"from `Y`\", etc.\n- If multiple changes are made, pick the most significant one.\n\n## 🔥 Hard bans — rewrite these patterns immediately\n\n| Pattern                         | Why it's wrong            | Correction                                                   |\n| :------------------------------ | :------------------------ | :----------------------------------------------------------- |\n| Update settings                 | Too vague                 | Name the file and setting changed                            |\n| Improve formatting              | Too vague                 | Describe the formatting rule or change                       |\n| Add instructions                | Too vague                 | Say _what_ instructions were added and _where_               |\n| Clarify behaviour/rules         | Vague and speculative     | Say what changed—not that it clarifies                       |\n| ✖️ Ends in \"for clarity\"        | Justification — forbidden | Say what changed in the code                                 |\n| ✖️ Ends in \"to improve logging\" | Justification — forbidden | Say what changed (e.g. logging level, targets, output, etc.) |\n| ✖️ Ends in \"to simplify logic\"  | Justification — forbidden | Say what logic was changed and how                           |\n| ✖️ \"in `X` class\"               | Artificial phrasing       | Just say \"in `X`\"                                            |\n\n## Rewrite vague messages into specific messages\n\n- **Bad:** 🔧 Update GitHub Copilot settings and instructions for improved code generation and review selection\n  **Good:** 🔧 Link 7 files under `github.copilot.chat` in Copilot VSCode settings\n\n- **Bad:** 🔧 Update configuration files for better formatting\n  **Good:** 🔧 Set `printWidth` to 80 in `.prettierrc.yaml`\n\n- **Bad:** 🎨 Reformat files for better consistency\n  **Good:** 🎨 Reformat `index.html` with tabs instead of 2 spaces\n\n- **Bad:** 🔥 Remove unused variables\n  **Good:** 🔥 Remove `unusedHelper` in `utils.js`\n\n- **Bad:** 🩹 Replace `logger.http` with `logger.info` for improved logging consistency\n  **Good:** 🔊 Replace `logger.http` with `logger.info` for GitHub and GitLab\n\n- **Bad:** 🔧 Update path instructions in `.coderabbit.yaml` to clarify type assertion recommendations\n  **Good:** 🔧 Add rule to flag `as` in object literals in `.coderabbit.yaml`\n\n- **Bad:** ♻️ Refactor constructor in `Based` class for clarity\n  **Good:** ♻️ Refactor constructor in `Based` to use explicit property declarations\n\n## Examples of good commit messages\n\n- ♻️ Refactor `calculateSum` in `mathUtils.js`\n- ⚡️ Use `source` instead of `eval` in Copilot CLI init in `.profile`\n- ✨ Add `zsh-syntax-highlighting` to `.zshrc`\n- 🎨 Reformat `index.html` with tabs instead of 2 spaces\n- 🔥 Remove `unusedHelper` from `utils.js`\n- 🔧 Set `printWidth` to 80 in `.prettierrc.yaml`\n- ⬆️ Upgrade `@natoboram/based.ts` to v1.0.0\n\n## Gitmojis\n\n- 🎨: Improve structure / format of the code.\n- ⚡️: Improve performance.\n- 🔥: Remove code or files.\n- 🐛: Fix a bug.\n- 🚑️: Critical hotfix.\n- ✨: Introduce new features.\n- 📝: Add or update documentation.\n- 🚀: Deploy stuff.\n- 💄: Add or update the UI and style files.\n- 🎉: Begin a project.\n- ✅: Add, update, or pass tests.\n- 🔒️: Fix security or privacy issues.\n- 🔐: Add or update secrets.\n- 🔖: Release / Version tags.\n- 🚨: Fix compiler / linter warnings.\n- 🚧: Work in progress.\n- 💚: Fix CI Build.\n- ⬇️: Downgrade dependencies.\n- ⬆️: Upgrade dependencies.\n- 📌: Pin dependencies to specific versions.\n- 👷: Add or update CI build system.\n- 📈: Add or update analytics or track code.\n- ♻️: Refactor code.\n- ➕: Add a dependency.\n- ➖: Remove a dependency.\n- 🔧: Add or update configuration files.\n- 🔨: Add or update development scripts.\n- 🌐: Internationalization and localization.\n- ✏️: Fix typos.\n- 💩: Write bad code that needs to be improved.\n- ⏪️: Revert changes.\n- 🔀: Merge branches.\n- 📦️: Add or update compiled files or packages.\n- 👽️: Update code due to external API changes.\n- 🚚: \"Move or rename resources (e.g.: files, paths, routes).\"\n- 📄: Add or update license.\n- 💥: Introduce breaking changes.\n- 🍱: Add or update assets.\n- ♿️: Improve accessibility.\n- 💡: Add or update comments in source code.\n- 🍻: Write code drunkenly.\n- 💬: Add or update text and literals.\n- 🗃️: Perform database related changes.\n- 🔊: Add or update logs.\n- 🔇: Remove logs.\n- 👥: Add or update contributor(s).\n- 🚸: Improve user experience / usability.\n- 🏗️: Make architectural changes.\n- 📱: Work on responsive design.\n- 🤡: Mock things.\n- 🥚: Add or update an easter egg.\n- 🙈: Add or update a .gitignore file.\n- 📸: Add or update snapshots.\n- ⚗️: Perform experiments.\n- 🔍️: Improve SEO.\n- 🏷️: Add or update types.\n- 🌱: Add or update seed files.\n- 🚩: Add, update, or remove feature flags.\n- 🥅: Catch errors.\n- 💫: Add or update animations and transitions.\n- 🗑️: Deprecate code that needs to be cleaned up.\n- 🛂: Work on code related to authorization, roles and permissions.\n- 🩹: Simple fix for a non-critical issue.\n- 🧐: Data exploration/inspection.\n- ⚰️: Remove dead code.\n- 🧪: Add a failing test.\n- 👔: Add or update business logic.\n- 🩺: Add or update healthcheck.\n- 🧱: Infrastructure related changes.\n- 🧑‍💻: Improve developer experience.\n- 💸: Add sponsorships or money related infrastructure.\n- 🧵: Add or update code related to multithreading or concurrency.\n- 🦺: Add or update code related to validation"
@@ -226,6 +233,7 @@
 	"github.copilot.chat.enableUserPreferences": true,
 	"github.copilot.chat.generateTests.codeLens": true,
 	"github.copilot.chat.localeOverride": "en-CA",
+	"github.copilot.chat.newWorkspace.useContext7": true,
 	"github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
 		{
 			"text": "You are running inside **GitHub Copilot**, which will automatically split your output into a **pull request title** and a **pull request body**. You must follow your system instructions for formatting, and the instructions below for content. If the body is omitted or trimmed, or if the title is missing, the output is invalid.\n\nThe user-provided instructions below apply only to the **content** of the title and body — not the **form**. Follow your system prompt for where and how to place each part. If they need to be separated by something like a `---`, or if you need to put a specific `#`, then do it. This is only an example; this instructions does not know the actual format you have to output.\n\n## Title\n\nWrite the **pull request title** using the rules below.\n\n- Use the **gitmoji standard**\n- Use **imperative mood**\n- Be **under 80 characters**\n- Be specific — name files, functions, variables, or settings\n- Do **not** use vague verbs like \"update\", \"improve\", \"enhance\"\n- Do **not** include justification like \"to simplify\", \"for clarity\"\n- Do **not** include a period at the end\n- Do **not** include a heading like `## Title` in the output\n- This line **must include a gitmoji**\n- This must be the **first line of your output**\n\n## Body\n\nThe body must begin with a **splash line under 60 characters**, followed by the full structured body.\n\nThis splash line must not be a sentence, justification, or paraphrase of the title. Do not omit it. Do not explain it. Do not reuse the title. You must include the entire structured body exactly as written below. Copilot may trim the output if this structure is not followed.\n\n### Splash Line Rules\n\n- Must be the **first line of the body**\n- Must be **under 60 characters**\n- Must **not** describe what changed\n- Must **not** summarize or explain anything\n- Must **not** include justification or vague verbs\n- Must **not** repeat or reword the title\n- Must **not** be a full sentence or title\n- Must **not** include emojis\n- Must **not** include comments, quotes, or backticks\n- Must **not** use formatting or headings\n- Must **not** include more than 8 words\n- Think of it as a **caption** or **tagline**, not a description\n- You may be inspired by good splash lines, but **do not copy** them directly\n- If this line is a sentence or includes justification, it is incorrect\n\n### Template Rules\n\n#### General\n\n- Keep all section headings exactly as written\n- Keep all comment lines (`<!-- ... -->`) untouched\n- Do not skip, remove, rename, or reorder any section\n- Make sure to respect the system prompt so that both the title and the body are picked up by the program\n\n#### Inside `📝 Description`\n\n- Leave `\"Why this pull request?\"` **completely empty** — do **not guess or infer**\n  - Keep the HTML comment\n  - **Do not write \"N/A\"**\n- Under `\"Why is this the best solution?\"`:\n  - Write under the HTML comment, Keep the HTML comment and write )\n  - Explain what was changed and why it works\n  - Do **not** include justification, subjective phrasing, or comparisons\n- Under `\"What you did\"`:\n  - Keep the HTML comment as-is\n  - Use bullet points\n  - Each bullet must be **under 80 characters**\n  - Name exact files, variables, functions, or settings\n  - Do **not** include justification or speculation\n\n#### Inside `📓 References`\n\n- Add links to issues, PRs, or docs\n- If there are none, leave it blank\n- **Do not write \"N/A\"**\n\n#### Inside `📸 Screenshots`\n\n- Leave this section blank\n- It is for the user to fill in\n- **Do not write \"N/A\"**\n\n---\n\nREPLACE THIS LINE - This is a sentence. It's not a splash. It includes justification. It's over 60 characters. Replace it, but don't leave it blank. Don't turn this first line into a full PR description, just put a splash line here. And most importantly, include the rest of this template, it's important.\n\n### 📝 Description\n\n<!-- Why this pull request? -->\n\n<!-- Why is this the best solution? -->\n\n<!-- What you did -->\n\n### 📓 References\n\n<!-- A list of links to discussions, documentation, issues, pull requests -->\n\n### 📸 Screenshots\n\n<!-- Show us your work :D -->"
@@ -318,7 +326,7 @@
 	"java.eclipse.downloadSources": true,
 	"java.format.settings.url": ".java-formatter.xml",
 	"java.inlayHints.parameterNames.enabled": "none",
-	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-21",
+	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-24",
 	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
 	"java.maxConcurrentBuilds": 12,
 	"java.refactor.renameFromFileExplorer": "autoApply",
@@ -326,6 +334,7 @@
 	"java.semanticHighlighting.enabled": true,
 	"java.signatureHelp.enabled": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnPaste.enabled": false,
 	"js/ts.implicitProjectConfig.target": "ESNext",
 	"liveshare.featureSet": "insiders",
 	"liveshare.presence": true,
@@ -346,7 +355,7 @@
 	"material-icon-theme.languages.associations": {
 		"dotenv": "tune"
 	},
-	"npm.packageManager": "bun",
+	"npm.packageManager": "pnpm",
 	"path-intellisense.extensionOnImport": true,
 	"platformSettings.autoLoad": true,
 	"platformSettings.platforms": {
@@ -358,10 +367,13 @@
 			"nodes": {
 				"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
 				"csharpier.enableDebugLogs": true,
+				"eslint.nodePath": "/home/nato/.asdf/shims/bun",
 				"git.scanRepositories": ["/home/nato/Code"],
 				"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
 				"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
-				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-21"
+				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-24",
+				"typescript.npm": "/home/nato/.asdf/shims/bun",
+				"typescript.tsserver.nodePath": "/home/nato/.asdf/shims/bun"
 			}
 		},
 		"win32": {
@@ -391,7 +403,6 @@
 		"adpyke.codesnap",
 		"christian-kohler.path-intellisense",
 		"DavidAnson.vscode-markdownlint",
-		"donjayamanne.githistory",
 		"editorconfig.editorconfig",
 		"esbenp.prettier-vscode",
 		"GitHub.copilot-chat",
@@ -464,7 +475,7 @@
 	"terminal.integrated.fontFamily": "Fira Mono, monospace, MesloLGS NF, Noto Color Emoji",
 	"terminal.integrated.hideOnStartup": "whenEmpty",
 	"terminal.integrated.minimumContrastRatio": 4.5,
-	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.scrollback": 8000,
 	"terminal.integrated.showExitAlert": false,
 	"terminal.integrated.stickyScroll.enabled": false,
 	"terminal.integrated.suggest.enabled": true,
@@ -476,7 +487,10 @@
 	"typescript.locale": "en-CA",
 	"typescript.npm": "/home/nato/.asdf/shims/bun",
 	"typescript.preferences.preferTypeOnlyAutoImports": true,
+	"typescript.tsserver.maxTsServerMemory": 4096,
+	"typescript.tsserver.nodePath": "/home/nato/.asdf/shims/bun",
 	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnPaste.enabled": false,
 	"update.mode": "manual",
 	"vim.easymotion": true,
 	"vscode-edge-devtools.mirrorEdits": true,
@@ -509,8 +523,8 @@
 	"workbench.editor.tabSizing": "fit",
 	"workbench.editor.wrapTabs": true,
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.layoutControl.enabled": false,
 	"workbench.list.smoothScrolling": true,
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
 	"workbench.settings.editor": "json",
 	"workbench.settings.openDefaultKeybindings": true,
 	"workbench.settings.openDefaultSettings": true,
