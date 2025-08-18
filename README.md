@@ -7,10 +7,13 @@ My personal dotfiles
 ## Content
 
 - <https://github.com/llvm/llvm-project>
+- <https://github.com/microsoft/vscode-copilot-chat>
 - <https://github.com/microsoft/vscode>
 - <https://github.com/nektos/act>
+- <https://github.com/nicolargo/glances>
 - <https://github.com/nordtheme/gedit>
 - <https://github.com/ohmyzsh/ohmyzsh>
+- <https://github.com/pnpm/pnpm>
 - <https://github.com/romkatv/powerlevel10k>
 - <https://github.com/vinceliuice/Graphite-gtk-theme>
 
@@ -21,3 +24,7 @@ git clone git@github.com:NatoBoram/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow .
 ```
+
+## Acknowledgements
+
+- [Stow has forever changed the way I manage my dotfiles](https://www.youtube.com/watch?v=y6XCebnB9gs)
