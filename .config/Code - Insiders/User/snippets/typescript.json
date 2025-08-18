@@ -1,8 +1,45 @@
 {
+	"Catch a promise": {
+		"body": [".catch((error: unknown) => {", "\t$0", "})"],
+		"prefix": ".catch"
+	},
 	"Log copied variable": {
-		"prefix": "logvar",
 		"body": [
 			"console.log('$TM_FILENAME:$TM_LINE_NUMBER $CLIPBOARD:', $CLIPBOARD)"
-		]
+		],
+		"description": "Log the value of the copied variable along with the file name and line number",
+		"prefix": "logvar"
+	},
+	"Vitest Describe": {
+		"body": [
+			"describe(\"$1\", () => {",
+			"\ttest(\"$2\", ({ expect }) => {",
+			"\t\tconst result = $1($2$0)",
+			"\t\texpect(result).toBe(\"$3\")",
+			"\t})",
+			"})"
+		],
+		"description": "A Vitest `describe` block with a test inside",
+		"prefix": "vdescribe"
+	},
+	"Vitest Describe Test": {
+		"body": [
+			"test(\"$1\", ({ expect }) => {",
+			"\tconst result = $2($0)",
+			"\texpect(result).toBe(\"$3\")",
+			"})"
+		],
+		"description": "A Vitest test inside of a `describe` block",
+		"prefix": "vdtest"
+	},
+	"Vitest Test": {
+		"body": [
+			"test(\"$1\", ({ expect }) => {",
+			"\tconst result = $1($0)",
+			"\texpect(result).toBe(\"$2\")",
+			"})"
+		],
+		"description": "A Vitest test",
+		"prefix": "vtest"
 	}
 }
