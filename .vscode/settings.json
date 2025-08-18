@@ -1,1 +1,6 @@
-{ "files.associations": { "*.stow-local-ignore": "ignore" } }
+{
+	"files.associations": {
+		"*.stow-local-ignore": "ignore",
+		"pnpm/rc": "properties"
+	}
+}
