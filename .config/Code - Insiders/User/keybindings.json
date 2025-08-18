@@ -39,7 +39,20 @@
 		"key": "alt+s l",
 		"when": "editorHasSelection && !editorReadonly"
 	},
-	{ "command": "json.sort", "key": "alt+s j" },
+	{
+		"args": { "commands": ["json.sort", "editor.action.formatDocument"] },
+		"command": "runCommands",
+		"key": "alt+s j",
+		"when": "(editorLangId == 'json' || editorLangId == 'jsonc' || editorLangId == 'snippets') && !editorReadonly"
+	},
+	{
+		"args": {
+			"commands": ["vscode-yaml-sort.sortYaml", "editor.action.formatDocument"]
+		},
+		"command": "runCommands",
+		"key": "alt+s y",
+		"when": "(editorLangId == 'yaml' || editorLangId == 'dockercompose' || editorLangId == 'github-actions-workflow') && !editorReadonly"
+	},
 	{
 		"command": "workbench.action.nextEditor",
 		"key": "ctrl+tab",
@@ -59,5 +72,10 @@
 		"command": "workbench.action.previousEditorInGroup",
 		"key": "ctrl+shift+tab",
 		"when": "!activeEditorGroupEmpty"
+	},
+	{
+		"command": "tsco.organize",
+		"key": "alt+s o",
+		"when": "editorLangId == 'typescript' && !editorReadonly"
 	}
 ]
