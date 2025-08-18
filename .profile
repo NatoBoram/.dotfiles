@@ -70,13 +70,13 @@ PATH="$HOME/Applications/gradle/bin:$PATH"
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
 PATH="$PNPM_HOME:$PATH"
+export NODE_OPTIONS=--max-old-space-size=4096
 
 # Python
 export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
 
 # Rust
-#. "$HOME/.cargo/env"
-PATH="$HOME/.cargo/bin:$PATH"
+#PATH="$HOME/.cargo/bin:$PATH"
 
 # Swift
 PATH="$HOME/Applications/swift/usr/bin:$PATH"
