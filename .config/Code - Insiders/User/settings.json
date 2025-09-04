@@ -93,6 +93,7 @@
 	"editor.guides.bracketPairs": true,
 	"editor.inlineSuggest.edits.allowCodeShifting": "horizontal",
 	"editor.inlineSuggest.enabled": true,
+	"editor.inlineSuggest.minShowDelay": 1000,
 	"editor.insertSpaces": false,
 	"editor.lightbulb.enabled": "onCode",
 	"editor.minimap.showMarkSectionHeaders": false,
