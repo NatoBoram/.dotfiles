@@ -1,4 +1,6 @@
-gitmojis:
+name: gitmoji
+description: An emoji guide for your commit messages
+emojis:
   - 🎨: Improve structure / format of the code.
   - ⚡️: Improve performance.
   - 🔥: Remove code or files.
