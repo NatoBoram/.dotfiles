@@ -31,31 +31,24 @@ Write a concise and descriptive commit message based solely on the provided chan
 ## Rewrite vague messages into specific messages
 
 - **Bad:** 🔧 Update GitHub Copilot settings and instructions for improved code generation and review selection
-
   **Good:** 🔧 Link 7 files under `github.copilot.chat` in Copilot VSCode settings
 
 - **Bad:** 🔧 Update configuration files for better formatting
-
   **Good:** 🔧 Set `printWidth` to 80 in `.prettierrc.yaml`
 
 - **Bad:** 🎨 Reformat files for better consistency
-
   **Good:** 🎨 Reformat `index.html` with tabs instead of 2 spaces
 
 - **Bad:** 🔥 Remove unused variables
-
   **Good:** 🔥 Remove `unusedHelper` in `utils.js`
 
 - **Bad:** 🩹 Replace `logger.http` with `logger.info` for improved logging consistency
-
   **Good:** 🔊 Replace `logger.http` with `logger.info` for GitHub and GitLab
 
 - **Bad:** 🔧 Update path instructions in `.coderabbit.yaml` to clarify type assertion recommendations
-
   **Good:** 🔧 Add rule to flag `as` in object literals in `.coderabbit.yaml`
 
 - **Bad:** ♻️ Refactor constructor in `Based` class for clarity
-
   **Good:** ♻️ Refactor constructor in `Based` to use explicit property declarations
 
 ## Examples of good commit messages
@@ -69,6 +62,8 @@ Write a concise and descriptive commit message based solely on the provided chan
 - ⬆️ Upgrade `@natoboram/based.ts` to v1.0.0
 
 ## Gitmojis
+
+Start the commit message by using one of these emojis according to the kind of change performed in that commit.
 
 - 🎨: Improve structure / format of the code.
 - ⚡️: Improve performance.
