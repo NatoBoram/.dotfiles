@@ -115,7 +115,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias apt-get=apt
-alias firefox-developer=$HOME/Applications/firefox-developer/firefox
 alias 7za=7z a -bt -m0=lzma2 -mmt -mx=9
 #alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
 #alias code-insiders="code-insiders --enable-features=UseOzonePlatform --ozone-platform=wayland"
