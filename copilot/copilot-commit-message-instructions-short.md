@@ -1,0 +1,6 @@
+- Keep the subject under 80 characters.
+- Use a precise verb: Add, Remove, Rename, Move, Set, Enable, Disable, Replace, Reformat, Refactor, Extract, Inline, Pin, Bump, Link, Split, Migrate.
+- Never use "update", "enhance", "improve", "better", "optimise", "tweak", "adjust", "refine", "polish", "modernise".
+- Do not add justifications. Do not write phrases starting with "to", "for", "in order to". Ban "for clarity", "for readability", "for consistency", "for performance", "for security".
+- Name at least one concrete target. Mention files, symbols, or settings with backticks. Avoid generic nouns like "settings", "configuration files", "project".
+- Describe exactly what changed, where, and how in this shape: `<gitmoji> <verb> <target> [value]`.
