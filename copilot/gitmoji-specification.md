@@ -7,7 +7,6 @@ An emoji guide for your commit messages
 A gitmoji commit message is composed using the following pieces:
 
 - **intention**: The intention you want to express with the commit, using an emoji from the list.
-- **scope**: An optional string that adds contextual information for the scope of the change.
 - **message**: A brief explanation of the change.
 
 ```docopt

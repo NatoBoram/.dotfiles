@@ -2,5 +2,8 @@
 - Use a precise verb: Add, Remove, Rename, Move, Set, Enable, Disable, Replace, Reformat, Refactor, Extract, Inline, Pin, Bump, Link, Split, Migrate.
 - Never use "update", "enhance", "improve", "better", "optimise", "tweak", "adjust", "refine", "polish", "modernise".
 - Do not add justifications. Do not write phrases starting with "to", "for", "in order to". Ban "for clarity", "for readability", "for consistency", "for performance", "for security".
+- End the subject immediately after the change description. Do not append any purpose or outcome clause.
+- Do not include "for ..." or "to ..." after the target unless inside code, a path, or a value. Replace any such phrase with the concrete mechanism or value changed.
 - Name at least one concrete target. Mention files, symbols, or settings with backticks. Avoid generic nouns like "settings", "configuration files", "project".
-- Describe exactly what changed, where, and how in this shape: `<gitmoji> <verb> <target> [value]`.
+- When reformatting or refactoring, state the rule, style, or operation, not the intent. Examples: "with tabs", "to 80 columns", "extract <X>", "replace <A> with <B>".
+- Describe exactly what changed, where, and how in this shape: `<gitmoji> <verb> <target> [from <value>] [to <value>] [in <file>]`.

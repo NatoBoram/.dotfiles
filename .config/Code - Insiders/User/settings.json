@@ -25,6 +25,7 @@
 		"editor.defaultFormatter": "redhat.java"
 	},
 	"[markdown]": {
+		"editor.unicodeHighlight.ambiguousCharacters": true,
 		"gitlens.codeLens.scopes": ["document"]
 	},
 	"[phoenix-heex]": {
@@ -102,10 +103,13 @@
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
 	"editor.unicodeHighlight.allowedCharacters": {
+		"“": false,
+		"”": false,
 		"×": true,
 		"➕": true,
 		"➖": true
 	},
+	"editor.unicodeHighlight.includeComments": true,
 	"elixirLS.enableTestLenses": true,
 	"elixirLS.fetchDeps": true,
 	"emmet.includeLanguages": {
@@ -228,7 +232,7 @@
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
 		{
-			"text": "- Keep the subject under 80 characters.\n- Use a precise verb: Add, Remove, Rename, Move, Set, Enable, Disable, Replace, Reformat, Refactor, Extract, Inline, Pin, Bump, Link, Split, Migrate.\n- Never use \"update\", \"enhance\", \"improve\", \"better\", \"optimise\", \"tweak\", \"adjust\", \"refine\", \"polish\", \"modernise\".\n- Do not add justifications. Do not write phrases starting with \"to\", \"for\", \"in order to\". Ban \"for clarity\", \"for readability\", \"for consistency\", \"for performance\", \"for security\".\n- Name at least one concrete target. Mention files, symbols, or settings with backticks. Avoid generic nouns like \"settings\", \"configuration files\", \"project\".\n- Describe exactly what changed, where, and how in this shape: `<gitmoji> <verb> <target> [value]`."
+			"text": "- Keep the subject under 80 characters.\n- Use a precise verb: Add, Remove, Rename, Move, Set, Enable, Disable, Replace, Reformat, Refactor, Extract, Inline, Pin, Bump, Link, Split, Migrate.\n- Never use \"update\", \"enhance\", \"improve\", \"better\", \"optimise\", \"tweak\", \"adjust\", \"refine\", \"polish\", \"modernise\".\n- Do not add justifications. Do not write phrases starting with \"to\", \"for\", \"in order to\". Ban \"for clarity\", \"for readability\", \"for consistency\", \"for performance\", \"for security\".\n- End the subject immediately after the change description. Do not append any purpose or outcome clause.\n- Do not include \"for ...\" or \"to ...\" after the target unless inside code, a path, or a value. Replace any such phrase with the concrete mechanism or value changed.\n- Name at least one concrete target. Mention files, symbols, or settings with backticks. Avoid generic nouns like \"settings\", \"configuration files\", \"project\".\n- When reformatting or refactoring, state the rule, style, or operation, not the intent. Examples: \"with tabs\", \"to 80 columns\", \"extract <X>\", \"replace <A> with <B>\".\n- Describe exactly what changed, where, and how in this shape: `<gitmoji> <verb> <target> [from <value>] [to <value>] [in <file>]`."
 		},
 		{
 			"text": "# gitmoji\n\nAn emoji guide for your commit messages\n\n## Specification\n\nA gitmoji commit message is composed using the following pieces:\n\n- **intention**: The intention you want to express with the commit, using an emoji from the list.\n- **scope**: An optional string that adds contextual information for the scope of the change.\n- **message**: A brief explanation of the change.\n\n```docopt\n<intention> <message>\n```\n\n## Examples\n\n- ⚡️ Lazyload home screen images.\n- 🐛 Fix `onClick` event handler\n- 🔖 Bump version `1.2.0`\n- ♻️ Transform classes to hooks\n- 📈 Add analytics to the dashboard\n- 🌐 Support Japanese language\n- ♿️ Move the click handler to a button"
@@ -496,7 +500,7 @@
 	"typescript.locale": "en-CA",
 	"typescript.npm": "/home/nato/.asdf/shims/bun",
 	"typescript.preferences.preferTypeOnlyAutoImports": true,
-	"typescript.tsserver.maxTsServerMemory": 4096,
+	"typescript.tsserver.maxTsServerMemory": 8192,
 	"typescript.tsserver.nodePath": "/home/nato/.asdf/shims/bun",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnPaste.enabled": false,
