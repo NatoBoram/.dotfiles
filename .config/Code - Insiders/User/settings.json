@@ -17,15 +17,26 @@
 	"[dockerfile]": {
 		"editor.defaultFormatter": "ms-azuretools.vscode-containers"
 	},
-	"[go]": { "editor.minimap.maxColumn": 80, "editor.rulers": [80] },
-	"[java]": { "editor.defaultFormatter": "redhat.java" },
+	"[go]": {
+		"editor.minimap.maxColumn": 80,
+		"editor.rulers": [80]
+	},
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
 	"[markdown]": {
 		"editor.unicodeHighlight.ambiguousCharacters": true,
 		"gitlens.codeLens.scopes": ["document"]
 	},
-	"[phoenix-heex]": { "editor.defaultFormatter": "JakeBecker.elixir-ls" },
-	"[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
-	"[svelte]": { "editor.defaultFormatter": "svelte.svelte-vscode" },
+	"[phoenix-heex]": {
+		"editor.defaultFormatter": "JakeBecker.elixir-ls"
+	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
 	"chat.agent.maxRequests": 40,
@@ -208,9 +219,15 @@
 	"git.timeline.showUncommitted": true,
 	"github.copilot.chat.agent.thinkingTool": true,
 	"github.copilot.chat.codeGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" },
-		{ "file": "~/.dotfiles/copilot/copilot-instructions.md" },
-		{ "file": "~/Code/github.com/coderabbitai/StyleGuide/README.md" }
+		{
+			"file": ".prettierrc.yaml"
+		},
+		{
+			"file": "~/.dotfiles/copilot/copilot-instructions.md"
+		},
+		{
+			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
+		}
 	],
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
@@ -236,15 +253,27 @@
 		}
 	],
 	"github.copilot.chat.reviewSelection.instructions": [
-		{ "file": "~/.dotfiles/copilot/copilot-instructions.md" },
-		{ "file": "~/Code/github.com/coderabbitai/StyleGuide/README.md" }
+		{
+			"file": "~/.dotfiles/copilot/copilot-instructions.md"
+		},
+		{
+			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
+		}
 	],
 	"github.copilot.chat.search.semanticTextResults": true,
 	"github.copilot.chat.testGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" },
-		{ "file": "package.json" },
-		{ "file": "tsconfig.json" },
-		{ "file": "vitest.config.ts" },
+		{
+			"file": ".prettierrc.yaml"
+		},
+		{
+			"file": "package.json"
+		},
+		{
+			"file": "tsconfig.json"
+		},
+		{
+			"file": "vitest.config.ts"
+		},
 		{
 			"text": "# Tests\n\n## TypeScript\n\nTests in TypeScript use `vitest`.\n\n- Use `describe` to name the function that it's testing and `test` to name the value of the variable that's changing.\n- Don't duplicate code; import existing code instead, even if it's private. I'll most likely import it myself.\n- Always use the `expect` that comes from `test` instead of importing it from `vitest`.\n\n### Examples\n\n```ts\nimport { describe, test } from \"vitest\"\nimport { getLeftPadding } from \"./apply_docstrings.ts\"\n\ndescribe(\"getLeftPadding\", () => {\n\ttest(\"spaces\", ({ expect }) => {\n\t\tconst padding = getLeftPadding(\"    hello\")\n\t\texpect(padding).toBe(\"    \")\n\t})\n\n\ttest(\"tabs\", ({ expect }) => {\n\t\tconst padding = getLeftPadding(\"\\thello\")\n\t\texpect(padding).toBe(\"\\t\")\n\t})\n})\n```"
 		}
@@ -297,7 +326,9 @@
 	"go.inlayHints.functionTypeParameters": true,
 	"go.toolsManagement.autoUpdate": true,
 	"go.useLanguageServer": true,
-	"gopls": { "formatting.gofumpt": true },
+	"gopls": {
+		"formatting.gofumpt": true
+	},
 	"holiday.gearIconStyle": "santa hat",
 	"html.format.indentHandlebars": true,
 	"html.format.maxPreserveNewLines": 1,
@@ -334,12 +365,17 @@
 	"material-icon-theme.files.associations": {
 		"tsconfig.rollup.json": "tsconfig"
 	},
-	"material-icon-theme.languages.associations": { "dotenv": "tune" },
+	"material-icon-theme.languages.associations": {
+		"dotenv": "tune"
+	},
 	"npm.packageManager": "pnpm",
 	"path-intellisense.extensionOnImport": true,
 	"platformSettings.autoLoad": true,
 	"platformSettings.platforms": {
-		"darwin": { "inherits": "linux", "nodes": {} },
+		"darwin": {
+			"inherits": "linux",
+			"nodes": {}
+		},
 		"linux": {
 			"nodes": {
 				"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
@@ -503,7 +539,9 @@
 	"workbench.editor.revealIfOpen": true,
 	"workbench.editor.tabSizing": "fit",
 	"workbench.editor.wrapTabs": true,
-	"workbench.editorAssociations": { "*.bin": "hexEditor.hexedit" },
+	"workbench.editorAssociations": {
+		"*.bin": "hexEditor.hexedit"
+	},
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.list.smoothScrolling": true,
 	"workbench.secondarySideBar.defaultVisibility": "hidden",
