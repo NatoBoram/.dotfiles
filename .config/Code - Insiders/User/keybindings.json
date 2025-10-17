@@ -1,5 +1,11 @@
 [
 	{
+		"args": { "text": "\\\r\n" },
+		"command": "workbench.action.terminal.sendSequence",
+		"key": "shift+enter",
+		"when": "terminalFocus"
+	},
+	{
 		"args": {
 			"commands": [
 				{ "command": "editor.action.clipboardCopyAction" },
