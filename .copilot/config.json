@@ -1,0 +1,21 @@
+{
+	"asked_setup_terminals": ["vscode-insiders"],
+	"banner": "never",
+	"last_logged_in_user": {
+		"host": "https://github.com",
+		"login": "NatoBoram"
+	},
+	"logged_in_users": [
+		{
+			"host": "https://github.com",
+			"login": "NatoBoram"
+		}
+	],
+	"render_markdown": true,
+	"screen_reader": false,
+	"theme": "auto",
+	"trusted_folders": [
+		"/home/nato/Code/github.com/coderabbitai",
+		"/home/nato/Code/github.com/NatoBoram"
+	]
+}

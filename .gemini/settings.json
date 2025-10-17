@@ -1,0 +1,58 @@
+{
+	"ide": {
+		"enabled": true
+	},
+	"mcpServers": {
+		"context7": {
+			"trust": true,
+			"url": "https://mcp.context7.com/sse"
+		},
+		"deepwiki": {
+			"trust": true,
+			"url": "https://mcp.deepwiki.com/sse"
+		},
+		"github": {
+			"httpUrl": "https://api.githubcopilot.com/mcp",
+			"oauth": {
+				"authorizationUrl": "https://github.com/login/oauth/authorize",
+				"clientId": "$GITHUB_CLIENT_ID",
+				"clientSecret": "$GITHUB_CLIENT_SECRET",
+				"enabled": true,
+				"tokenUrl": "https://github.com/login/oauth/access_token"
+			}
+		},
+		"grep": {
+			"httpUrl": "https://mcp.grep.app",
+			"trust": true
+		},
+		"memory": {
+			"args": ["@modelcontextprotocol/server-memory@latest"],
+			"command": "bunx",
+			"trust": true
+		},
+		"sentry": {
+			"url": "https://mcp.sentry.dev/sse"
+		},
+		"sequential-thinking": {
+			"args": ["@modelcontextprotocol/server-sequential-thinking@latest"],
+			"command": "bunx",
+			"trust": true
+		},
+		"tavily": {
+			"args": ["tavily-mcp@latest"],
+			"command": "bunx",
+			"env": {
+				"TAVILY_API_KEY": "$TAVILY_API_KEY"
+			},
+			"trust": true
+		}
+	},
+	"security": {
+		"auth": {
+			"selectedType": "oauth-personal"
+		}
+	},
+	"ui": {
+		"theme": "Default"
+	}
+}

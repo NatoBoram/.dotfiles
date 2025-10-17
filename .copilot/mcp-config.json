@@ -1,0 +1,61 @@
+{
+	"mcpServers": {
+		"context7": {
+			"headers": {},
+			"tools": ["*"],
+			"type": "sse",
+			"url": "https://mcp.context7.com/sse"
+		},
+		"deepwiki": {
+			"headers": {},
+			"tools": ["*"],
+			"type": "sse",
+			"url": "https://mcp.deepwiki.com/sse"
+		},
+		"exa": {
+			"headers": {},
+			"tools": ["*"],
+			"type": "http",
+			"url": "https://mcp.exa.ai/mcp"
+		},
+		"github": {
+			"headers": {},
+			"tools": [
+				"get_commit",
+				"get_file_contents",
+				"get_issue",
+				"get_issue_comments",
+				"get_label",
+				"get_latest_release",
+				"get_me",
+				"get_release_by_tag",
+				"get_tag",
+				"get_team_members",
+				"get_teams",
+				"list_branches",
+				"list_commits",
+				"list_issue_types",
+				"list_issues",
+				"list_label",
+				"list_pull_requests",
+				"list_releases",
+				"list_sub_issues",
+				"list_tags",
+				"pull_request_read",
+				"search_code",
+				"search_issues",
+				"search_pull_requests",
+				"search_repositories",
+				"search_users"
+			],
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp"
+		},
+		"grep": {
+			"headers": {},
+			"tools": ["*"],
+			"type": "http",
+			"url": "https://mcp.grep.app"
+		}
+	}
+}

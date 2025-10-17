@@ -1,11 +1,13 @@
 # Dotfiles
 
-My personal dotfiles
+My personal dotfiles.
 
 ![Screenshot](https://github.com/NatoBoram/.dotfiles/assets/10495562/678b127f-5b95-49e3-82a0-6bd3fee885a6)
 
 ## Content
 
+- <https://github.com/github/copilot-cli>
+- <https://github.com/google-gemini/gemini-cli>
 - <https://github.com/llvm/llvm-project>
 - <https://github.com/microsoft/vscode-copilot-chat>
 - <https://github.com/microsoft/vscode>
@@ -24,6 +26,17 @@ git clone git@github.com:NatoBoram/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow .
 ```
+
+## Usage
+
+To adopt a file from `$HOME`:
+
+```sh
+touch $FILE
+stow --adopt .
+```
+
+The new empty file will be overwritten by the one at `$HOME`.
 
 ## Acknowledgements
 
