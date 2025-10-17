@@ -32,6 +32,7 @@
 		"key": "ctrl+alt+j",
 		"when": "editorTextFocus"
 	},
+	{ "command": "-editor.action.codeAction", "key": "ctrl+alt+i" },
 	{ "command": "-workbench.action.quit", "key": "ctrl+q" },
 	{
 		"command": "bookmarks.listFromAllFiles",
