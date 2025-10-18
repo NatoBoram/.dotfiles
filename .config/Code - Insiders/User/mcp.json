@@ -1,0 +1,75 @@
+{
+	"inputs": [
+		{
+			"description": "Tavily API Key",
+			"id": "tavily_api_key",
+			"password": true,
+			"type": "promptString"
+		},
+		{
+			"description": "CircleCI API Token",
+			"id": "circleci-token",
+			"password": true,
+			"type": "promptString"
+		},
+		{
+			"default": "https://circleci.com",
+			"description": "CircleCI Base URL",
+			"id": "circleci-base-url",
+			"type": "promptString"
+		},
+		{
+			"description": "Context7 API Key",
+			"id": "context7_api_key",
+			"password": true,
+			"type": "promptString"
+		}
+	],
+	"servers": {
+		"circleci": {
+			"args": ["@circleci/mcp-server-circleci@latest"],
+			"command": "bunx",
+			"env": {
+				"CIRCLECI_BASE_URL": "${input:circleci-base-url}",
+				"CIRCLECI_TOKEN": "${input:circleci-token}"
+			},
+			"type": "stdio"
+		},
+		"context7": {
+			"args": [
+				"@upstash/context7-mcp@latest",
+				"--api-key",
+				"${input:context7_api_key}"
+			],
+			"command": "bunx",
+			"type": "stdio"
+		},
+		"deepwiki": { "type": "http", "url": "https://mcp.deepwiki.com/sse" },
+		"exa": { "type": "http", "url": "https://mcp.exa.ai/mcp" },
+		"github": { "type": "http", "url": "https://api.githubcopilot.com/mcp" },
+		"grep": { "type": "http", "url": "https://mcp.grep.app" },
+		"linear": { "type": "http", "url": "https://mcp.linear.app/sse" },
+		"memory": {
+			"args": ["@modelcontextprotocol/server-memory@latest"],
+			"command": "bunx",
+			"type": "stdio"
+		},
+		"playwright": {
+			"args": ["@playwright/mcp@latest"],
+			"command": "bunx",
+			"type": "stdio"
+		},
+		"sentry": { "type": "http", "url": "https://mcp.sentry.dev/sse" },
+		"sequential-thinking": {
+			"args": ["@modelcontextprotocol/server-sequential-thinking@latest"],
+			"command": "bunx",
+			"type": "stdio"
+		},
+		"tavily": {
+			"args": ["tavily-mcp@latest"],
+			"command": "bunx",
+			"env": { "TAVILY_API_KEY": "${input:tavily_api_key}" },
+			"type": "stdio"
+		}
+	}
+}
