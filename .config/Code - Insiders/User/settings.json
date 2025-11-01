@@ -47,7 +47,7 @@
 	"codesnap.containerPadding": "1em",
 	"codesnap.realLineNumbers": true,
 	"codesnap.showWindowTitle": true,
-	"codesnap.shutterAction": "copy",
+	// "codesnap.shutterAction": "copy",
 	"codesnap.transparentBackground": true,
 	"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
 	"css.format.maxPreserveNewLines": 1,
@@ -219,15 +219,7 @@
 	"git.timeline.showUncommitted": true,
 	"github.copilot.chat.agent.thinkingTool": true,
 	"github.copilot.chat.codeGeneration.instructions": [
-		{
-			"file": ".prettierrc.yaml"
-		},
-		{
-			"file": "~/.dotfiles/copilot/copilot-instructions.md"
-		},
-		{
-			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
-		}
+		{ "file": ".prettierrc.yaml" }
 	],
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
@@ -252,14 +244,7 @@
 			"text": "You are running inside **GitHub Copilot**, which will automatically split your output into a **pull request title** and a **pull request body**. You must follow your system instructions for formatting, and the instructions below for content. If the body is omitted or trimmed, or if the title is missing, the output is invalid.\n\nThe user-provided instructions below apply only to the **content** of the title and body — not the **form**. Follow your system prompt for where and how to place each part. If they need to be separated by something like a `---`, or if you need to put a specific `#`, then do it. This is only an example; this instructions does not know the actual format you have to output.\n\n## Title\n\nWrite the **pull request title** using the rules below.\n\n- Use the **gitmoji standard**\n- Use **imperative mood**\n- Be **under 80 characters**\n- Be specific — name files, functions, variables, or settings\n- Do **not** use vague verbs like \"update\", \"improve\", \"enhance\"\n- Do **not** include justification like \"to simplify\", \"for clarity\"\n- Do **not** include a period at the end\n- Do **not** include a heading like `## Title` in the output\n- This line **must include a gitmoji**\n- This must be the **first line of your output**\n\n## Body\n\nThe body must begin with a **splash line under 60 characters**, followed by the full structured body.\n\nThis splash line must not be a sentence, justification, or paraphrase of the title. Do not omit it. Do not explain it. Do not reuse the title. You must include the entire structured body exactly as written below. Copilot may trim the output if this structure is not followed.\n\n### Splash Line Rules\n\n- Must be the **first line of the body**\n- Must be **under 60 characters**\n- Must **not** describe what changed\n- Must **not** summarize or explain anything\n- Must **not** include justification or vague verbs\n- Must **not** repeat or reword the title\n- Must **not** be a full sentence or title\n- Must **not** include emojis\n- Must **not** include comments, quotes, or backticks\n- Must **not** use formatting or headings\n- Must **not** include more than 8 words\n- Think of it as a **caption** or **tagline**, not a description\n- You may be inspired by good splash lines, but **do not copy** them directly\n- If this line is a sentence or includes justification, it is incorrect\n\n### Template Rules\n\n#### General\n\n- Keep all section headings exactly as written\n- Keep all comment lines (`<!-- ... -->`) untouched\n- Do not skip, remove, rename, or reorder any section\n- Make sure to respect the system prompt so that both the title and the body are picked up by the program\n\n#### Inside `📝 Description`\n\n- Leave `\"Why this pull request?\"` **completely empty** — do **not guess or infer**\n  - Keep the HTML comment\n  - **Do not write \"N/A\"**\n- Under `\"Why is this the best solution?\"`:\n  - Write under the HTML comment, Keep the HTML comment and write )\n  - Explain what was changed and why it works\n  - Do **not** include justification, subjective phrasing, or comparisons\n- Under `\"What you did\"`:\n  - Keep the HTML comment as-is\n  - Use bullet points\n  - Each bullet must be **under 80 characters**\n  - Name exact files, variables, functions, or settings\n  - Do **not** include justification or speculation\n\n#### Inside `📓 References`\n\n- Add links to issues, PRs, or docs\n- If there are none, leave it blank\n- **Do not write \"N/A\"**\n\n#### Inside `📸 Screenshots`\n\n- Leave this section blank\n- It is for the user to fill in\n- **Do not write \"N/A\"**\n\n---\n\nREPLACE THIS LINE - This is a sentence. It's not a splash. It includes justification. It's over 60 characters. Replace it, but don't leave it blank. Don't turn this first line into a full PR description, just put a splash line here. And most importantly, include the rest of this template, it's important.\n\n### 📝 Description\n\n<!-- Why this pull request? -->\n\n<!-- Why is this the best solution? -->\n\n<!-- What you did -->\n\n### 📓 References\n\n<!-- A list of links to discussions, documentation, issues, pull requests -->\n\n### 📸 Screenshots\n\n<!-- Show us your work :D -->"
 		}
 	],
-	"github.copilot.chat.reviewSelection.instructions": [
-		{
-			"file": "~/.dotfiles/copilot/copilot-instructions.md"
-		},
-		{
-			"file": "~/Code/github.com/coderabbitai/StyleGuide/README.md"
-		}
-	],
+	"github.copilot.chat.reviewSelection.instructions": [],
 	"github.copilot.chat.search.semanticTextResults": true,
 	"github.copilot.chat.testGeneration.instructions": [
 		{
