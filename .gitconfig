@@ -34,3 +34,6 @@ autoSetupRemote = true
 gpgSign = if-asked
 [tag]
 gpgSign = true
+[gitflow "branch"]
+master = main
+develop = main

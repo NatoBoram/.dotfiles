@@ -35,20 +35,40 @@
 			},
 			"type": "stdio"
 		},
-		"context7": {
-			"args": [
-				"@upstash/context7-mcp@latest",
-				"--api-key",
-				"${input:context7_api_key}"
-			],
-			"command": "bunx",
-			"type": "stdio"
+		"coderabbit-docs": {
+			"type": "http",
+			"url": "https://docs.coderabbit.ai/mcp"
 		},
-		"deepwiki": { "type": "http", "url": "https://mcp.deepwiki.com/sse" },
-		"exa": { "type": "http", "url": "https://mcp.exa.ai/mcp" },
-		"github": { "type": "http", "url": "https://api.githubcopilot.com/mcp" },
-		"grep": { "type": "http", "url": "https://mcp.grep.app" },
-		"linear": { "type": "http", "url": "https://mcp.linear.app/sse" },
+		"cognitionai/deepwiki": {
+			"gallery": "https://api.mcp.github.com",
+			"type": "http",
+			"url": "https://mcp.deepwiki.com/sse",
+			"version": "1.0.0"
+		},
+		"exa": {
+			"type": "http",
+			"url": "https://mcp.exa.ai/mcp"
+		},
+		"getsentry/sentry-mcp": {
+			"gallery": "https://api.mcp.github.com",
+			"type": "http",
+			"url": "https://mcp.sentry.dev/mcp",
+			"version": "1.0.0"
+		},
+		"github/github-mcp-server": {
+			"gallery": "https://api.mcp.github.com",
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp",
+			"version": "0.13.0"
+		},
+		"grep": {
+			"type": "http",
+			"url": "https://mcp.grep.app"
+		},
+		"linear": {
+			"type": "http",
+			"url": "https://mcp.linear.app/sse"
+		},
 		"memory": {
 			"args": ["@modelcontextprotocol/server-memory@latest"],
 			"command": "bunx",
@@ -59,7 +79,6 @@
 			"command": "bunx",
 			"type": "stdio"
 		},
-		"sentry": { "type": "http", "url": "https://mcp.sentry.dev/sse" },
 		"sequential-thinking": {
 			"args": ["@modelcontextprotocol/server-sequential-thinking@latest"],
 			"command": "bunx",
@@ -68,8 +87,19 @@
 		"tavily": {
 			"args": ["tavily-mcp@latest"],
 			"command": "bunx",
-			"env": { "TAVILY_API_KEY": "${input:tavily_api_key}" },
+			"env": {
+				"TAVILY_API_KEY": "${input:tavily_api_key}"
+			},
 			"type": "stdio"
+		},
+		"upstash/context7": {
+			"gallery": "https://api.mcp.github.com",
+			"headers": {
+				"CONTEXT7_API_KEY": "${input:context7_api_key}"
+			},
+			"type": "http",
+			"url": "https://mcp.context7.com/mcp",
+			"version": "1.0.0"
 		}
 	}
 }

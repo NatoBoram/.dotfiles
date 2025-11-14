@@ -1,5 +1,4 @@
 {
-	"asked_setup_terminals": ["vscode-insiders"],
 	"banner": "never",
 	"last_logged_in_user": {
 		"host": "https://github.com",
@@ -17,5 +16,6 @@
 	"trusted_folders": [
 		"/home/nato/Code/github.com/coderabbitai",
 		"/home/nato/Code/github.com/NatoBoram"
-	]
+	],
+	"asked_setup_terminals": ["vscode-insiders"]
 }

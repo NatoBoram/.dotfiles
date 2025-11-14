@@ -62,7 +62,11 @@ source ~/.gh.zsh
 
 # Go
 export GOPATH="$HOME/go"
-PATH="$GOPATH/bin:$PATH"
+export GOBIN="$GOPATH/bin"
+PATH="$GOBIN:$PATH"
+
+# GTR
+PATH="$HOME/Code/github.com/coderabbitai/git-worktree-runner/bin:$PATH"
 
 # Java
 PATH="$HOME/Applications/gradle/bin:$PATH"

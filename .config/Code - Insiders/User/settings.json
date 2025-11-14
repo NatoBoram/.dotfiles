@@ -134,8 +134,8 @@
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
 		"*.mjs": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs.map",
 		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
-		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts",
-		"*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js",
+		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts, ${capture}.bench.ts",
+		"*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js, ${capture}.bench.ts",
 		"compose.yaml": "compose.override.yaml, *.compose.yaml, *.compose.override.yaml",
 		"minepkg.toml": ".minepkg-lock.toml",
 		"mix.exs": "mix.lock",
@@ -214,12 +214,15 @@
 	"git.inputValidationSubjectLength": 80,
 	"git.pruneOnFetch": true,
 	"git.pullBeforeCheckout": true,
+	"git.rebaseWhenSync": true,
 	"git.repositoryScanMaxDepth": 4,
 	"git.scanRepositories": ["/home/nato/Code"],
 	"git.timeline.showUncommitted": true,
 	"github.copilot.chat.agent.thinkingTool": true,
 	"github.copilot.chat.codeGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" }
+		{
+			"file": ".prettierrc.yaml"
+		}
 	],
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
@@ -324,7 +327,7 @@
 	"java.eclipse.downloadSources": true,
 	"java.format.settings.url": ".java-formatter.xml",
 	"java.inlayHints.parameterNames.enabled": "none",
-	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-24",
+	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-26-jep401ea2+1-1",
 	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
 	"java.maxConcurrentBuilds": 12,
 	"java.refactor.renameFromFileExplorer": "autoApply",
@@ -369,7 +372,7 @@
 				"git.scanRepositories": ["/home/nato/Code"],
 				"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
 				"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
-				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-24",
+				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-26-jep401ea2+1-1",
 				"typescript.npm": "/home/nato/.asdf/shims/bun",
 				"typescript.tsserver.nodePath": "/home/nato/.asdf/shims/bun",
 				"vitest.nodeExecutable": "/home/nato/.asdf/shims/node"
