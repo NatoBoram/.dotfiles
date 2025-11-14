@@ -22,6 +22,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ### Security
 
+## [0.0.2] - 2025-11-14
+
+## Added
+
+- A second example release.
+
+## [0.0.1] - 2025-11-14
+
+## Added
+
+- An example changelog file.
+
 ## How do I make a good changelog?
 
 ### Guiding Principles
@@ -42,3 +54,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - `Removed` for now removed features.
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities.
+
+[Unreleased]: https://github.com/NatoBoram/.dotfiles/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/NatoBoram/.dotfiles/compare/v0.0.1...v0.0.2
+[0.0.1]: https://github.com/NatoBoram/.dotfiles/releases/tag/v0.0.1
