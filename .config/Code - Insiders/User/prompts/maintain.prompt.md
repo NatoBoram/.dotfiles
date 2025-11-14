@@ -63,12 +63,12 @@ enum FooBar {
 ```
 
 ```ts
-export const FooBar = {
+const FooBar = {
 	foo: "foo",
 	bar: "bar",
 } as const
 
-export type FooBar = (typeof FooBar)[keyof typeof FooBar]
+type FooBar = (typeof FooBar)[keyof typeof FooBar]
 ```
 
 Add causes to errors.
@@ -113,5 +113,72 @@ switch (foo) {
 	case "baz":
 		// ...
 		return
+}
+```
+
+Log full errors.
+
+```ts
+console.log("An error has occurred.", { error: error.message })
+```
+
+```ts
+console.error("An error has occurred.", { error })
+```
+
+Make interfaces for inline types.
+
+```ts
+function foo(): { bar: string } {
+	return { bar: "bar" }
+}
+```
+
+```ts
+interface Foo {
+	readonly bar: string
+}
+
+function foo(): Foo {
+	return { bar: "bar" }
+}
+```
+
+Remove comments that repeat the next line.
+
+```ts
+// Assign `"foo"` to `bar`.
+const bar = "foo"
+```
+
+```ts
+const bar = "foo"
+```
+
+Split type imports from value imports.
+
+```ts
+import { Bar, type Foo } from "baz"
+```
+
+```ts
+import type { Foo } from "baz"
+import { Bar } from "baz"
+```
+
+Make interfaces immutables. If they can't be immutable, add a TSDoc comment explaining why.
+
+```ts
+interface Foo {
+	bar: string
+	baz: number
+}
+```
+
+```ts
+interface Foo {
+	readonly bar: string
+	/** ... */
+	baz: number
 }
 ```
