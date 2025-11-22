@@ -4,6 +4,7 @@ lg = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Cre
 gpgsign = true
 [core]
 excludesfile = ~/.gitignore
+editor = nano
 [fetch]
 prune = true
 [color]
