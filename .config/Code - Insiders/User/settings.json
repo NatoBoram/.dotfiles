@@ -344,12 +344,14 @@
 	"markdown.extension.print.theme": "dark",
 	"markdownlint.config": {
 		"first-line-heading": false,
+		"line-length": false,
 		"no-blanks-blockquote": false,
-		"no-duplicate-heading": false,
-		"no-hard-tabs": false,
+		"no-duplicate-heading": { "siblings_only": true },
+		"no-hard-tabs": { "code_blocks": false },
 		"no-inline-html": false,
 		"reference-links-images": false
 	},
+	"markdownlint.run": "onSave",
 	"material-icon-theme.files.associations": {
 		"tsconfig.rollup.json": "tsconfig"
 	},
@@ -408,17 +410,15 @@
 		"editorconfig.editorconfig",
 		"esbenp.prettier-vscode",
 		"GitHub.copilot-chat",
-		"GitHub.copilot",
 		"GitHub.vscode-pull-request-github",
 		"jasonlhy.hungry-delete",
 		"johnpapa.read-time",
-		"ms-azuretools.vscode-docker",
+		"ms-azuretools.vscode-containers",
 		"ms-vscode.vscode-commander",
 		"ms-vscode.vscode-copilot-vision",
 		"ms-vscode.vscode-websearchforcopilot",
 		"ms-vscode.wordcount",
 		"runarsf.platform-settings",
-		"VisualStudioExptTeam.vscodeintellicode",
 		"yechunan.json-color-token"
 	],
 	"remote.SSH.remotePlatform": {
