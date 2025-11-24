@@ -1,2 +1,4 @@
+*.instructions.md
 *.lock
+*.prompt.md
 pnpm-lock.yaml
