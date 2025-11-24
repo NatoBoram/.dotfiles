@@ -30,7 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## [0.0.1] - 2025-11-14
 
-## Added
+### Added
 
 - An example changelog file.
 
@@ -38,7 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ### Guiding Principles
 
-- Changelogs are for _humans_, not machines.
+- Changelogs are for *humans*, not machines.
 - There should be an entry for every single version.
 - The same types of changes should be grouped.
 - Versions and sections should be linkable.
