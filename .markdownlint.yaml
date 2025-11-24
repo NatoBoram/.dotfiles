@@ -1,1 +1,9 @@
 default: true
+emphasis-style:
+  style: asterisk
+first-line-heading: false
+line-length: false
+no-duplicate-heading:
+  siblings_only: true
+no-hard-tabs:
+  code_blocks: false
