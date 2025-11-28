@@ -273,7 +273,7 @@
 		"scminput": true
 	},
 	"github.copilot.nextEditSuggestions.enabled": false,
-	"github.copilot.selectedCompletionModel": "gemini-2.5-pro",
+	"github.copilot.selectedCompletionModel": "gemini-3-pro",
 	"github.gitProtocol": "ssh",
 	"githubPullRequests.assignCreated": "${user}",
 	"githubPullRequests.commentExpandState": "collapseAll",

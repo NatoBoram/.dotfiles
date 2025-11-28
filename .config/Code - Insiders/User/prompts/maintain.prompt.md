@@ -182,3 +182,27 @@ interface Foo {
 	baz: number
 }
 ```
+
+Pop scope-wide scopes.
+
+```ts
+async function foo(): Promise<Bar | undefined> {
+	try {
+		return await bar()
+	} catch (error) {
+		console.log("An error occurred.", error)
+		return
+	}
+}
+```
+
+```ts
+async function foo(): Promise<Bar | undefined> {
+	const b = await bar().catch((error: unknown) => {
+		console.error("An error occurred.", error)
+	})
+	if (!b) return
+
+	return b
+}
+```
