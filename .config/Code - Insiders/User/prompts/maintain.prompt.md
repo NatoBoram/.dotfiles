@@ -187,6 +187,7 @@ Pop scope-wide scopes.
 
 ```ts
 async function foo(): Promise<Bar | undefined> {
+	// Bad: the entire scope of the function is used by a `try`.
 	try {
 		return await bar()
 	} catch (error) {
@@ -194,15 +195,49 @@ async function foo(): Promise<Bar | undefined> {
 		return
 	}
 }
+
+async function baz() {
+	const f = await foo()
+}
 ```
 
 ```ts
-async function foo(): Promise<Bar | undefined> {
+async function baz() {
+	// Good: the error handling was moved to the parent function
 	const b = await bar().catch((error: unknown) => {
 		console.error("An error occurred.", error)
 	})
-	if (!b) return
-
-	return b
 }
+```
+
+Turn comments preceding declarations into TSDocs.
+
+```ts
+// ...
+const foo = "bar"
+```
+
+```ts
+/** ... */
+const foo = "bar"
+```
+
+Pop complex ternaries by making new functions.
+
+```ts
+const foo = bar
+	? (() => {
+			// ...
+	  })()
+	: undefined
+```
+
+```ts
+function baz(bar: boolean) {
+	if (!bar) return
+
+	// ...
+}
+
+const foo = baz(bar)
 ```
