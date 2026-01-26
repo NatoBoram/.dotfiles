@@ -40,6 +40,7 @@
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
 	"chat.agent.maxRequests": 40,
+	"chat.agentsControl.clickBehavior": "default",
 	"chat.commandCenter.triStateToggle": false,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
 	"chat.edits2.enabled": true,
