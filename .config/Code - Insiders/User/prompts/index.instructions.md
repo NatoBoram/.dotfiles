@@ -1,5 +1,6 @@
 ---
 applyTo: "**/index.ts"
+name: index.ts
 ---
 
 - Never declare anything here, only re-export existing code

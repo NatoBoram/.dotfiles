@@ -2,7 +2,7 @@
 agent: agent
 name: maintain
 description: Applies small refactors to improve maintainability
-argument-hint: Files and folders that need refactoring
+argument-hint: Code, files and folders that need refactoring
 ---
 
 Turn mutable variables into constants by making new functions.

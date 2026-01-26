@@ -1,5 +1,6 @@
 ---
 applyTo: "**/main.ts"
+name: main.ts
 ---
 
 - Include the Node shebang

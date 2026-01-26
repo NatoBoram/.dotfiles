@@ -1,5 +1,7 @@
 ---
-applyTo: CHANGELOG.md
+applyTo: "**/CHANGELOG.md"
+name: CHANGELOG.md
+description: All notable changes to this project will be documented in this file.
 ---
 
 # Changelog

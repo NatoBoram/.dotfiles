@@ -1,5 +1,6 @@
 ---
 applyTo: "**/package.json"
+name: package.json
 ---
 
 Never edit dependency versions manually; always go through `pnpm` instead.

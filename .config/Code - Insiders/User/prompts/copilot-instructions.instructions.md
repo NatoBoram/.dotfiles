@@ -1,6 +1,6 @@
 ---
 applyTo: ".github/copilot-instructions.md,.github/instructions/*.instructions.md"
-name: copilot-instructions
+name: copilot-instructions.md
 description: Generate workspace instructions files
 ---
 
