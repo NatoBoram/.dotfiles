@@ -40,14 +40,18 @@
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
 	"chat.agent.maxRequests": 40,
+	"chat.commandCenter.triStateToggle": false,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
 	"chat.edits2.enabled": true,
 	"chat.focusWindowOnConfirmation": false,
 	"chat.mcp.autostart": "newAndOutdated",
+	"chat.tools.terminal.autoApprove": {
+		"/^pnpm\\s+(install|run)\\b/": true
+	},
+	"chat.tools.terminal.outputLocation": "terminal",
 	"codesnap.containerPadding": "1em",
 	"codesnap.realLineNumbers": true,
 	"codesnap.showWindowTitle": true,
-	// "codesnap.shutterAction": "copy",
 	"codesnap.transparentBackground": true,
 	"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
 	"css.format.maxPreserveNewLines": 1,
@@ -103,9 +107,9 @@
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
 	"editor.unicodeHighlight.allowedCharacters": {
+		"×": true,
 		"“": false,
 		"”": false,
-		"×": true,
 		"➕": true,
 		"➖": true
 	},
@@ -127,8 +131,6 @@
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		".env": ".env.*",
-		".env.*": ".env.${capture}.local",
 		"*.ex": "${capture}.eex, ${capture}.html.heex",
 		"*.go": "${capture}_test.go",
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
@@ -136,6 +138,8 @@
 		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
 		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts, ${capture}.bench.ts",
 		"*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js, ${capture}.bench.ts",
+		".env": ".env.*",
+		".env.*": ".env.${capture}.local",
 		"compose.yaml": "compose.override.yaml, *.compose.yaml, *.compose.override.yaml",
 		"minepkg.toml": ".minepkg-lock.toml",
 		"mix.exs": "mix.lock",
@@ -160,11 +164,6 @@
 		"usernamehw"
 	],
 	"files.associations": {
-		".env": "env",
-		".env.*": "env",
-		".env.*.local": "env",
-		".gcloudignore": "ignore",
-		".markdownlintrc": "json",
 		"*.appxmanifest": "xml",
 		"*.ash": "shellscript",
 		"*.compose.override.yaml": "dockercompose",
@@ -178,17 +177,22 @@
 		"*.pwsh": "powershell",
 		"*.sql": "sql",
 		"*.stow-local-ignore": "ignore",
+		".env": "env",
+		".env.*": "env",
+		".env.*.local": "env",
+		".gcloudignore": "ignore",
+		".markdownlintrc": "json",
 		"authorized_keys": "ssh_config",
 		"pubspec.lock": "yaml"
 	},
 	"files.autoSave": "onWindowChange",
 	"files.exclude": {
-		"_build": true,
-		".elixir_ls": true,
 		"**/.classpath": true,
 		"**/.factorypath": true,
 		"**/.project": true,
 		"**/.settings": true,
+		".elixir_ls": true,
+		"_build": true,
 		"deps": true,
 		"node_modules": false,
 		"vendor": true
@@ -337,6 +341,13 @@
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"javascript.updateImportsOnPaste.enabled": false,
 	"js/ts.implicitProjectConfig.target": "ESNext",
+	"json.schemaDownload.trustedDomains": {
+		"https://json-schema.org/": true,
+		"https://json.schemastore.org": true,
+		"https://raw.githubusercontent.com/": true,
+		"https://schemastore.azurewebsites.net/": true,
+		"https://www.schemastore.org/": true
+	},
 	"liveshare.featureSet": "insiders",
 	"liveshare.presence": true,
 	"liveshare.showInStatusBar": "whileCollaborating",
@@ -346,8 +357,12 @@
 		"first-line-heading": false,
 		"line-length": false,
 		"no-blanks-blockquote": false,
-		"no-duplicate-heading": { "siblings_only": true },
-		"no-hard-tabs": { "code_blocks": false },
+		"no-duplicate-heading": {
+			"siblings_only": true
+		},
+		"no-hard-tabs": {
+			"code_blocks": false
+		},
 		"no-inline-html": false,
 		"reference-links-images": false
 	},
@@ -488,6 +503,7 @@
 	"traycer.commentIndicator": "Hover",
 	"tsco.addPublicModifierIfMissing": false,
 	"tsco.useRegions": false,
+	"typescript.experimental.useTsgo": false,
 	"typescript.locale": "en-CA",
 	"typescript.npm": "/home/nato/.asdf/shims/bun",
 	"typescript.preferences.preferTypeOnlyAutoImports": true,
@@ -521,7 +537,6 @@
 		}
 	},
 	"workbench.colorTheme": "Nord",
-	"workbench.editor.defaultBinaryEditor": "default",
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.revealIfOpen": true,
