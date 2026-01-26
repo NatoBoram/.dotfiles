@@ -58,7 +58,7 @@ PATH="$HOME/.mix/escripts:$PATH"
 PATH="$HOME/Applications/flutter/bin:$PATH"
 
 # GitHub Copilot CLI
-source ~/.gh.zsh
+#. ~/.gh.zsh
 
 # Go
 export GOPATH="$HOME/go"
