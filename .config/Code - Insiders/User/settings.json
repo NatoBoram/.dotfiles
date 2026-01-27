@@ -344,7 +344,8 @@
 	"js/ts.implicitProjectConfig.target": "ESNext",
 	"json.schemaDownload.trustedDomains": {
 		"https://json-schema.org/": true,
-		"https://json.schemastore.org": true,
+		"https://json.schemastore.org/": true,
+		"https://jsr.io": true,
 		"https://raw.githubusercontent.com/": true,
 		"https://schemastore.azurewebsites.net/": true,
 		"https://www.schemastore.org/": true
