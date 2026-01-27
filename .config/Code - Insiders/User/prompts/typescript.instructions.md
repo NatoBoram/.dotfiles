@@ -6,15 +6,15 @@ description: Write maintainable TypeScript code
 
 ## Table of contents
 
-* Comments
-* Control flow
-* Immutability
-* Linting
-* Logging
-* Modernization
-* Purity
-* Simplification
-* Typing
+- Comments
+- Control flow
+- Immutability
+- Linting
+- Logging
+- Modernization
+- Purity
+- Simplification
+- Typing
 
 ## Comments
 
@@ -175,7 +175,7 @@ Do not disable linting.
 ```ts
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment >
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 ```
 
 ```ts
@@ -303,7 +303,7 @@ Pop complex ternaries by making new functions.
 const foo = bar
 	? (() => {
 			// ...
-	  })()
+		})()
 	: undefined
 ```
 
