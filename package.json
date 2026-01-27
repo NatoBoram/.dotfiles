@@ -1,5 +1,6 @@
 {
 	"name": "@natoboram/.dotfiles",
+	"version": "0.0.0",
 	"description": "My personal dotfiles",
 	"keywords": [
 		"dotfiles"
