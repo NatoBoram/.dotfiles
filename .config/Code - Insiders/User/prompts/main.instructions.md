@@ -1,5 +1,5 @@
 ---
-applyTo: "**/main.ts"
+applyTo: "**/main.js,**/main.ts"
 name: main.ts
 ---
 

@@ -1,5 +1,5 @@
 ---
-applyTo: "**/*.ts"
+applyTo: "**/*.js,**/*.ts"
 name: TypeScript
 description: Write maintainable TypeScript code
 ---

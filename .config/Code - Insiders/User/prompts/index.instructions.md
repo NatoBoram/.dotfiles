@@ -1,5 +1,5 @@
 ---
-applyTo: "**/index.ts"
+applyTo: "**/index.js,**/index.ts"
 name: index.ts
 ---
 
