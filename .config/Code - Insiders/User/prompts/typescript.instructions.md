@@ -85,6 +85,31 @@ async function baz() {
 }
 ```
 
+Move function declarations to the top level.
+
+```ts
+function foo() {
+	const baz = true
+
+	function bar() {
+		baz
+	}
+
+	bar()
+}
+```
+
+```ts
+function bar(baz: boolean) {
+	baz
+}
+
+function foo() {
+	const baz = true
+	bar(baz)
+}
+```
+
 Replace usage of `if` on enums by `switch`.
 
 ```ts
