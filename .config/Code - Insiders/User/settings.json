@@ -108,9 +108,9 @@
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
 	"editor.unicodeHighlight.allowedCharacters": {
-		"×": true,
 		"“": false,
 		"”": false,
+		"×": true,
 		"➕": true,
 		"➖": true
 	},
@@ -132,6 +132,8 @@
 	"explorer.copyRelativePathSeparator": "/",
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
+		".env": ".env.*",
+		".env.*": ".env.${capture}.local",
 		"*.ex": "${capture}.eex, ${capture}.html.heex",
 		"*.go": "${capture}_test.go",
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
@@ -139,8 +141,6 @@
 		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
 		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts, ${capture}.bench.ts",
 		"*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js, ${capture}.bench.ts",
-		".env": ".env.*",
-		".env.*": ".env.${capture}.local",
 		"compose.yaml": "compose.override.yaml, *.compose.yaml, *.compose.override.yaml",
 		"minepkg.toml": ".minepkg-lock.toml",
 		"mix.exs": "mix.lock",
@@ -165,6 +165,12 @@
 		"usernamehw"
 	],
 	"files.associations": {
+		".env": "env",
+		".env.*": "env",
+		".env.*.local": "env",
+		".env.local": "env",
+		".gcloudignore": "ignore",
+		".markdownlintrc": "json",
 		"*.appxmanifest": "xml",
 		"*.ash": "shellscript",
 		"*.compose.override.yaml": "dockercompose",
@@ -178,22 +184,18 @@
 		"*.pwsh": "powershell",
 		"*.sql": "sql",
 		"*.stow-local-ignore": "ignore",
-		".env": "env",
-		".env.*": "env",
-		".env.*.local": "env",
-		".gcloudignore": "ignore",
-		".markdownlintrc": "json",
+		"*utils.ts": "typescript",
 		"authorized_keys": "ssh_config",
 		"pubspec.lock": "yaml"
 	},
 	"files.autoSave": "onWindowChange",
 	"files.exclude": {
+		"_build": true,
+		".elixir_ls": true,
 		"**/.classpath": true,
 		"**/.factorypath": true,
 		"**/.project": true,
 		"**/.settings": true,
-		".elixir_ls": true,
-		"_build": true,
 		"deps": true,
 		"node_modules": false,
 		"vendor": true
