@@ -133,7 +133,7 @@ switch (foo) {
 
 ## Immutability
 
-Turn mutable variables into constants by making new functions.
+Avoid mutable variables by making new functions.
 
 ```ts
 let foo
