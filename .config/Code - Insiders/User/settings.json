@@ -50,6 +50,7 @@
 		"/^pnpm\\s+(install|run)\\b/": true
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
+	"chat.viewSessions.orientation": "stacked",
 	"codesnap.containerPadding": "1em",
 	"codesnap.realLineNumbers": true,
 	"codesnap.showWindowTitle": true,

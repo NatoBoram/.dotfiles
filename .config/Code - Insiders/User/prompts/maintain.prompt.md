@@ -228,7 +228,7 @@ Pop complex ternaries by making new functions.
 const foo = bar
 	? (() => {
 			// ...
-	  })()
+		})()
 	: undefined
 ```
 
