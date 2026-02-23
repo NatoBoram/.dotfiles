@@ -1,9 +1,9 @@
 {
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][php][postcss][scss][snippets][sql][typescript][typescriptreact][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][json5][jsonc][markdown][php][postcss][scss][snippets][sql][typescript][typescriptreact][xml][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.minimap.maxColumn": 80
 	},
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][php][postcss][scss][snippets][svelte][typescript][typescriptreact][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][json5][jsonc][php][postcss][scss][snippets][svelte][typescript][typescriptreact][xml][yaml]": {
 		"editor.rulers": [80]
 	},
 	"[dart]": {
@@ -152,6 +152,7 @@
 	},
 	"explorer.incrementalNaming": "smart",
 	"explorer.openEditors.sortOrder": "alphabetical",
+	"extensions.allowOpenInModalEditor": false,
 	"extensions.autoRestart": true,
 	"extensions.trustedPublishers": [
 		"bradlc",
@@ -230,6 +231,12 @@
 	"github.copilot.chat.codeGeneration.instructions": [
 		{
 			"file": ".prettierrc.yaml"
+		},
+		{
+			"file": "tsconfig.json"
+		},
+		{
+			"file": "eslint.config.ts"
 		}
 	],
 	"github.copilot.chat.codesearch.enabled": true,
@@ -498,6 +505,7 @@
 	"terminal.integrated.enableMultiLinePasteWarning": false,
 	"terminal.integrated.fontFamily": "Fira Mono, monospace, MesloLGS NF, Noto Color Emoji",
 	"terminal.integrated.hideOnStartup": "whenEmpty",
+	"terminal.integrated.initialHint": false,
 	"terminal.integrated.minimumContrastRatio": 4.5,
 	"terminal.integrated.scrollback": 8000,
 	"terminal.integrated.showExitAlert": false,
@@ -542,6 +550,7 @@
 		}
 	},
 	"workbench.colorTheme": "Nord",
+	"workbench.editor.allowOpenInModalEditor": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.revealIfOpen": true,
