@@ -248,6 +248,31 @@ foos.forEach(foo => bars.push(foo.bar))
 const bars = foos.map(({ bar }) => bar)
 ```
 
+Move data accesses up to have more pure functions down.
+
+```ts
+function foo(bar: string): string {
+	const baz = getBaz()
+	return bar + baz
+}
+```
+
+```ts
+function foo(bar: string, baz: string): string {
+	return bar + baz
+}
+```
+
+Pass the full object to prevent data loss.
+
+```ts
+function foo(date: string) {}
+```
+
+```ts
+function foo(date: Date) {}
+```
+
 ## Simplification
 
 Use intermediate variables to extract logic from string interpolation.
@@ -336,7 +361,7 @@ if (!isFoo(bar)) return
 const foo = bar
 ```
 
-Don't do tuples, create an interface instead.
+Don't do tuples; create an interface instead.
 
 ```ts
 const foo = ["bar", true]
