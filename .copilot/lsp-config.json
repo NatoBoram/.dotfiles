@@ -1,0 +1,44 @@
+{
+	"lspServers": {
+		"dart": {
+			"args": ["language-server"],
+			"command": "dart",
+			"fileExtensions": {
+				".dart": "dart"
+			}
+		},
+		"go": {
+			"command": "gopls",
+			"fileExtensions": {
+				".go": "go"
+			}
+		},
+		"rust": {
+			"command": "rust-analyzer",
+			"fileExtensions": {
+				".rs": "rust"
+			}
+		},
+		"svelte": {
+			"args": ["--stdio"],
+			"command": "svelteserver",
+			"fileExtensions": {
+				".svelte": "svelte"
+			}
+		},
+		"typescript": {
+			"args": ["--lsp", "--stdio"],
+			"command": "tsgo",
+			"fileExtensions": {
+				".cjs": "javascript",
+				".cts": "typescript",
+				".js": "javascript",
+				".jsx": "javascript",
+				".mjs": "javascript",
+				".mts": "typescript",
+				".ts": "typescript",
+				".tsx": "typescript"
+			}
+		}
+	}
+}
