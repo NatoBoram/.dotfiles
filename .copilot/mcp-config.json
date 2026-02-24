@@ -2,29 +2,21 @@
 	"mcpServers": {
 		"context7": {
 			"headers": {},
-			"tools": ["*"],
-			"type": "sse",
-			"url": "https://mcp.context7.com/sse"
-		},
-		"deepwiki": {
-			"headers": {},
-			"tools": ["*"],
-			"type": "sse",
-			"url": "https://mcp.deepwiki.com/sse"
-		},
-		"exa": {
-			"headers": {},
+			"source": "user",
 			"tools": ["*"],
 			"type": "http",
-			"url": "https://mcp.exa.ai/mcp"
+			"url": "https://mcp.context7.com/mcp"
 		},
 		"github": {
 			"headers": {},
+			"oauthClientId": "Iv23li3Y2ZC8uztHXFAM",
+			"oauthPublicClient": false,
 			"tools": [
 				"get_commit",
+				"get_copilot_job_status",
 				"get_file_contents",
-				"get_issue",
 				"get_issue_comments",
+				"get_issue",
 				"get_label",
 				"get_latest_release",
 				"get_me",
@@ -32,6 +24,7 @@
 				"get_tag",
 				"get_team_members",
 				"get_teams",
+				"issue_read",
 				"list_branches",
 				"list_commits",
 				"list_issue_types",
@@ -51,11 +44,11 @@
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp"
 		},
-		"grep": {
-			"headers": {},
+		"tavily": {
+			"source": "user",
 			"tools": ["*"],
 			"type": "http",
-			"url": "https://mcp.grep.app"
+			"url": "https://mcp.tavily.com/mcp"
 		}
 	}
 }
