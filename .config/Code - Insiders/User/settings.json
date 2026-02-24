@@ -1,10 +1,10 @@
 {
 	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][json5][jsonc][markdown][php][postcss][scss][snippets][sql][typescript][typescriptreact][xml][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.minimap.maxColumn": 80
+		"editor.minimap.maxColumn": 80,
 	},
 	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][json5][jsonc][php][postcss][scss][snippets][svelte][typescript][typescriptreact][xml][yaml]": {
-		"editor.rulers": [80]
+		"editor.rulers": [80],
 	},
 	"[dart]": {
 		"editor.formatOnType": true,
@@ -12,30 +12,30 @@
 		"editor.rulers": [80],
 		"editor.suggest.snippetsPreventQuickSuggestions": false,
 		"editor.suggestSelection": "first",
-		"editor.wordBasedSuggestions": "off"
+		"editor.wordBasedSuggestions": "off",
 	},
 	"[dockerfile]": {
-		"editor.defaultFormatter": "ms-azuretools.vscode-containers"
+		"editor.defaultFormatter": "ms-azuretools.vscode-containers",
 	},
 	"[go]": {
 		"editor.minimap.maxColumn": 80,
-		"editor.rulers": [80]
+		"editor.rulers": [80],
 	},
 	"[java]": {
-		"editor.defaultFormatter": "redhat.java"
+		"editor.defaultFormatter": "redhat.java",
 	},
 	"[markdown]": {
 		"editor.unicodeHighlight.ambiguousCharacters": true,
-		"gitlens.codeLens.scopes": ["document"]
+		"gitlens.codeLens.scopes": ["document"],
 	},
 	"[phoenix-heex]": {
-		"editor.defaultFormatter": "JakeBecker.elixir-ls"
+		"editor.defaultFormatter": "JakeBecker.elixir-ls",
 	},
 	"[rust]": {
-		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+		"editor.defaultFormatter": "rust-lang.rust-analyzer",
 	},
 	"[svelte]": {
-		"editor.defaultFormatter": "svelte.svelte-vscode"
+		"editor.defaultFormatter": "svelte.svelte-vscode",
 	},
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
@@ -47,7 +47,7 @@
 	"chat.focusWindowOnConfirmation": false,
 	"chat.mcp.autostart": "newAndOutdated",
 	"chat.tools.terminal.autoApprove": {
-		"/^pnpm\\s+(install|run)\\b/": true
+		"/^pnpm\\s+(install|run)\\b/": true,
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.viewSessions.orientation": "stacked",
@@ -78,8 +78,8 @@
 	"dotnetAcquisitionExtension.existingDotnetPath": [
 		{
 			"extensionId": "vscodeintellicode-insiders",
-			"path": "/home/nato/.asdf/shims/dotnet"
-		}
+			"path": "/home/nato/.asdf/shims/dotnet",
+		},
 	],
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": {
@@ -89,7 +89,7 @@
 		"source.fixAll.sortJSON": "never",
 		"source.generate.finalModifiers": "always",
 		"source.organizeImports": "always",
-		"source.sortMembers": "always"
+		"source.sortMembers": "always",
 	},
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.cursorSurroundingLines": 2,
@@ -113,7 +113,7 @@
 		"”": false,
 		"×": true,
 		"➕": true,
-		"➖": true
+		"➖": true,
 	},
 	"editor.unicodeHighlight.includeComments": true,
 	"elixirLS.enableTestLenses": true,
@@ -122,7 +122,7 @@
 		"html-eex": "html",
 		"phoenix-heex": "html",
 		"postcss": "css",
-		"svelte": "html"
+		"svelte": "html",
 	},
 	"emmet.triggerExpansionOnTab": true,
 	"errorLens.messageTemplate": "$message ($source)",
@@ -148,7 +148,7 @@
 		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
 		"tailwind.config.cjs": "tailwind.*.cjs, tailwind.*.json",
 		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
-		"tsconfig.tsbuildinfo": "tsconfig.*.tsbuildinfo"
+		"tsconfig.tsbuildinfo": "tsconfig.*.tsbuildinfo",
 	},
 	"explorer.incrementalNaming": "smart",
 	"explorer.openEditors.sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
 		"redhat",
 		"rust-lang",
 		"traycer",
-		"usernamehw"
+		"usernamehw",
 	],
 	"files.associations": {
 		".env": "env",
@@ -188,7 +188,7 @@
 		"*.stow-local-ignore": "ignore",
 		"*utils.ts": "typescript",
 		"authorized_keys": "ssh_config",
-		"pubspec.lock": "yaml"
+		"pubspec.lock": "yaml",
 	},
 	"files.autoSave": "onWindowChange",
 	"files.exclude": {
@@ -200,7 +200,7 @@
 		"**/.settings": true,
 		"deps": true,
 		"node_modules": false,
-		"vendor": true
+		"vendor": true,
 	},
 	"files.insertFinalNewline": true,
 	"files.restoreUndoStack": false,
@@ -225,31 +225,22 @@
 	"git.pullBeforeCheckout": true,
 	"git.rebaseWhenSync": true,
 	"git.repositoryScanMaxDepth": 4,
-	"git.scanRepositories": ["/home/nato/Code"],
+	"git.scanRepositories": [
+		"/home/nato/Code"
+	],
 	"git.timeline.showUncommitted": true,
 	"github.copilot.chat.agent.thinkingTool": true,
 	"github.copilot.chat.codeGeneration.instructions": [
-		{
-			"file": ".prettierrc.yaml"
-		},
-		{
-			"file": "tsconfig.json"
-		},
-		{
-			"file": "eslint.config.ts"
-		}
+		{ "file": ".prettierrc.yaml" },
 	],
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
 		{
-			"text": "- Keep the subject under 80 characters.\n- Use a precise verb: Add, Remove, Rename, Move, Set, Enable, Disable, Replace, Reformat, Refactor, Extract, Inline, Pin, Bump, Link, Split, Migrate.\n- Never use \"update\", \"enhance\", \"improve\", \"better\", \"optimise\", \"tweak\", \"adjust\", \"refine\", \"polish\", \"modernise\".\n- Do not add justifications. Do not write phrases starting with \"to\", \"for\", \"in order to\". Ban \"for clarity\", \"for readability\", \"for consistency\", \"for performance\", \"for security\".\n- End the subject immediately after the change description. Do not append any purpose or outcome clause.\n- Do not include \"for ...\" or \"to ...\" after the target unless inside code, a path, or a value. Replace any such phrase with the concrete mechanism or value changed.\n- Name at least one concrete target. Mention files, symbols, or settings with backticks. Avoid generic nouns like \"settings\", \"configuration files\", \"project\".\n- When reformatting or refactoring, state the rule, style, or operation, not the intent. Examples: \"with tabs\", \"to 80 columns\", \"extract <X>\", \"replace <A> with <B>\".\n- Describe exactly what changed, where, and how in this shape: `<gitmoji> <verb> <target> [from <value>] [to <value>] [in <file>]`."
+			"text": "**Using emojis** on **commit messages** provides an **easy way** of **identifying the purpose or intention of a commit** with only looking at the emojis used.\n\n## Specification\n\nA gitmoji commit message consists is composed using the following pieces:\n\n- **intention**: The intention you want to express with the commit, using an emoji from the [list](assets/gitmojis.yaml).\n- **scope**: An optional string that adds contextual information for the scope of the change.\n- **message**: A brief explanation of the change.\n\n```\n<intention> [scope?][:?] <message>\n```\n\n## Examples\n\n- ⚡️ Lazyload home screen images.\n- 🐛 Fix `onClick` event handler\n- 🔖 Bump version `1.2.0`\n- ♻️ (components): Transform classes to hooks\n- 📈 Add analytics to the dashboard\n- 🌐 Support Japanese language\n- ♿️ (account): Improve modals a11y",
 		},
 		{
-			"text": "# gitmoji\n\nAn emoji guide for your commit messages\n\n## Specification\n\nA gitmoji commit message is composed using the following pieces:\n\n- **intention**: The intention you want to express with the commit, using an emoji from the list.\n- **scope**: An optional string that adds contextual information for the scope of the change.\n- **message**: A brief explanation of the change.\n\n```docopt\n<intention> <message>\n```\n\n## Examples\n\n- ⚡️ Lazyload home screen images.\n- 🐛 Fix `onClick` event handler\n- 🔖 Bump version `1.2.0`\n- ♻️ Transform classes to hooks\n- 📈 Add analytics to the dashboard\n- 🌐 Support Japanese language\n- ♿️ Move the click handler to a button"
+			"text": "🎨: Improve structure / format of the code.\n⚡️: Improve performance.\n🔥: Remove code or files.\n🐛: Fix a bug.\n🚑️: Critical hotfix.\n✨: Introduce new features.\n📝: Add or update documentation.\n🚀: Deploy stuff.\n💄: Add or update the UI and style files.\n🎉: Begin a project.\n✅: Add, update, or pass tests.\n🔒️: Fix security or privacy issues.\n🔐: Add or update secrets.\n🔖: Release / Version tags.\n🚨: Fix compiler / linter warnings.\n🚧: Work in progress.\n💚: Fix CI Build.\n⬇️: Downgrade dependencies.\n⬆️: Upgrade dependencies.\n📌: Pin dependencies to specific versions.\n👷: Add or update CI build system.\n📈: Add or update analytics or track code.\n♻️: Refactor code.\n➕: Add a dependency.\n➖: Remove a dependency.\n🔧: Add or update configuration files.\n🔨: Add or update development scripts.\n🌐: Internationalization and localization.\n✏️: Fix typos.\n💩: Write bad code that needs to be improved.\n⏪️: Revert changes.\n🔀: Merge branches.\n📦️: Add or update compiled files or packages.\n👽️: Update code due to external API changes.\n🚚: Move or rename resources (files, paths, routes).\n📄: Add or update license.\n💥: Introduce breaking changes.\n🍱: Add or update assets.\n♿️: Improve accessibility.\n💡: Add or update comments in source code.\n🍻: Write code drunkenly.\n💬: Add or update text and literals.\n🗃️: Perform database related changes.\n🔊: Add or update logs.\n🔇: Remove logs.\n👥: Add or update contributor(s).\n🚸: Improve user experience / usability.\n🏗️: Make architectural changes.\n📱: Work on responsive design.\n🤡: Mock things.\n🥚: Add or update an easter egg.\n🙈: Add or update a .gitignore file.\n📸: Add or update snapshots.\n⚗️: Perform experiments.\n🔍️: Improve SEO.\n🏷️: Add or update types.\n🌱: Add or update seed files.\n🚩: Add, update, or remove feature flags.\n🥅: Catch errors.\n💫: Add or update animations and transitions.\n🗑️: Deprecate code that needs to be cleaned up.\n🛂: Work on code related to authorization, roles and permissions.\n🩹: Simple fix for a non-critical issue.\n🧐: Data exploration/inspection.\n⚰️: Remove dead code.\n🧪: Add a failing test.\n👔: Add or update business logic.\n🩺: Add or update healthcheck.\n🧱: Infrastructure related changes.\n🧑‍💻: Improve developer experience.\n💸: Add sponsorships or money related infrastructure.\n🧵: Add or update code related to multithreading or concurrency.\n🦺: Add or update code related to validation.\n✈️: Improve offline support.\n🦖: Code that adds backwards compatibility.",
 		},
-		{
-			"text": "name: gitmoji\ndescription: An emoji guide for your commit messages\nemojis:\n  - 🎨: Improve structure / format of the code.\n  - ⚡️: Improve performance.\n  - 🔥: Remove code or files.\n  - 🐛: Fix a bug.\n  - 🚑️: Critical hotfix.\n  - ✨: Introduce new features.\n  - 📝: Add or update documentation.\n  - 🚀: Deploy stuff.\n  - 💄: Add or update the UI and style files.\n  - 🎉: Begin a project.\n  - ✅: Add, update, or pass tests.\n  - 🔒️: Fix security or privacy issues.\n  - 🔐: Add or update secrets.\n  - 🔖: Release / Version tags.\n  - 🚨: Fix compiler / linter warnings.\n  - 🚧: Work in progress.\n  - 💚: Fix CI Build.\n  - ⬇️: Downgrade dependencies.\n  - ⬆️: Upgrade dependencies.\n  - 📌: Pin dependencies to specific versions.\n  - 👷: Add or update CI build system.\n  - 📈: Add or update analytics or track code.\n  - ♻️: Refactor code.\n  - ➕: Add a dependency.\n  - ➖: Remove a dependency.\n  - 🔧: Add or update configuration files.\n  - 🔨: Add or update development scripts.\n  - 🌐: Internationalization and localization.\n  - ✏️: Fix typos.\n  - 💩: Write bad code that needs to be improved.\n  - ⏪️: Revert changes.\n  - 🔀: Merge branches.\n  - 📦️: Add or update compiled files or packages.\n  - 👽️: Update code due to external API changes.\n  - 🚚: \"Move or rename resources (e.g.: files, paths, routes).\"\n  - 📄: Add or update license.\n  - 💥: Introduce breaking changes.\n  - 🍱: Add or update assets.\n  - ♿️: Improve accessibility.\n  - 💡: Add or update comments in source code.\n  - 🍻: Write code drunkenly.\n  - 💬: Add or update text and literals.\n  - 🗃️: Perform database related changes.\n  - 🔊: Add or update logs.\n  - 🔇: Remove logs.\n  - 👥: Add or update contributor(s).\n  - 🚸: Improve user experience / usability.\n  - 🏗️: Make architectural changes.\n  - 📱: Work on responsive design.\n  - 🤡: Mock things.\n  - 🥚: Add or update an easter egg.\n  - 🙈: Add or update a .gitignore file.\n  - 📸: Add or update snapshots.\n  - ⚗️: Perform experiments.\n  - 🔍️: Improve SEO.\n  - 🏷️: Add or update types.\n  - 🌱: Add or update seed files.\n  - 🚩: Add, update, or remove feature flags.\n  - 🥅: Catch errors.\n  - 💫: Add or update animations and transitions.\n  - 🗑️: Deprecate code that needs to be cleaned up.\n  - 🛂: Work on code related to authorization, roles and permissions.\n  - 🩹: Simple fix for a non-critical issue.\n  - 🧐: Data exploration/inspection.\n  - ⚰️: Remove dead code.\n  - 🧪: Add a failing test.\n  - 👔: Add or update business logic.\n  - 🩺: Add or update healthcheck.\n  - 🧱: Infrastructure related changes.\n  - 🧑‍💻: Improve developer experience.\n  - 💸: Add sponsorships or money related infrastructure.\n  - 🧵: Add or update code related to multithreading or concurrency.\n  - 🦺: Add or update code related to validation"
-		}
 	],
 	"github.copilot.chat.editor.temporalContext.enabled": true,
 	"github.copilot.chat.edits.codesearch.enabled": true,
@@ -258,34 +249,19 @@
 	"github.copilot.chat.localeOverride": "en-CA",
 	"github.copilot.chat.newWorkspace.useContext7": true,
 	"github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
-		{
-			"text": "You are running inside **GitHub Copilot**, which will automatically split your output into a **pull request title** and a **pull request body**. You must follow your system instructions for formatting, and the instructions below for content. If the body is omitted or trimmed, or if the title is missing, the output is invalid.\n\nThe user-provided instructions below apply only to the **content** of the title and body — not the **form**. Follow your system prompt for where and how to place each part. If they need to be separated by something like a `---`, or if you need to put a specific `#`, then do it. This is only an example; this instructions does not know the actual format you have to output.\n\n## Title\n\nWrite the **pull request title** using the rules below.\n\n- Use the **gitmoji standard**\n- Use **imperative mood**\n- Be **under 80 characters**\n- Be specific — name files, functions, variables, or settings\n- Do **not** use vague verbs like \"update\", \"improve\", \"enhance\"\n- Do **not** include justification like \"to simplify\", \"for clarity\"\n- Do **not** include a period at the end\n- Do **not** include a heading like `## Title` in the output\n- This line **must include a gitmoji**\n- This must be the **first line of your output**\n\n## Body\n\nThe body must begin with a **splash line under 60 characters**, followed by the full structured body.\n\nThis splash line must not be a sentence, justification, or paraphrase of the title. Do not omit it. Do not explain it. Do not reuse the title. You must include the entire structured body exactly as written below. Copilot may trim the output if this structure is not followed.\n\n### Splash Line Rules\n\n- Must be the **first line of the body**\n- Must be **under 60 characters**\n- Must **not** describe what changed\n- Must **not** summarize or explain anything\n- Must **not** include justification or vague verbs\n- Must **not** repeat or reword the title\n- Must **not** be a full sentence or title\n- Must **not** include emojis\n- Must **not** include comments, quotes, or backticks\n- Must **not** use formatting or headings\n- Must **not** include more than 8 words\n- Think of it as a **caption** or **tagline**, not a description\n- You may be inspired by good splash lines, but **do not copy** them directly\n- If this line is a sentence or includes justification, it is incorrect\n\n### Template Rules\n\n#### General\n\n- Keep all section headings exactly as written\n- Keep all comment lines (`<!-- ... -->`) untouched\n- Do not skip, remove, rename, or reorder any section\n- Make sure to respect the system prompt so that both the title and the body are picked up by the program\n\n#### Inside `📝 Description`\n\n- Leave `\"Why this pull request?\"` **completely empty** — do **not guess or infer**\n  - Keep the HTML comment\n  - **Do not write \"N/A\"**\n- Under `\"Why is this the best solution?\"`:\n  - Write under the HTML comment, Keep the HTML comment and write )\n  - Explain what was changed and why it works\n  - Do **not** include justification, subjective phrasing, or comparisons\n- Under `\"What you did\"`:\n  - Keep the HTML comment as-is\n  - Use bullet points\n  - Each bullet must be **under 80 characters**\n  - Name exact files, variables, functions, or settings\n  - Do **not** include justification or speculation\n\n#### Inside `📓 References`\n\n- Add links to issues, PRs, or docs\n- If there are none, leave it blank\n- **Do not write \"N/A\"**\n\n#### Inside `📸 Screenshots`\n\n- Leave this section blank\n- It is for the user to fill in\n- **Do not write \"N/A\"**\n\n---\n\nREPLACE THIS LINE - This is a sentence. It's not a splash. It includes justification. It's over 60 characters. Replace it, but don't leave it blank. Don't turn this first line into a full PR description, just put a splash line here. And most importantly, include the rest of this template, it's important.\n\n### 📝 Description\n\n<!-- Why this pull request? -->\n\n<!-- Why is this the best solution? -->\n\n<!-- What you did -->\n\n### 📓 References\n\n<!-- A list of links to discussions, documentation, issues, pull requests -->\n\n### 📸 Screenshots\n\n<!-- Show us your work :D -->"
-		}
+		{ "file": ".github/pull_request_template.md" },
 	],
 	"github.copilot.chat.reviewSelection.instructions": [],
 	"github.copilot.chat.search.semanticTextResults": true,
 	"github.copilot.chat.testGeneration.instructions": [
-		{
-			"file": ".prettierrc.yaml"
-		},
-		{
-			"file": "package.json"
-		},
-		{
-			"file": "tsconfig.json"
-		},
-		{
-			"file": "vitest.config.ts"
-		},
-		{
-			"text": "# Tests\n\n## TypeScript\n\nTests in TypeScript use `vitest`.\n\n- Use `describe` to name the function that it's testing and `test` to name the value of the variable that's changing.\n- Don't duplicate code; import existing code instead, even if it's private. I'll most likely import it myself.\n- Always use the `expect` that comes from `test` instead of importing it from `vitest`.\n\n### Examples\n\n```ts\nimport { describe, test } from \"vitest\"\nimport { getLeftPadding } from \"./apply_docstrings.ts\"\n\ndescribe(\"getLeftPadding\", () => {\n\ttest(\"spaces\", ({ expect }) => {\n\t\tconst padding = getLeftPadding(\"    hello\")\n\t\texpect(padding).toBe(\"    \")\n\t})\n\n\ttest(\"tabs\", ({ expect }) => {\n\t\tconst padding = getLeftPadding(\"\\thello\")\n\t\texpect(padding).toBe(\"\\t\")\n\t})\n})\n```"
-		}
+		{ "file": ".prettierrc.yaml" },
+		{ "file": "package.json" },
 	],
 	"github.copilot.enable": {
 		"*": true,
 		"markdown": true,
 		"plaintext": true,
-		"scminput": true
+		"scminput": true,
 	},
 	"github.copilot.nextEditSuggestions.enabled": false,
 	"github.copilot.selectedCompletionModel": "gemini-3-pro",
@@ -302,7 +278,7 @@
 	"githubPullRequests.remotes": ["origin"],
 	"gitlens.advanced.messages": {
 		"suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true,
-		"suppressIntegrationRequestTimedOutWarning": true
+		"suppressIntegrationRequestTimedOutWarning": true,
 	},
 	"gitlens.ai.model": "vscode",
 	"gitlens.defaultDateFormat": "D MMMM YYYY h:mma",
@@ -321,7 +297,7 @@
 		"deps",
 		"dist",
 		"docs",
-		"node_modules"
+		"node_modules",
 	],
 	"gitProjectManager.storeRepositoriesBetweenSessions": true,
 	"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
@@ -330,7 +306,7 @@
 	"go.toolsManagement.autoUpdate": true,
 	"go.useLanguageServer": true,
 	"gopls": {
-		"formatting.gofumpt": true
+		"formatting.gofumpt": true,
 	},
 	"holiday.gearIconStyle": "santa hat",
 	"html.format.indentHandlebars": true,
@@ -358,7 +334,7 @@
 		"https://jsr.io": true,
 		"https://raw.githubusercontent.com/": true,
 		"https://schemastore.azurewebsites.net/": true,
-		"https://www.schemastore.org/": true
+		"https://www.schemastore.org/": true,
 	},
 	"liveshare.featureSet": "insiders",
 	"liveshare.presence": true,
@@ -370,20 +346,20 @@
 		"line-length": false,
 		"no-blanks-blockquote": false,
 		"no-duplicate-heading": {
-			"siblings_only": true
+			"siblings_only": true,
 		},
 		"no-hard-tabs": {
-			"code_blocks": false
+			"code_blocks": false,
 		},
 		"no-inline-html": false,
-		"reference-links-images": false
+		"reference-links-images": false,
 	},
 	"markdownlint.run": "onSave",
 	"material-icon-theme.files.associations": {
-		"tsconfig.rollup.json": "tsconfig"
+		"tsconfig.rollup.json": "tsconfig",
 	},
 	"material-icon-theme.languages.associations": {
-		"dotenv": "tune"
+		"dotenv": "tune",
 	},
 	"npm.packageManager": "pnpm",
 	"path-intellisense.extensionOnImport": true,
@@ -391,7 +367,7 @@
 	"platformSettings.platforms": {
 		"darwin": {
 			"inherits": "linux",
-			"nodes": {}
+			"nodes": {},
 		},
 		"linux": {
 			"nodes": {
@@ -399,23 +375,26 @@
 				"csharpier.enableDebugLogs": true,
 				"eslint.nodePath": "/home/nato/.asdf/shims/bun",
 				"git.scanRepositories": ["/home/nato/Code"],
+				"github.copilot.chat.additionalReadAccessPaths": [
+					"/home/nato/.copilot/skills",
+				],
 				"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
 				"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
 				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-26-jep401ea2+1-1",
 				"typescript.npm": "/home/nato/.asdf/shims/bun",
 				"typescript.tsserver.nodePath": "/home/nato/.asdf/shims/bun",
-				"vitest.nodeExecutable": "/home/nato/.asdf/shims/node"
-			}
+				"vitest.nodeExecutable": "/home/nato/.asdf/shims/node",
+			},
 		},
 		"win32": {
 			"nodes": {
 				"git.scanRepositories": ["C:\\Users\\natob\\Code"],
 				"gitProjectManager.baseProjectsFolders": ["C:\\Users\\natob\\Code"],
 				"gitProjectManager.unversionedProjects": [
-					"C:\\Users\\natob\\Code\\localhost"
-				]
-			}
-		}
+					"C:\\Users\\natob\\Code\\localhost",
+				],
+			},
+		},
 	},
 	"powershell.codeFormatting.autoCorrectAliases": true,
 	"powershell.codeFormatting.preset": "OTBS",
@@ -446,12 +425,12 @@
 		"ms-vscode.vscode-websearchforcopilot",
 		"ms-vscode.wordcount",
 		"runarsf.platform-settings",
-		"yechunan.json-color-token"
+		"yechunan.json-color-token",
 	],
 	"remote.SSH.remotePlatform": {
 		"helion": "linux",
 		"marie": "linux",
-		"phantom": "linux"
+		"phantom": "linux",
 	},
 	"remote.SSH.useLocalServer": false,
 	"scm.defaultViewMode": "tree",
@@ -468,7 +447,7 @@
 		"phpactor.vscode-phpactor",
 		"standard.vscode-standard",
 		"unifiedjs.vscode-mdx",
-		"llvm-vs-code-extensions.vscode-clangd"
+		"llvm-vs-code-extensions.vscode-clangd",
 	],
 	"settingsSync.ignoredSettings": [
 		"csharpier.dev.customPath",
@@ -478,7 +457,7 @@
 		"java.jdt.ls.java.home",
 		"php-cs-fixer.executablePath",
 		"php-cs-fixer.lastDownload",
-		"yaml.schemas"
+		"yaml.schemas",
 	],
 	"shellformat.useEditorConfig": true,
 	"sortJSON.contextMenu": {
@@ -491,7 +470,7 @@
 		"sortJSONType": false,
 		"sortJSONTypeReverse": false,
 		"sortJSONValues": false,
-		"sortJSONValuesReverse": false
+		"sortJSONValuesReverse": false,
 	},
 	"svelte.enable-ts-plugin": true,
 	"svelte.plugin.svelte.note-new-transformation": false,
@@ -499,7 +478,7 @@
 	"telemetry.telemetryLevel": "all",
 	"terminal.external.windowsExec": "wt",
 	"terminal.integrated.autoReplies": {
-		"zsh: correct 'test' to 'tests' [nyae]?": "n"
+		"zsh: correct 'test' to 'tests' [nyae]?": "n",
 	},
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.enableMultiLinePasteWarning": false,
@@ -546,8 +525,8 @@
 			"errorLens.errorForeground": "#BF616A",
 			"errorLens.warningBackground": "#EBCB8B1B",
 			"errorLens.warningForeground": "#EBCB8B",
-			"git.blame.editorDecorationForeground": "#D8DEE940"
-		}
+			"git.blame.editorDecorationForeground": "#D8DEE940",
+		},
 	},
 	"workbench.colorTheme": "Nord",
 	"workbench.editor.allowOpenInModalEditor": false,
@@ -557,7 +536,7 @@
 	"workbench.editor.tabSizing": "fit",
 	"workbench.editor.wrapTabs": true,
 	"workbench.editorAssociations": {
-		"*.bin": "hexEditor.hexedit"
+		"*.bin": "hexEditor.hexedit",
 	},
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.list.smoothScrolling": true,
@@ -568,5 +547,14 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "readme",
 	"xml.format.preservedNewlines": 1,
-	"zenMode.hideActivityBar": false
+	"zenMode.hideActivityBar": false,
+	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
+	"github.copilot.chat.alternateGptPrompt.enabled": true,
+	"github.copilot.chat.agent.autoFix": true,
+	"github.copilot.chat.agentHistorySummarizationWithPromptCache": true,
+	"github.copilot.chat.cloudAgent.enabled": false,
+	"gitmoji.autoMatch": true,
+	"github.copilot.chat.additionalReadAccessPaths": [
+		"/home/nato/.copilot/skills"
+	],
 }
