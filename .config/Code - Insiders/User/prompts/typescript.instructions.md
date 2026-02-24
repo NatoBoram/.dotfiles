@@ -18,23 +18,31 @@ description: Write maintainable TypeScript code
 
 ## Comments
 
-Remove comments that repeat the next line.
+### Remove comments that repeat the next line
+
+#### Bad
 
 ```ts
 // Assign `"foo"` to `bar`.
 const bar = "foo"
 ```
 
+#### Good
+
 ```ts
 const bar = "foo"
 ```
 
-Turn comments preceding declarations into TSDocs.
+### Turn comments preceding declarations into TSDocs
+
+#### Bad
 
 ```ts
 // ...
 const foo = "bar"
 ```
+
+#### Good
 
 ```ts
 /** ... */
@@ -43,7 +51,11 @@ const foo = "bar"
 
 ## Control flow
 
-Reduce nesting by using early returns.
+You'll notice that Prettier can get pretty unweildy with deeply nested code. This is a good indicator that you should refactor your code.
+
+### Prefer early returns
+
+#### Bad
 
 ```ts
 if (foo) {
@@ -53,12 +65,18 @@ if (foo) {
 }
 ```
 
+#### Good
+
 ```ts
 if (!foo || !bar) return
 baz()
 ```
 
-Pop scope-wide scopes.
+### Avoid scope-wide scopes
+
+The solution is simple: Make a function.
+
+#### Bad
 
 ```ts
 async function foo(): Promise<Bar | undefined> {
@@ -76,6 +94,10 @@ async function baz() {
 }
 ```
 
+#### Good
+
+Notice that the function `foo` isn't even needed anymore.
+
 ```ts
 async function baz() {
 	// Good: the error handling was moved to the parent function.
@@ -85,7 +107,9 @@ async function baz() {
 }
 ```
 
-Move function declarations to the top level.
+### Avoid closures
+
+#### Bad
 
 ```ts
 function foo() {
@@ -99,6 +123,8 @@ function foo() {
 }
 ```
 
+#### Good
+
 ```ts
 function bar(baz: boolean) {
 	baz
@@ -110,7 +136,9 @@ function foo() {
 }
 ```
 
-Replace usage of `if` on enums by `switch`.
+### Replace usage of `if` on enums by `switch`
+
+#### Bad
 
 ```ts
 if (foo === "bar") {
@@ -119,6 +147,8 @@ if (foo === "bar") {
 	// ...
 }
 ```
+
+#### Good
 
 ```ts
 switch (foo) {
@@ -131,9 +161,37 @@ switch (foo) {
 }
 ```
 
+### Avoid `try`/`catch`
+
+`try`/`catch` is a control flow that's akin to an undeterministic `goto`.
+
+#### Bad
+
+```ts
+try {
+	await foo()
+} catch (e) {
+	console.error(e)
+}
+```
+
+#### Good
+
+```ts
+const result = await foo().catch((error: unknown) => {
+	console.error("An error occurred", { error })
+})
+```
+
 ## Immutability
 
-Avoid mutable variables by making new functions.
+### Prefer `const` over `let`
+
+Whenever you have a mutable variable, consider making a function that gives you the correct result directly. This allows reading the parent function while only focusing on the flow that actually matters.
+
+The solution is simple: Make a function.
+
+#### Bad
 
 ```ts
 let foo
@@ -141,6 +199,8 @@ if (bar) {
 	foo = "baz"
 }
 ```
+
+#### Good
 
 ```ts
 function getFoo(bar: boolean): string | undefined {
@@ -151,7 +211,13 @@ function getFoo(bar: boolean): string | undefined {
 const foo = getFoo(bar)
 ```
 
-Make interfaces immutables. If they can't be immutable, add a TSDoc comment explaining why.
+### Prefer `readonly`
+
+In interfaces and classes, mark properties as `readonly` whenever possible. Immutability is to be expected; mutability is the exception. When there's a non-`readonly` property, it signals that there's something somewhere in the codebase potentially doing something terribly wrong.
+
+If a property must be mutable, document why with a TSDoc comment.
+
+#### Bad
 
 ```ts
 interface Foo {
@@ -159,6 +225,8 @@ interface Foo {
 	baz: number
 }
 ```
+
+#### Good
 
 ```ts
 interface Foo {
@@ -170,7 +238,11 @@ interface Foo {
 
 ## Linting
 
-Do not disable linting.
+### Don't disable it
+
+Always try to fix the issue first.
+
+#### Bad
 
 ```ts
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -178,27 +250,37 @@ Do not disable linting.
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 ```
 
+#### Good
+
 ```ts
 // @ts-expect-error The library has a bug where the `foo` property is missing.
 ```
 
 ## Logging
 
-Add causes to errors.
+### Add causes to errors
+
+#### Bad
 
 ```ts
 throw new Error(`Couldn't foo bar #${bar.id}.`)
 ```
 
+#### Good
+
 ```ts
 throw new Error(`Couldn't foo a bar.`, { cause: { bar } })
 ```
 
-Log full errors.
+### Log full errors
+
+#### Bad
 
 ```ts
 console.log("An error has occurred.", { error: error.message })
 ```
+
+#### Good
 
 ```ts
 console.error("An error has occurred.", { error })
@@ -206,7 +288,9 @@ console.error("An error has occurred.", { error })
 
 ## Modernization
 
-Turn enums into const assertions.
+### Don't use `enum`
+
+#### Bad
 
 ```ts
 enum FooBar {
@@ -214,6 +298,8 @@ enum FooBar {
 	bar = "bar",
 }
 ```
+
+#### Good
 
 ```ts
 const FooBar = {
@@ -224,11 +310,15 @@ const FooBar = {
 type FooBar = (typeof FooBar)[keyof typeof FooBar]
 ```
 
-Split type imports from value imports.
+### Split type imports from value imports
+
+#### Bad
 
 ```ts
 import { Bar, type Foo } from "baz"
 ```
+
+#### Good
 
 ```ts
 import type { Foo } from "baz"
@@ -237,18 +327,26 @@ import { Bar } from "baz"
 
 ## Purity
 
-Avoid side-effects.
+### Avoid side-effects
+
+See your code linearly instead of as a spaghetti plate. Stuff goes in, undergoes transformations, stuff goes out.
+
+#### Bad
 
 ```ts
 const bars: Bar[] = []
 foos.forEach(foo => bars.push(foo.bar))
 ```
 
+#### Good
+
 ```ts
 const bars = foos.map(({ bar }) => bar)
 ```
 
-Move data accesses up to have more pure functions down.
+### Move data accesses up to have more pure functions down
+
+#### Bad
 
 ```ts
 function foo(bar: string): string {
@@ -257,17 +355,23 @@ function foo(bar: string): string {
 }
 ```
 
+#### Good
+
 ```ts
 function foo(bar: string, baz: string): string {
 	return bar + baz
 }
 ```
 
-Pass the full object to prevent data loss.
+### Pass the full object to prevent data loss
+
+#### Bad
 
 ```ts
 function foo(date: string) {}
 ```
+
+#### Good
 
 ```ts
 function foo(date: Date) {}
@@ -275,13 +379,19 @@ function foo(date: Date) {}
 
 ## Simplification
 
-Use intermediate variables to extract logic from string interpolation.
+### Use intermediate variables in string interpolations
+
+Putting logic inside of a string interpolation makes the entire function harder to read. In those cases, use an intermediate variable to make the string more readable.
+
+#### Bad
 
 ```ts
 const foo = `
 ${bar ? "baz" : "qux"}
 `
 ```
+
+#### Good
 
 ```ts
 const bazqux = bar ? "baz" : "qux"
@@ -290,7 +400,9 @@ ${bazqux}
 `
 ```
 
-Simplify boolean expressions.
+### Simplify boolean expressions
+
+#### Bad
 
 ```ts
 if (bar.length > 0 ? true : false) {
@@ -298,19 +410,25 @@ if (bar.length > 0 ? true : false) {
 }
 ```
 
+#### Good
+
 ```ts
-if (bar.length) {
+if (bar) {
 	// ...
 }
 ```
 
-Make interfaces for inline types.
+### Make interfaces for inline types
+
+#### Bad
 
 ```ts
 function foo(): { bar: string } {
 	return { bar: "bar" }
 }
 ```
+
+#### Good
 
 ```ts
 interface Foo {
@@ -322,7 +440,9 @@ function foo(): Foo {
 }
 ```
 
-Pop complex ternaries by making new functions.
+### Pop complex ternaries by making new functions
+
+#### Bad
 
 ```ts
 const foo = bar
@@ -331,6 +451,8 @@ const foo = bar
 		})()
 	: undefined
 ```
+
+#### Good
 
 ```ts
 function baz(bar: boolean) {
@@ -344,11 +466,17 @@ const foo = baz(bar)
 
 ## Typing
 
-Don't pretend something is something else. Instead, use an adapter or a type guard.
+### Don't use type assertions
+
+Don't pretend something is something else. Instead, take the time to properly investigate the issue and use an adapter or a type guard. Request more context from code files from the user if needed.
+
+#### Bad
 
 ```ts
 const foo = bar as unknown as Foo
 ```
+
+#### Good
 
 ```ts
 // Good: use an adapter
@@ -361,11 +489,17 @@ if (!isFoo(bar)) return
 const foo = bar
 ```
 
-Don't do tuples; create an interface instead.
+### Don't do tuples
+
+Prefer interfaces.
+
+#### Bad
 
 ```ts
 const foo = ["bar", true]
 ```
+
+#### Good
 
 ```ts
 interface Foo {
