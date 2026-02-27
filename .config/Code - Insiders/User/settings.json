@@ -340,8 +340,6 @@
 	"java.saveActions.organizeImports": true,
 	"java.semanticHighlighting.enabled": true,
 	"java.signatureHelp.enabled": true,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"javascript.updateImportsOnPaste.enabled": false,
 	"js/ts.experimental.useTsgo": true,
 	"js/ts.implicitProjectConfig.target": "ESNext",
 	"js/ts.locale": "en-CA",
