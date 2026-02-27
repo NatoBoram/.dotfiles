@@ -227,9 +227,19 @@
 	"git.repositoryScanMaxDepth": 4,
 	"git.scanRepositories": ["/home/nato/Code"],
 	"git.timeline.showUncommitted": true,
+	"github.copilot.chat.additionalReadAccessPaths": [
+		"/home/nato/.copilot/skills"
+	],
+	"github.copilot.chat.agent.autoFix": true,
 	"github.copilot.chat.agent.thinkingTool": true,
+	"github.copilot.chat.agentHistorySummarizationWithPromptCache": true,
+	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
+	"github.copilot.chat.alternateGptPrompt.enabled": true,
+	"github.copilot.chat.cloudAgent.enabled": false,
 	"github.copilot.chat.codeGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" }
+		{
+			"file": ".prettierrc.yaml"
+		}
 	],
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
@@ -247,13 +257,19 @@
 	"github.copilot.chat.localeOverride": "en-CA",
 	"github.copilot.chat.newWorkspace.useContext7": true,
 	"github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
-		{ "file": ".github/pull_request_template.md" }
+		{
+			"file": ".github/pull_request_template.md"
+		}
 	],
 	"github.copilot.chat.reviewSelection.instructions": [],
 	"github.copilot.chat.search.semanticTextResults": true,
 	"github.copilot.chat.testGeneration.instructions": [
-		{ "file": ".prettierrc.yaml" },
-		{ "file": "package.json" }
+		{
+			"file": ".prettierrc.yaml"
+		},
+		{
+			"file": "package.json"
+		}
 	],
 	"github.copilot.enable": {
 		"*": true,
@@ -287,6 +303,7 @@
 	"gitlens.showWelcomeOnInstall": false,
 	"gitlens.showWhatsNewAfterUpgrades": false,
 	"gitlens.views.searchAndCompare.files.layout": "tree",
+	"gitmoji.autoMatch": true,
 	"gitmoji.showEmojiCode": true,
 	"gitpod.showReleaseNotes": false,
 	"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
@@ -327,10 +344,14 @@
 	"javascript.updateImportsOnPaste.enabled": false,
 	"js/ts.implicitProjectConfig.target": "ESNext",
 	"json.schemaDownload.trustedDomains": {
+		"https://biomejs.dev": true,
+		"https://developer.microsoft.com/json-schemas/": true,
 		"https://json-schema.org/": true,
 		"https://json.schemastore.org/": true,
 		"https://jsr.io": true,
 		"https://raw.githubusercontent.com/": true,
+		"https://raw.githubusercontent.com/devcontainers/spec/": true,
+		"https://raw.githubusercontent.com/microsoft/vscode/": true,
 		"https://schemastore.azurewebsites.net/": true,
 		"https://www.schemastore.org/": true
 	},
@@ -545,14 +566,5 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "readme",
 	"xml.format.preservedNewlines": 1,
-	"zenMode.hideActivityBar": false,
-	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
-	"github.copilot.chat.alternateGptPrompt.enabled": true,
-	"github.copilot.chat.agent.autoFix": true,
-	"github.copilot.chat.agentHistorySummarizationWithPromptCache": true,
-	"github.copilot.chat.cloudAgent.enabled": false,
-	"gitmoji.autoMatch": true,
-	"github.copilot.chat.additionalReadAccessPaths": [
-		"/home/nato/.copilot/skills"
-	]
+	"zenMode.hideActivityBar": false
 }
