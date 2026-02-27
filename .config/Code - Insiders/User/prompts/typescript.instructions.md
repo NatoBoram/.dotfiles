@@ -33,7 +33,7 @@ const bar = "foo"
 const bar = "foo"
 ```
 
-### Turn comments preceding declarations into TSDocs
+### Turn comments preceding declarations into TSDoc
 
 #### Bad
 
@@ -48,6 +48,10 @@ const foo = "bar"
 /** ... */
 const foo = "bar"
 ```
+
+### Don't put redundant TSDoc
+
+Assume the thing you're writing is within the context of where you're writing it and do not repeat the context. For example, if you don't have anything else to say in `@param` or `@returns` than its name or its type, then it's ok to omit them.
 
 ## Control flow
 
