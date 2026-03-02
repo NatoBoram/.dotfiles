@@ -55,7 +55,7 @@ PATH="$HOME/Applications/elixir/bin:$PATH"
 PATH="$HOME/.mix/escripts:$PATH"
 
 # Flutter
-PATH="$HOME/Applications/flutter/bin:$PATH"
+#PATH="$HOME/Applications/flutter/bin:$PATH"
 
 # GitHub Copilot CLI
 #. ~/.gh.zsh
