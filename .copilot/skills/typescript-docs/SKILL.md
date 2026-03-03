@@ -1,12 +1,21 @@
 ---
 name: typescript-docs
-description: The docs for TypeScript.
+description: "Use when looking up anything about TypeScript. It contains the entire TypeScript documentation."
+argument-hint: "Question about TypeScript."
 license: CC-BY-4.0
 ---
 
-# TypeScript Docs
+## When to use
 
-A lot of information about TypeScript is hidden inside of changelogs. When using this skill, make sure to do a search in [release-notes](./references/release-notes/).
+- You need documentation about TypeScript.
+- You're about to search the web for TypeScript documentation.
+
+## Procedure
+
+1. Identify the user's intent and keywords.
+2. Do text searches in the [references](./references/) folder using tools instead of the terminal to find all relevant references.
+3. Use the selected reference files to answer.
+4. Link and cite each reference file clearly so the user can verify everything.
 
 ## References
 
