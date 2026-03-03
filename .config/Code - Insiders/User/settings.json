@@ -50,6 +50,12 @@
 		"/^pnpm\\s+(install|run)\\b/": true
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
+	"chat.tools.urls.autoApprove": {
+		"https://www.typescriptlang.org": {
+			"approveRequest": false,
+			"approveResponse": true
+		}
+	},
 	"chat.viewSessions.orientation": "stacked",
 	"codesnap.containerPadding": "1em",
 	"codesnap.realLineNumbers": true,
