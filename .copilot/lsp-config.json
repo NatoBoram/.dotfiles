@@ -3,28 +3,19 @@
 		"dart": {
 			"args": ["language-server"],
 			"command": "dart",
-			"fileExtensions": {
-				".dart": "dart"
-			}
+			"fileExtensions": { ".dart": "dart" }
 		},
-		"go": {
-			"command": "gopls",
-			"fileExtensions": {
-				".go": "go"
-			}
-		},
-		"rust": {
-			"command": "rust-analyzer",
-			"fileExtensions": {
-				".rs": "rust"
-			}
-		},
+		"go": { "command": "gopls", "fileExtensions": { ".go": "go" } },
+		"rust": { "command": "rust-analyzer", "fileExtensions": { ".rs": "rust" } },
 		"svelte": {
-			"args": ["--stdio"],
-			"command": "svelteserver",
-			"fileExtensions": {
-				".svelte": "svelte"
-			}
+			"args": ["svelte-language-server@latest", "--stdio"],
+			"command": "bunx",
+			"fileExtensions": { ".svelte": "svelte" }
+		},
+		"turbo": {
+			"args": ["turbo@latest", "daemon"],
+			"command": "bunx",
+			"fileExtensions": { ".json": "json" }
 		},
 		"typescript": {
 			"args": ["--lsp", "--stdio"],

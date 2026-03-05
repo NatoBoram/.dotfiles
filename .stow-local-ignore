@@ -5,6 +5,7 @@
 .markdownlint.yaml
 .prettierrc.yaml
 .stow-local-ignore
+.turbo
 .vscode
 copilot
 flakes
