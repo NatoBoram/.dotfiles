@@ -563,6 +563,7 @@
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.revealIfOpen": true,
 	"workbench.editor.tabSizing": "fit",
+	"workbench.editor.useModal": "off",
 	"workbench.editor.wrapTabs": true,
 	"workbench.editorAssociations": {
 		"*.bin": "hexEditor.hexedit"
