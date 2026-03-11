@@ -277,7 +277,7 @@ You can try this functionality out in a recent version of Visual Studio Code.
 
 Keep in mind that this feature is currently in preview, and we are seeking further feedback on it.
 
-https://github.com/microsoft/TypeScript/pull/53542
+<https://github.com/microsoft/TypeScript/pull/53542>
 
 ## Linked Cursors for JSX Tags
 

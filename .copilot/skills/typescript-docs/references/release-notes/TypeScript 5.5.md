@@ -519,7 +519,7 @@ Whilst we can build `frontend` and `backend` in parallel, we need to first wait 
 How could we improve upon this?
 Well, if a fast tool could generate all those declaration files for `core` _in parallel_, TypeScript then could immediately follow that by type-checking `core`, `frontend`, and `backend` also _in parallel_.
 
-### Solution: Explicit Types!
+### Solution: Explicit Types
 
 The common requirement in both use-cases is that we need a cross-file type-checker to generate declaration files.
 Which is a lot to ask from the tooling community.

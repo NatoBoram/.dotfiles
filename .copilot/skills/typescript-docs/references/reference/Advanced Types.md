@@ -442,7 +442,7 @@ interface Animal {
 interface Bear extends Animal {
   honey: boolean
 }<br/>
-const bear = getBear() 
+const bear = getBear()
 bear.name
 bear.honey
         </pre></code>
@@ -453,8 +453,8 @@ bear.honey
 type Animal = {
   name: string
 }<br/>
-type Bear = Animal & { 
-  honey: Boolean 
+type Bear = Animal & {
+  honey: Boolean
 }<br/>
 const bear = getBear();
 bear.name;

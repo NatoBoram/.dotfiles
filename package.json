@@ -32,10 +32,13 @@
 	],
 	"repository": "github:NatoBoram/.dotfiles",
 	"scripts": {
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"lint": "markdownlint-cli2 \"**/*.md\" && prettier --check .",
+		"lint:fix": "markdownlint-cli2 \"**/*.md\" --fix; prettier --list-different --write ."
 	},
 	"devDependencies": {
 		"@prettier/plugin-xml": "^3.4.2",
+		"markdownlint-cli2": "^0.21.0",
 		"prettier": "^3.6.2"
 	},
 	"type": "module",

@@ -770,7 +770,7 @@ In this release, we leveraged [Mozilla's browser-compat-data](https://github.com
 While it is unlike that you are using them, APIs such as `Account`, `AssertionOptions`, `RTCStatsEventInit`, `MSGestureEvent`, `DeviceLightEvent`, `MSPointerEvent`, `ServiceWorkerMessageEvent`, and `WebAuthentication` have all been removed from `lib.d.ts`.
 This is discussed [in some detail here](https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/991).
 
-https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/991
+<https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/991>
 
 ### `useDefineForClassFields` now defaults to true on `esnext` and eventually on `es2022`
 

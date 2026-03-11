@@ -2,6 +2,7 @@
 .gitattributes
 .github
 .gitignore
+.markdownlint-cli2.yaml
 .markdownlint.yaml
 .prettierrc.yaml
 .stow-local-ignore

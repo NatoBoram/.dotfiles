@@ -1104,15 +1104,15 @@ Scenario: `"/node_modules/pkg/main.mts"` imports `"#internal/utils"` with condit
 
 Resolution process:
 
-1.  Import path starts with `#`, try to resolve through `"imports"`.
-2.  Does `"imports"` exist in the nearest ancestor package.json? **Yes.**
-3.  Does `"#internal/utils"` exist in the `"imports"` object? **No, check for pattern matches.**
-4.  Does any key with a `*` match `"#internal/utils"`? **Yes, `"#internal/*"` matches and sets `utils` to be the substitution.**
-5.  The value at `imports["#internal/*"]` is an object—it must be specifying conditions.
-6.  Does the first condition `"import"` match this request? **Yes.**
-7.  Should we attempt to map the output path to an input path? **No, because the package.json is in `node_modules`.**
-8.  In `./dist/internal/*.mjs`, replace `*` with the substitution `utils`. **`./dist/internal/utils.mjs`**
-9.  Does the path `./dist/internal/utils.mjs` have a recognized TypeScript file extension? **No, try extension substitution.**
+1. Import path starts with `#`, try to resolve through `"imports"`.
+2. Does `"imports"` exist in the nearest ancestor package.json? **Yes.**
+3. Does `"#internal/utils"` exist in the `"imports"` object? **No, check for pattern matches.**
+4. Does any key with a `*` match `"#internal/utils"`? **Yes, `"#internal/*"` matches and sets `utils` to be the substitution.**
+5. The value at `imports["#internal/*"]` is an object—it must be specifying conditions.
+6. Does the first condition `"import"` match this request? **Yes.**
+7. Should we attempt to map the output path to an input path? **No, because the package.json is in `node_modules`.**
+8. In `./dist/internal/*.mjs`, replace `*` with the substitution `utils`. **`./dist/internal/utils.mjs`**
+9. Does the path `./dist/internal/utils.mjs` have a recognized TypeScript file extension? **No, try extension substitution.**
 10. Via [extension substitution](#file-extension-substitution), try the following paths, returning the first one that exists, or `undefined` otherwise:
     1. `./dist/internal/utils.mts`
     2. `./dist/internal/utils.d.mts`

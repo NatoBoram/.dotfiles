@@ -252,7 +252,7 @@ Attempting to use a single `.d.ts` file to type both an ES module entrypoint and
 TypeScript also supports [the `"imports"` field of `package.json`](https://nodejs.org/api/packages.html#packages_imports) in a similar manner by looking for declaration files alongside corresponding files, and supports [packages self-referencing themselves](https://nodejs.org/api/packages.html#packages_self_referencing_a_package_using_its_name).
 These features are generally not as involved to set up, but are supported.
 
-### Your Feedback Wanted!
+### Your Feedback Wanted
 
 As we continue working on TypeScript 4.7, we expect to see more documentation and polish go into this functionality.
 Supporting these new features has been an ambitious under-taking, and that's why we're looking for early feedback on it!

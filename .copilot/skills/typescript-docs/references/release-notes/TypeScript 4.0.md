@@ -663,7 +663,7 @@ For Visual Studio Code, this is the "Include Package JSON Auto Imports" (or `typ
 ![Configuring 'include package JSON auto imports'](https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2020/08/configurePackageJsonAutoImports4-0.png)
 For more details, you can see the [proposal issue](https://github.com/microsoft/TypeScript/issues/37812) along with [the implementing pull request](https://github.com/microsoft/TypeScript/pull/38923).
 
-## Our New Website!
+## Our New Website
 
 [The TypeScript website](https://www.typescriptlang.org/) has recently been rewritten from the ground up and rolled out!
 
@@ -715,7 +715,7 @@ class Derived extends Base {
 
 See more details on [the implementing pull request](https://github.com/microsoft/TypeScript/pull/37894).
 
-### Operands for `delete` must be optional.
+### Operands for `delete` must be optional
 
 When using the `delete` operator in [`strictNullChecks`](/tsconfig#strictNullChecks), the operand must now be `any`, `unknown`, `never`, or be optional (in that it contains `undefined` in the type).
 Otherwise, use of the `delete` operator is an error.

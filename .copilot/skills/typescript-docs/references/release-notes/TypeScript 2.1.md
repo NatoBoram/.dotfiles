@@ -235,8 +235,8 @@ TypeScript injects a handful of helper functions such as `__extends` for inherit
 
 Previously there were two options:
 
-1.  inject helpers in _every_ file that needs them, or
-2.  no helpers at all with [`noEmitHelpers`](/tsconfig#noEmitHelpers).
+1. inject helpers in _every_ file that needs them, or
+2. no helpers at all with [`noEmitHelpers`](/tsconfig#noEmitHelpers).
 
 The two options left more to be desired;
 bundling the helpers in every file was a pain point for customers trying to keep their package size small.

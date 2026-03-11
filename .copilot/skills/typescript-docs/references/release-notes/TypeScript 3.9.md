@@ -52,12 +52,12 @@ TypeScript 3.9 ships with many new speed improvements.
 Our team has been focusing on performance after observing extremely poor editing/compilation speed with packages like material-ui and styled-components.
 We've dived deep here, with a series of different pull requests that optimize certain pathological cases involving large unions, intersections, conditional types, and mapped types.
 
-- https://github.com/microsoft/TypeScript/pull/36576
-- https://github.com/microsoft/TypeScript/pull/36590
-- https://github.com/microsoft/TypeScript/pull/36607
-- https://github.com/microsoft/TypeScript/pull/36622
-- https://github.com/microsoft/TypeScript/pull/36754
-- https://github.com/microsoft/TypeScript/pull/36696
+- <https://github.com/microsoft/TypeScript/pull/36576>
+- <https://github.com/microsoft/TypeScript/pull/36590>
+- <https://github.com/microsoft/TypeScript/pull/36607>
+- <https://github.com/microsoft/TypeScript/pull/36622>
+- <https://github.com/microsoft/TypeScript/pull/36754>
+- <https://github.com/microsoft/TypeScript/pull/36696>
 
 Each of these pull requests gains about a 5-10% reduction in compile times on certain codebases.
 In total, we believe we've achieved around a 40% reduction in material-ui's compile time!
@@ -188,7 +188,7 @@ function getAllFiles(startFileName: string) {
 }
 ```
 
-https://github.com/microsoft/TypeScript/issues/36048
+<https://github.com/microsoft/TypeScript/issues/36048>
 
 ## Editor Improvements
 

@@ -178,6 +178,7 @@ Let’s examine why we picked each of these settings:
 
 - **`target: "es2020"`**. Setting this value to the _lowest_ ECMAScript version that you intend to support ensures the emitted code will not use language features introduced in a later version. Since `target` also implies a corresponding value for `lib`, this also ensures you don’t access globals that may not be available in older environments.
 - **`strict: true`**. Without this, you may write type-level code that ends up in your output `.d.ts` files and errors when a consumer compiles with `strict` enabled. For example, this `extends` clause:
+
   ```ts
   export interface Super {
   	foo: string
@@ -186,7 +187,9 @@ Let’s examine why we picked each of these settings:
   	foo: string | undefined
   }
   ```
+
   is only an error under `strictNullChecks`. On the other hand, it’s very difficult to write code that errors only when `strict` is _disabled_, so it’s highly recommended for libraries to compile with `strict`.
+
 - **`verbatimModuleSyntax: true`**. This setting protects against a few module-related pitfalls that can cause problems for library consumers. First, it prevents writing any import statements that could be interpreted ambiguously based on the user’s value of `esModuleInterop` or `allowSyntheticDefaultImports`. Previously, it was often suggested that libraries compile without `esModuleInterop`, since its use in libraries could force users to adopt it too. However, it’s also possible to write imports that only work _without_ `esModuleInterop`, so neither value for the setting guarantees portability for libraries. `verbatimModuleSyntax` does provide such a guarantee.[^1] Second, it prevents the use of `export default` in modules that will be emitted as CommonJS, which can require bundler users and Node.js ESM users to consume the module differently. See the appendix on [ESM/CJS Interop](/docs/handbook/modules/appendices/esm-cjs-interop.html#library-code-needs-special-considerations) for more details.
 - **`declaration: true`** emits type declaration files alongside the output JavaScript. This is needed for consumers of the library to have any type information.
 - **`sourceMap: true`** and **`declarationMap: true`** emit source maps for the output JavaScript and type declaration files, respectively. These are only useful if the library also ships its source (`.ts`) files. By shipping source maps and source files, consumers of the library will be able to debug the library code somewhat more easily. By shipping declaration maps and source files, consumers will be able to see the original TypeScript sources when they run Go To Definition on imports from the libraries. Both of these represent a tradeoff between developer experience and library size, so it’s up to you whether to include them.

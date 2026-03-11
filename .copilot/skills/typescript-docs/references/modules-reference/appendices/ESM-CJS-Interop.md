@@ -135,6 +135,7 @@ Meanwhile, other transpilers were coming up with a way to solve the same problem
 2. Most likely, this means that runtimes implementing ESM/CJS interop will choose to make default imports of CJS modules _always_ link directly to the whole `exports`, rather than only doing so if the `exports` is a function or primitive.
 3. So, a default import of a true CJS module should work just like a `require` call. But we’ll need a way to disambiguate true CJS modules from our transpiled CJS modules, so we can still transpile `export default "hello"` to `exports.default = "hello"` and have a default import of _that_ module link to `exports.default`. Basically, a default import of one of our own transpiled modules needs to work one way (to simulate ESM-to-ESM imports), while a default import of any other existing CJS module needs to work another way (to simulate how we think ESM-to-CJS imports will work).
 4. When we transpile an ES module to CJS, let’s add a special extra field to the output:
+
    ```ts
    exports.A = {}
    exports.B = {}
@@ -142,7 +143,9 @@ Meanwhile, other transpilers were coming up with a way to solve the same problem
    // Extra special flag!
    exports.__esModule = true
    ```
+
    that we can check for when we transpile a default import:
+
    ```ts
    // import hello from "./module";
    const _mod = require("./module")

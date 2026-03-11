@@ -433,7 +433,7 @@ bear.honey;
 type Animal = {
   name: string;
 }<br/>
-type Bear = Animal & { 
+type Bear = Animal & {
   honey: boolean;
 }<br/>
 const bear = getBear();
