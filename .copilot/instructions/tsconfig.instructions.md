@@ -1,5 +1,6 @@
 ---
 applyTo: "**/tsconfig.json,**/tsconfig.*.json"
+name: tsconfig.json
 ---
 
 ## Regular projects
