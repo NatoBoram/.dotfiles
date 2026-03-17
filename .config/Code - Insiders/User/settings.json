@@ -51,10 +51,15 @@
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.urls.autoApprove": {
-		"https://www.typescriptlang.org": {
-			"approveRequest": false,
-			"approveResponse": true
-		}
+		"https://code.visualstudio.com": true,
+		"https://docs.gitlab.com": true,
+		"https://github.com": true,
+		"https://modelcontextprotocol.io": true,
+		"https://raw.githubusercontent.com": true,
+		"https://shields.io": true,
+		"https://www.npmjs.com": true,
+		"https://www.reddit.com": true,
+		"https://www.typescriptlang.org": true
 	},
 	"chat.viewSessions.orientation": "stacked",
 	"codesnap.containerPadding": "1em",
@@ -577,5 +582,7 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "readme",
 	"xml.format.preservedNewlines": 1,
-	"zenMode.hideActivityBar": false
+	"zenMode.hideActivityBar": false,
+	"github.copilot.chat.agentDebugLog.enabled": true,
+	"github.copilot.chat.agentDebugLog.fileLogging.enabled": true
 }

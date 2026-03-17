@@ -39,29 +39,26 @@
 			"type": "http",
 			"url": "https://docs.coderabbit.ai/mcp"
 		},
-		"cognitionai/deepwiki": {
+		"context7": {
+			"gallery": "https://api.mcp.github.com",
+			"headers": {
+				"CONTEXT7_API_KEY": "${input:context7_api_key}"
+			},
+			"type": "http",
+			"url": "https://mcp.context7.com/mcp",
+			"version": "1.0.0"
+		},
+		"deepwiki": {
 			"gallery": "https://api.mcp.github.com",
 			"type": "http",
 			"url": "https://mcp.deepwiki.com/sse",
 			"version": "1.0.0"
 		},
-		"com.stackoverflow.mcp/mcp": {
-			"gallery": "https://api.mcp.github.com",
-			"type": "http",
-			"url": "https://mcp.stackoverflow.com",
-			"version": "1.1.3"
-		},
 		"exa": {
 			"type": "http",
 			"url": "https://mcp.exa.ai/mcp"
 		},
-		"getsentry/sentry-mcp": {
-			"gallery": "https://api.mcp.github.com",
-			"type": "http",
-			"url": "https://mcp.sentry.dev/mcp",
-			"version": "1.0.0"
-		},
-		"github/github-mcp-server": {
+		"github": {
 			"gallery": "https://api.mcp.github.com",
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp",
@@ -85,10 +82,22 @@
 			"command": "bunx",
 			"type": "stdio"
 		},
+		"sentry": {
+			"gallery": "https://api.mcp.github.com",
+			"type": "http",
+			"url": "https://mcp.sentry.dev/mcp",
+			"version": "1.0.0"
+		},
 		"sequential-thinking": {
 			"args": ["@modelcontextprotocol/server-sequential-thinking@latest"],
 			"command": "bunx",
 			"type": "stdio"
+		},
+		"stackoverflow": {
+			"gallery": "https://api.mcp.github.com",
+			"type": "http",
+			"url": "https://mcp.stackoverflow.com",
+			"version": "1.1.3"
 		},
 		"tavily": {
 			"args": ["tavily-mcp@latest"],
@@ -97,15 +106,6 @@
 				"TAVILY_API_KEY": "${input:tavily_api_key}"
 			},
 			"type": "stdio"
-		},
-		"upstash/context7": {
-			"gallery": "https://api.mcp.github.com",
-			"headers": {
-				"CONTEXT7_API_KEY": "${input:context7_api_key}"
-			},
-			"type": "http",
-			"url": "https://mcp.context7.com/mcp",
-			"version": "1.0.0"
 		}
 	}
 }
