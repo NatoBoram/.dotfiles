@@ -68,7 +68,7 @@ Thus, it follows that in a README it is desirable to have:
 
 You don't need to use _this_ format, but try to be consistent to save your users precious cognitive cycles.
 
-The ordering presented here is lovingly referred to as "cognitive funneling," and can be imagined as a funnel held upright, where the widest end contains the broadest more pertinent details, and moving deeper down into the funnel presents more specific details that are pertinent for only a reader who is interested enough in your work to have reached that deeply in the document. Finally, the bottom can be reserved for details only for those intrigued by the deeper context of the work (background, credits, biblio, etc.).
+The ordering presented here is lovingly referred to as "cognitive funneling," and can be imagined as a funnel held upright, where the widest end contains the broadest more pertinent details, and moving deeper down into the funnel presents more specific details that are pertinent for only a reader who is interested enough in your work to have reached that deeply in the document. Finally, the bottom can be reserved for details only for those intrigued by the deeper context of the work (credits, biblio, etc.).
 
 Once again, the Perl monks have wisdom to share on the subject:
 
@@ -94,37 +94,32 @@ Go forth, brave module spelunker, and make your work discoverable and usable thr
 
 Outside of the key points of the article, there are other practices you can follow (or not follow) to raise your README's quality bar even further and maximize its usefulness to others:
 
-1. Consider including a **Background** section if your module depends on important but not widely known abstractions or other ecosystems. The function of [`bisecting-between`](https://github.com/hackergrrl/bisecting-between) is not immediately obvious from its name, so it has a detailed _Background_ section to define and link to the big concepts and abstractions one needs to understand to use and grok it. This is also a great place to explain the module's motivation if similar modules already exist on npm.
+1. Include information on types of arguments and return parameters if it's not obvious. Prefer convention wherever possible (`cb` probably means callback function, `num` probably means a `Number`, etc.).
 
-2. Aggressively linkify! If you talk about other modules, ideas, or people, make that reference text a link so that visitors can more easily grok your module and the ideas it builds on. Few modules exist in a vacuum: all work comes from other work, so it pays to help users follow your module's history and inspiration.
+2. Include the example code in **Usage** as a file in your repo -- maybe as `example.js`. It's great to have README code that users can actually run if they clone the repository.
 
-3. Include information on types of arguments and return parameters if it's not obvious. Prefer convention wherever possible (`cb` probably means callback function, `num` probably means a `Number`, etc.).
+3. Be judicious in your use of badges. They're easy to abuse. They can also be a breeding ground for bikeshedding and endless debate. They add visual noise to your README and generally only function if the user is reading your Markdown in a browser online, since the images are often hosted elsewhere on the internet. For each badge, consider: "what real value is this badge providing to the typical viewer of this README?" Do you have a CI badge to show build/test status? This signal would better reach important parties by emailing maintainers or automatically creating an issue. Always consider the audience of the data in your README and ask yourself if there's a flow for that data that can better reach its intended audience.
 
-4. Include the example code in **Usage** as a file in your repo -- maybe as `example.js`. It's great to have README code that users can actually run if they clone the repository.
-
-5. Be judicious in your use of badges. They're easy to abuse. They can also be a breeding ground for bikeshedding and endless debate. They add visual noise to your README and generally only function if the user is reading your Markdown in a browser online, since the images are often hosted elsewhere on the internet. For each badge, consider: "what real value is this badge providing to the typical viewer of this README?" Do you have a CI badge to show build/test status? This signal would better reach important parties by emailing maintainers or automatically creating an issue. Always consider the audience of the data in your README and ask yourself if there's a flow for that data that can better reach its intended audience.
-
-6. API formatting is highly bikesheddable. Use whatever format you think is clearest, but make sure your format expresses important subtleties:
+4. API formatting is highly bikesheddable. Use whatever format you think is clearest, but make sure your format expresses important subtleties:
    1. which parameters are optional, and their defaults
    2. type information, where it is not obvious from convention
    3. for `opts` object parameters, all keys and values that are accepted
    4. don't shy away from providing a tiny example of an API function's use if it is not obvious or fully covered in the **Usage** section. However, this can also be a strong signal that the function is too complex and needs to be refactored, broken into smaller functions, or removed altogether
    5. aggressively linkify specialized terminology! In markdown you can keep [footnotes](https://daringfireball.net/projects/markdown/syntax#link) at the bottom of your document, so referring to them several times throughout becomes cheap. Some of my personal preferences on API formatting can be found [here](https://github.com/hackergrrl/common-readme/blob/master/api_formatting.md)
 
-7. If your module is a small collection of stateless functions, having a **Usage** section as a Node REPL session of function calls and results might communicate usage more clearly than a source code file to run.
+5. If your module is a small collection of stateless functions, having a **Usage** section as a Node REPL session of function calls and results might communicate usage more clearly than a source code file to run.
 
-8. If your module provides a CLI (command line interface) instead of (or in addition to) a programmatic API, show usage examples as command invocations and their output. If you create or modify a file, `cat` it to demonstrate the change before and after.
+6. If your module provides a CLI (command line interface) instead of (or in addition to) a programmatic API, show usage examples as command invocations and their output. If you create or modify a file, `cat` it to demonstrate the change before and after.
 
-9. Don't forget to use `package.json` [keywords](https://docs.npmjs.com/files/package.json#keywords) to direct module spelunkers to your doorstep.
+7. Don't forget to use `package.json` [keywords](https://docs.npmjs.com/files/package.json#keywords) to direct module spelunkers to your doorstep.
 
-10. The more you change your API, the more work you need to exert updating documentation -- the implication here is that you should keep your APIs small and concretely defined early on. Requirements change over time, but instead of front-loading assumptions into the APIs of your modules, load them up one level of abstraction: the module set itself. If the requirements _do_ change and 'do-one-concrete-thing' no longer makes sense, then simply write a new module that does the thing you need. The 'do-one-concrete-thing' module remains a valid and valuable model for the npm ecosystem, and your course correction cost you nothing but a simple substitution of one module for another.
+8. The more you change your API, the more work you need to exert updating documentation -- the implication here is that you should keep your APIs small and concretely defined early on. Requirements change over time, but instead of front-loading assumptions into the APIs of your modules, load them up one level of abstraction: the module set itself. If the requirements _do_ change and 'do-one-concrete-thing' no longer makes sense, then simply write a new module that does the thing you need. The 'do-one-concrete-thing' module remains a valid and valuable model for the npm ecosystem, and your course correction cost you nothing but a simple substitution of one module for another.
 
-11. Finally, please remember that your version control repository and its embedded README will outlive your [repository host](https://github.com) and any of the things you hyperlink to -- especially images -- so _inline_ anything that is essential to future users grokking your work.
+9 Finally, please remember that your version control repository and its embedded README will outlive your [repository host](https://github.com) and any of the things you hyperlink to -- especially images -- so _inline_ anything that is essential to future users grokking your work.
 
 ## Bonus: The README Checklist
 
 - [ ] One-liner explaining the purpose of the module
-- [ ] Necessary background context & links
 - [ ] Potentially unfamiliar terms link to informative sources
 - [ ] Clear, _runnable_ example of usage
 - [ ] Installation instructions
