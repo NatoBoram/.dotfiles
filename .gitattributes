@@ -1,3 +1,4 @@
 .local/share/gedit/styles/** linguist-generated
+.stow-local-ignore linguist-language="Ignore List"
 .themes/** linguist-generated
 pnpm-lock.yaml linguist-generated
