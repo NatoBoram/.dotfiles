@@ -1,0 +1,98 @@
+{
+	"name": "@natoboram/bun",
+	"version": "0.0.0",
+	"description": "Packages globally installed by Bun.",
+	"keywords": [
+		"bun",
+		"dotfiles"
+	],
+	"homepage": "https://github.com/NatoBoram/.dotfiles/tree/main/.bun/install/global",
+	"bugs": {
+		"url": "https://github.com/NatoBoram/.dotfiles/issues",
+		"email": "10495562+NatoBoram@users.noreply.github.com"
+	},
+	"license": "AGPL-3.0-or-later",
+	"author": {
+		"name": "Nato Boram",
+		"url": "https://github.com/NatoBoram",
+		"email": "10495562+NatoBoram@users.noreply.github.com"
+	},
+	"funding": [
+		{
+			"type": "individual",
+			"url": "https://github.com/sponsors/NatoBoram"
+		},
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/NatoBoram"
+		},
+		{
+			"type": "individual",
+			"url": "https://paypal.me/NatoBoram/5"
+		}
+	],
+	"repository": "github:NatoBoram/.dotfiles",
+	"dependencies": {
+		"@angular/cli": "latest",
+		"@biomejs/biome": "latest",
+		"@capacitor/assets": "latest",
+		"@capacitor/cli": "latest",
+		"@changesets/cli": "latest",
+		"@forge/cli": "latest",
+		"@github/copilot": "latest",
+		"@google-cloud/functions-framework": "latest",
+		"@google/gemini-cli": "latest",
+		"@hey-api/openapi-ts": "latest",
+		"@ionic/cli": "latest",
+		"@microsoft/eslint-formatter-sarif": "latest",
+		"@modelcontextprotocol/server-memory": "latest",
+		"@napi-rs/cli": "latest",
+		"@natoboram/based.ts": "latest",
+		"@openai/codex": "latest",
+		"@prettier/plugin-php": "latest",
+		"@prettier/plugin-xml": "latest",
+		"@typescript/native-preview": "latest",
+		"@vitest/ui": "latest",
+		"ava": "latest",
+		"clipboard-cli": "latest",
+		"corepack": "latest",
+		"dprint": "latest",
+		"dts-gen": "latest",
+		"eslint": "latest",
+		"eslint-stats": "latest",
+		"generator-code": "latest",
+		"http-server": "latest",
+		"jshint": "latest",
+		"jwt-cracker": "latest",
+		"markdownlint-cli2": "latest",
+		"native-run": "latest",
+		"npm": "latest",
+		"openapi-typescript": "latest",
+		"prettier": "latest",
+		"prettier-plugin-java": "latest",
+		"prettier-plugin-tailwindcss": "latest",
+		"prisma": "latest",
+		"pyright": "latest",
+		"quicktype": "latest",
+		"rollup": "latest",
+		"sequelize-cli": "latest",
+		"sshpk": "latest",
+		"storybook": "latest",
+		"sv": "latest",
+		"svelte-language-server": "latest",
+		"syncpack": "latest",
+		"ts-autofix": "latest",
+		"ts2esm": "latest",
+		"tsup": "latest",
+		"tsx": "latest",
+		"turbo": "latest",
+		"typedoc": "latest",
+		"typescript": "latest",
+		"vite": "latest",
+		"vitest": "latest",
+		"yo": "latest",
+		"zenstack": "latest"
+	},
+	"type": "module",
+	"private": true
+}
