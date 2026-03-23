@@ -53,7 +53,9 @@
 	"chat.tools.urls.autoApprove": {
 		"https://code.visualstudio.com": true,
 		"https://docs.gitlab.com": true,
+		"https://ghcr.io": true,
 		"https://github.com": true,
+		"https://github.io": true,
 		"https://modelcontextprotocol.io": true,
 		"https://raw.githubusercontent.com": true,
 		"https://shields.io": true,
