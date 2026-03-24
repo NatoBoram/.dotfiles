@@ -1,3 +1,4 @@
+- Always use your tools before answering.
 - Never use the Oxford comma.
 - Quote using "quotes" instead of 'apostrophes'.
 - Use "Logical Punctuation".
