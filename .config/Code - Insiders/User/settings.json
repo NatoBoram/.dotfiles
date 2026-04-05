@@ -248,6 +248,14 @@
 	"github.copilot.chat.agentHistorySummarizationWithPromptCache": true,
 	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
 	"github.copilot.chat.alternateGptPrompt.enabled": true,
+	"github.copilot.chat.anthropic.tools.websearch.enabled": true,
+	"github.copilot.chat.anthropic.tools.websearch.userLocation": {
+		"country": "CA",
+		"region": "Québec",
+		"timezone": "America/Toronto"
+	},
+	"github.copilot.chat.askAgent.additionalTools": [],
+	"github.copilot.chat.backgroundCompaction": true,
 	"github.copilot.chat.cloudAgent.enabled": false,
 	"github.copilot.chat.codeGeneration.instructions": [
 		{
@@ -265,6 +273,7 @@
 	],
 	"github.copilot.chat.editor.temporalContext.enabled": true,
 	"github.copilot.chat.edits.codesearch.enabled": true,
+	"github.copilot.chat.edits.gemini3MultiReplaceString": true,
 	"github.copilot.chat.enableUserPreferences": true,
 	"github.copilot.chat.generateTests.codeLens": true,
 	"github.copilot.chat.localeOverride": "en-CA",
@@ -353,7 +362,7 @@
 	"java.saveActions.organizeImports": true,
 	"java.semanticHighlighting.enabled": true,
 	"java.signatureHelp.enabled": true,
-	"js/ts.experimental.useTsgo": true,
+	"js/ts.experimental.useTsgo": false,
 	"js/ts.implicitProjectConfig.target": "ESNext",
 	"js/ts.locale": "en-CA",
 	"js/ts.preferences.preferTypeOnlyAutoImports": true,
@@ -400,6 +409,7 @@
 		"dotenv": "tune"
 	},
 	"npm.packageManager": "pnpm",
+	"oxc.typeAware": true,
 	"path-intellisense.extensionOnImport": true,
 	"platformSettings.autoLoad": true,
 	"platformSettings.platforms": {
@@ -584,7 +594,5 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "readme",
 	"xml.format.preservedNewlines": 1,
-	"zenMode.hideActivityBar": false,
-	"github.copilot.chat.agentDebugLog.enabled": true,
-	"github.copilot.chat.agentDebugLog.fileLogging.enabled": true
+	"zenMode.hideActivityBar": false
 }
