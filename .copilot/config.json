@@ -12,8 +12,8 @@
 			"login": "NatoBoram"
 		}
 	],
-	"render_markdown": true,
-	"screen_reader": false,
+	"renderMarkdown": true,
+	"screenReader": false,
 	"theme": "auto",
 	"trusted_folders": [
 		"/home/nato/Code/github.com/coderabbitai",
