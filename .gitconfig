@@ -40,3 +40,5 @@
 	develop = main
 [blame]
 	ignoreRevsFile = :(optional).git-blame-ignore-revs
+[pull]
+	ff = only
