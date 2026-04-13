@@ -55,10 +55,12 @@
 		"https://docs.gitlab.com": true,
 		"https://ghcr.io": true,
 		"https://github.com": true,
+		"https://github.com/microsoft/vscode/wiki/*": true,
 		"https://github.io": true,
 		"https://modelcontextprotocol.io": true,
 		"https://raw.githubusercontent.com": true,
 		"https://shields.io": true,
+		"https://www.gnu.org": true,
 		"https://www.npmjs.com": true,
 		"https://www.reddit.com": true,
 		"https://www.typescriptlang.org": true
