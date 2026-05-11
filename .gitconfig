@@ -42,3 +42,7 @@
 	ignoreRevsFile = :(optional).git-blame-ignore-revs
 [pull]
 	ff = only
+[format]
+	signOff = true
+[diff]
+	algorithm = histogram

@@ -39,7 +39,6 @@
 	},
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
-	"chat.agent.maxRequests": 40,
 	"chat.agentsControl.clickBehavior": "default",
 	"chat.commandCenter.triStateToggle": false,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
@@ -47,7 +46,13 @@
 	"chat.focusWindowOnConfirmation": false,
 	"chat.mcp.autostart": "newAndOutdated",
 	"chat.tools.terminal.autoApprove": {
-		"/^pnpm\\s+(install|run)\\b/": true
+		"/^npm\\s+(ls|list|outdated|view|info|show|explain|why|root|prefix|bin|search|doctor|fund|repo|bugs|docs|home|help(-search)?)\\b/": false,
+		"/^npm\\s+audit$/": false,
+		"/^npm\\s+cache\\s+verify\\b/": false,
+		"/^npm\\s+config\\s+(list|get)\\b/": false,
+		"/^npm\\s+pkg\\s+get\\b/": false,
+		"/^pnpm\\s+(--prefix=.+\\s+)?(install|run)\\b/": true,
+		"npm ci": false
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.urls.autoApprove": {
@@ -223,7 +228,9 @@
 	"files.trimTrailingWhitespace": true,
 	"formatContextMenu.closeAfterSave": true,
 	"formattingToggle.affects": ["formatOnSave"],
+	"git.addAICoAuthor": "chatAndAgent",
 	"git.allowForcePush": true,
+	"git.alwaysSignOff": true,
 	"git.autofetch": true,
 	"git.autoRepositoryDetection": "subFolders",
 	"git.autoStash": true,
@@ -594,7 +601,7 @@
 	"workbench.settings.openDefaultKeybindings": true,
 	"workbench.settings.openDefaultSettings": true,
 	"workbench.settings.useSplitJSON": true,
-	"workbench.startupEditor": "readme",
+	"workbench.startupEditor": "none",
 	"xml.format.preservedNewlines": 1,
 	"zenMode.hideActivityBar": false
 }

@@ -1,11 +1,5 @@
 [
 	{
-		"args": { "text": "\\\r\n" },
-		"command": "workbench.action.terminal.sendSequence",
-		"key": "shift+enter",
-		"when": "terminalFocus"
-	},
-	{
 		"args": {
 			"commands": [
 				{ "command": "editor.action.clipboardCopyAction" },
@@ -23,30 +17,6 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"command": "-bookmarks.jumpToNext",
-		"key": "ctrl+alt+l",
-		"when": "editorTextFocus"
-	},
-	{
-		"command": "-bookmarks.jumpToPrevious",
-		"key": "ctrl+alt+j",
-		"when": "editorTextFocus"
-	},
-	{ "command": "-editor.action.codeAction", "key": "ctrl+alt+i" },
-	{ "command": "-workbench.action.quit", "key": "ctrl+q" },
-	{
-		"command": "bookmarks.listFromAllFiles",
-		"key": "ctrl+alt+l",
-		"when": "editorTextFocus"
-	},
-	{ "command": "deleteRight", "key": "delete", "when": "textInputFocus" },
-	{ "command": "editor.action.inlineSuggest.trigger", "key": "alt+c" },
-	{
-		"command": "editor.action.sortLinesAscending",
-		"key": "alt+s l",
-		"when": "editorHasSelection && !editorReadonly"
-	},
-	{
 		"args": { "commands": ["json.sort", "editor.action.formatDocument"] },
 		"command": "runCommands",
 		"key": "alt+s j",
@@ -59,6 +29,42 @@
 		"command": "runCommands",
 		"key": "alt+s y",
 		"when": "(editorLangId == 'yaml' || editorLangId == 'dockercompose' || editorLangId == 'github-actions-workflow') && !editorReadonly"
+	},
+	{
+		"args": { "text": "\\\r\n" },
+		"command": "workbench.action.terminal.sendSequence",
+		"key": "shift+enter",
+		"when": "terminalFocus"
+	},
+	{
+		"command": "-bookmarks.jumpToNext",
+		"key": "ctrl+alt+l",
+		"when": "editorTextFocus"
+	},
+	{
+		"command": "-bookmarks.jumpToPrevious",
+		"key": "ctrl+alt+j",
+		"when": "editorTextFocus"
+	},
+	{
+		"command": "-markdown.togglePreview",
+		"key": "ctrl+shift+v",
+		"when": "!notebookEditorFocused && resourceLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+	},
+	{
+		"command": "bookmarks.listFromAllFiles",
+		"key": "ctrl+alt+l",
+		"when": "editorTextFocus"
+	},
+	{
+		"command": "editor.action.sortLinesAscending",
+		"key": "alt+s l",
+		"when": "editorHasSelection && !editorReadonly"
+	},
+	{
+		"command": "tsco.organize",
+		"key": "alt+s o",
+		"when": "editorLangId == 'typescript' && !editorReadonly"
 	},
 	{
 		"command": "workbench.action.nextEditor",
@@ -80,9 +86,8 @@
 		"key": "ctrl+shift+tab",
 		"when": "!activeEditorGroupEmpty"
 	},
-	{
-		"command": "tsco.organize",
-		"key": "alt+s o",
-		"when": "editorLangId == 'typescript' && !editorReadonly"
-	}
+	{ "command": "-editor.action.codeAction", "key": "ctrl+alt+i" },
+	{ "command": "-workbench.action.quit", "key": "ctrl+q" },
+	{ "command": "deleteRight", "key": "delete", "when": "textInputFocus" },
+	{ "command": "editor.action.inlineSuggest.trigger", "key": "alt+c" }
 ]
