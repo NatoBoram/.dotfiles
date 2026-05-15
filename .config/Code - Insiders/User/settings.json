@@ -51,6 +51,7 @@
 		"/^npm\\s+cache\\s+verify\\b/": false,
 		"/^npm\\s+config\\s+(list|get)\\b/": false,
 		"/^npm\\s+pkg\\s+get\\b/": false,
+		"/^pnpm\\s+(--filter=.+\\s+)?(install|run)\\b/": true,
 		"/^pnpm\\s+(--prefix=.+\\s+)?(install|run)\\b/": true,
 		"npm ci": false
 	},
