@@ -1322,7 +1322,7 @@ button.image-button label {
 .pluma-window paned.horizontal box.vertical box.horizontal button.flat,
 .gedit-search-slider .linked > button,
 .gedit-document-panel row button.flat,
-.nautilus-window .floating-bar button,
+.floating-bar button,
 placessidebar.sidebar row button.sidebar-button,
 notebook > header tab button.flat,
 spinbutton.vertical button,
@@ -6100,7 +6100,7 @@ popover.emoji-completion .emoji:hover {
 	border-radius: 0;
 }
 
-.nautilus-window .floating-bar {
+.floating-bar {
 	min-height: 32px;
 	padding: 0;
 	margin: 6px;
@@ -6110,7 +6110,7 @@ popover.emoji-completion .emoji:hover {
 	color: rgba(0, 0, 0, 0.87);
 }
 
-.nautilus-window .floating-bar button {
+.floating-bar button {
 	margin: 4px;
 	color: rgba(0, 0, 0, 0.87);
 }

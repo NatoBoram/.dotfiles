@@ -48,7 +48,7 @@ If we want to describe something callable with properties, we can write a _call 
 
 ```ts twoslash
 type DescribableFunction = {
-	description: string
+	description: string;
 	(someArg: number): boolean
 }
 function doSomething(fn: DescribableFunction) {

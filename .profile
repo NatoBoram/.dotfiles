@@ -26,10 +26,6 @@ if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
-# AMD
-PATH="$PATH:/opt/rocm-5.4.2/bin:/opt/rocm-5.4.2/opencl/bin"
-export HSA_OVERRIDE_GFX_VERSION='10.3.0'
-
 # Android
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT="$ANDROID_HOME"
@@ -54,22 +50,10 @@ PATH="$PATH:$HOME/.pub-cache/bin"
 PATH="$HOME/Applications/elixir/bin:$PATH"
 PATH="$HOME/.mix/escripts:$PATH"
 
-# Flutter
-#PATH="$HOME/Applications/flutter/bin:$PATH"
-
-# GitHub Copilot CLI
-#. ~/.gh.zsh
-
 # Go
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 PATH="$GOBIN:$PATH"
-
-# GTR
-PATH="$HOME/Code/github.com/coderabbitai/git-worktree-runner/bin:$PATH"
-
-# Java
-PATH="$HOME/Applications/gradle/bin:$PATH"
 
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"

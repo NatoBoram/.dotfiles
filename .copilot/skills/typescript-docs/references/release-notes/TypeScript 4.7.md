@@ -680,7 +680,9 @@ Additionally, in nightly versions of TypeScript, `import type` can specify an im
 
 ```ts
 // Resolve `pkg` as if we were importing with a `require()`
-import type { TypeFromRequire } from "pkg" assert { "resolution-mode": "require" }
+import type { TypeFromRequire } from "pkg" assert {
+	"resolution-mode": "require",
+}
 
 // Resolve `pkg` as if we were importing with an `import`
 import type { TypeFromImport } from "pkg" assert { "resolution-mode": "import" }
@@ -692,11 +694,11 @@ These import assertions can also be used on `import()` types.
 
 ```ts
 export type TypeFromRequire = import("pkg", {
-	assert: { "resolution-mode": "require" }
+	assert: { "resolution-mode": "require" },
 }).TypeFromRequire
 
 export type TypeFromImport = import("pkg", {
-	assert: { "resolution-mode": "import" }
+	assert: { "resolution-mode": "import" },
 }).TypeFromImport
 
 export interface MergedType extends TypeFromRequire, TypeFromImport {}

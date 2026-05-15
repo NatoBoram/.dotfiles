@@ -204,8 +204,11 @@ TypeScript 5.6 introduces a new type called `IteratorObject`.
 It is defined as follows:
 
 ```ts
-interface IteratorObject<T, TReturn = unknown, TNext = unknown>
-	extends Iterator<T, TReturn, TNext> {
+interface IteratorObject<
+	T,
+	TReturn = unknown,
+	TNext = unknown,
+> extends Iterator<T, TReturn, TNext> {
 	[Symbol.iterator](): IteratorObject<T, TReturn, TNext>
 }
 ```
@@ -281,8 +284,11 @@ TypeScript 5.6 introduces a new intrinsic type called `BuiltinIteratorReturn` an
 Whenever `IteratorObject`s are used in places like `lib.d.ts`, they are always written with `BuiltinIteratorReturn` type for `TReturn` (though you'll see the more-specific `MapIterator`, `ArrayIterator`, `SetIterator` more often).
 
 ```ts
-interface MapIterator<T>
-	extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+interface MapIterator<T> extends IteratorObject<
+	T,
+	BuiltinIteratorReturn,
+	unknown
+> {
 	[Symbol.iterator](): MapIterator<T>
 }
 

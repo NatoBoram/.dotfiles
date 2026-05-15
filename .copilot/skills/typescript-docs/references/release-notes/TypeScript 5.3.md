@@ -79,11 +79,11 @@ These import attributes can also be used on `import()` types.
 
 ```ts
 export type TypeFromRequire = import("pkg", {
-	with: { "resolution-mode": "require" }
+	with: { "resolution-mode": "require" },
 }).TypeFromRequire
 
 export type TypeFromImport = import("pkg", {
-	with: { "resolution-mode": "import" }
+	with: { "resolution-mode": "import" },
 }).TypeFromImport
 
 export interface MergedType extends TypeFromRequire, TypeFromImport {}

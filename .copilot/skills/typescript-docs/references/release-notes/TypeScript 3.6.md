@@ -55,8 +55,11 @@ interface Iterator<T, TReturn = any, TNext = undefined> {
 Building on that work, the new `Generator` type is an `Iterator` that always has both the `return` and `throw` methods present, and is also iterable.
 
 ```ts
-interface Generator<T = unknown, TReturn = any, TNext = unknown>
-	extends Iterator<T, TReturn, TNext> {
+interface Generator<
+	T = unknown,
+	TReturn = any,
+	TNext = unknown,
+> extends Iterator<T, TReturn, TNext> {
 	next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 	return(value: TReturn): IteratorResult<T, TReturn>
 	throw(e: any): IteratorResult<T, TReturn>
