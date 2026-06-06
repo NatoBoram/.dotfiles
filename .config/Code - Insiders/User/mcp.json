@@ -70,7 +70,7 @@
 		},
 		"linear": {
 			"type": "http",
-			"url": "https://mcp.linear.app/sse"
+			"url": "https://mcp.linear.app/mcp"
 		},
 		"memory": {
 			"args": ["@modelcontextprotocol/server-memory@latest"],

@@ -111,6 +111,27 @@ async function baz() {
 }
 ```
 
+### Declare named functions at the top level only
+
+#### Bad
+
+```ts
+function foo() {
+	function bar() {}
+	bar()
+}
+```
+
+#### Good
+
+```ts
+function bar() {}
+
+function foo() {
+	bar()
+}
+```
+
 ### Avoid closures
 
 #### Bad

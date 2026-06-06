@@ -51,17 +51,19 @@
 		"/^npm\\s+cache\\s+verify\\b/": false,
 		"/^npm\\s+config\\s+(list|get)\\b/": false,
 		"/^npm\\s+pkg\\s+get\\b/": false,
-		"/^pnpm\\s+(--filter=.+\\s+)?(install|run)\\b/": true,
-		"/^pnpm\\s+(--prefix=.+\\s+)?(install|run)\\b/": true,
+		"/^pnpm i$/": true,
+		"/^pnpm\\s+(--filter=.+\\s+)?(install|run|test)\\b/": true,
+		"/^pnpm\\s+(--prefix=.+\\s+)?(install|run|test)\\b/": true,
 		"npm ci": false
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.urls.autoApprove": {
+		"https://*.coderabbit.ai": true,
 		"https://code.visualstudio.com": true,
+		"https://docs.github.com": true,
 		"https://docs.gitlab.com": true,
 		"https://ghcr.io": true,
 		"https://github.com": true,
-		"https://github.com/microsoft/vscode/wiki/*": true,
 		"https://github.io": true,
 		"https://modelcontextprotocol.io": true,
 		"https://raw.githubusercontent.com": true,
@@ -83,7 +85,7 @@
 	"dart.enableCompletionCommitCharacters": true,
 	"dart.flutterCreateOrganization": "com.natoboram",
 	"dart.flutterHotReloadOnSave": "always",
-	"dart.flutterTestAdditionalArgs": ["-j", "6"],
+	"dart.flutterTestAdditionalArgs": ["-j", "16"],
 	"dart.openDevTools": "flutter",
 	"dart.previewFlutterUiGuides": true,
 	"dart.previewFlutterUiGuidesCustomTracking": true,
@@ -306,8 +308,7 @@
 	"github.copilot.enable": {
 		"*": true,
 		"markdown": true,
-		"plaintext": true,
-		"scminput": true
+		"plaintext": true
 	},
 	"github.copilot.nextEditSuggestions.enabled": false,
 	"github.copilot.selectedCompletionModel": "gemini-3-pro",
@@ -365,14 +366,14 @@
 	"java.eclipse.downloadSources": true,
 	"java.format.settings.url": ".java-formatter.xml",
 	"java.inlayHints.parameterNames.enabled": "none",
-	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-26-jep401ea2+1-1",
+	"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-27-jep401ea3+1-1",
 	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
 	"java.maxConcurrentBuilds": 12,
 	"java.refactor.renameFromFileExplorer": "autoApply",
 	"java.saveActions.organizeImports": true,
 	"java.semanticHighlighting.enabled": true,
 	"java.signatureHelp.enabled": true,
-	"js/ts.experimental.useTsgo": false,
+	"js/ts.experimental.useTsgo": true,
 	"js/ts.implicitProjectConfig.target": "ESNext",
 	"js/ts.locale": "en-CA",
 	"js/ts.preferences.preferTypeOnlyAutoImports": true,
@@ -438,7 +439,7 @@
 				],
 				"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
 				"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
-				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-26-jep401ea2+1-1",
+				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-27-jep401ea3+1-1",
 				"js/ts.tsserver.node.path": "/home/nato/.asdf/shims/bun",
 				"js/ts.tsserver.npm.path": "/home/nato/.asdf/shims/bun",
 				"vitest.nodeExecutable": "/home/nato/.asdf/shims/node"
@@ -604,5 +605,13 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "none",
 	"xml.format.preservedNewlines": 1,
+	"yaml.disableSchemaDetection": [
+		"**/.github/workflows/*.yml",
+		"**/.github/workflows/*.yaml",
+		"**/.gitea/workflows/*.yml",
+		"**/.gitea/workflows/*.yaml",
+		"**/.forgejo/workflows/*.yml",
+		"**/.forgejo/workflows/*.yaml"
+	],
 	"zenMode.hideActivityBar": false
 }
