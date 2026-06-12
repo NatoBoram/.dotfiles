@@ -1,5 +1,5 @@
 ---
-applyTo: "**/*.js,**/*.ts"
+applyTo: "**/*.cjs,**/*.cts,**/*.js,**/*.jsx,**/*.mjs,**/*.mts,**/*.ts,**/*.tsx"
 name: TypeScript
 description: Write maintainable TypeScript code
 ---
@@ -521,7 +521,8 @@ Prefer interfaces.
 #### Bad
 
 ```ts
-const foo = ["bar", true]
+type Foo = [string, boolean]
+const foo: Foo = ["bar", true]
 ```
 
 #### Good
