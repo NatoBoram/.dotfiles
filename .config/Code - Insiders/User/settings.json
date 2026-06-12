@@ -605,13 +605,5 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "none",
 	"xml.format.preservedNewlines": 1,
-	"yaml.disableSchemaDetection": [
-		"**/.github/workflows/*.yml",
-		"**/.github/workflows/*.yaml",
-		"**/.gitea/workflows/*.yml",
-		"**/.gitea/workflows/*.yaml",
-		"**/.forgejo/workflows/*.yml",
-		"**/.forgejo/workflows/*.yaml"
-	],
 	"zenMode.hideActivityBar": false
 }
