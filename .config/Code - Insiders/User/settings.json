@@ -34,11 +34,15 @@
 	"[rust]": {
 		"editor.defaultFormatter": "rust-lang.rust-analyzer"
 	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
+	"chat.agent.maxRequests": 500,
 	"chat.agentsControl.clickBehavior": "default",
 	"chat.commandCenter.triStateToggle": false,
 	"chat.editing.alwaysSaveWithGeneratedChanges": true,
@@ -58,10 +62,11 @@
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.urls.autoApprove": {
-		"https://*.coderabbit.ai": true,
 		"https://code.visualstudio.com": true,
+		"https://coderabbit.ai": true,
 		"https://docs.github.com": true,
 		"https://docs.gitlab.com": true,
+		"https://docs.openwebui.com": true,
 		"https://ghcr.io": true,
 		"https://github.com": true,
 		"https://github.io": true,
@@ -296,7 +301,13 @@
 		}
 	],
 	"github.copilot.chat.reviewSelection.instructions": [],
+	"github.copilot.chat.scopeSelection": true,
 	"github.copilot.chat.search.semanticTextResults": true,
+	"github.copilot.chat.searchSubagent.enabled": true,
+	"github.copilot.chat.searchSubagent.model": "gemma4:12b",
+	"github.copilot.chat.searchSubagent.thoroughnessEnabled": true,
+	"github.copilot.chat.searchSubagent.toolCallLimit": 8,
+	"github.copilot.chat.skillTool.enabled": true,
 	"github.copilot.chat.testGeneration.instructions": [
 		{
 			"file": ".prettierrc.yaml"
@@ -311,7 +322,6 @@
 		"plaintext": true
 	},
 	"github.copilot.nextEditSuggestions.enabled": false,
-	"github.copilot.selectedCompletionModel": "gemini-3-pro",
 	"github.gitProtocol": "ssh",
 	"githubPullRequests.assignCreated": "${user}",
 	"githubPullRequests.commentExpandState": "collapseAll",
@@ -605,5 +615,13 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "none",
 	"xml.format.preservedNewlines": 1,
+	"yaml.disableSchemaDetection": [
+		"**/.github/workflows/*.yml",
+		"**/.github/workflows/*.yaml",
+		"**/.gitea/workflows/*.yml",
+		"**/.gitea/workflows/*.yaml",
+		"**/.forgejo/workflows/*.yml",
+		"**/.forgejo/workflows/*.yaml"
+	],
 	"zenMode.hideActivityBar": false
 }

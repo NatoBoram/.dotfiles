@@ -72,6 +72,10 @@
 			"type": "http",
 			"url": "https://mcp.linear.app/mcp"
 		},
+		"mdn": {
+			"type": "http",
+			"url": "https://mcp.mdn.mozilla.net"
+		},
 		"memory": {
 			"args": ["@modelcontextprotocol/server-memory@latest"],
 			"command": "bunx",
