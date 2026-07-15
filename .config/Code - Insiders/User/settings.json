@@ -24,9 +24,11 @@
 	"[java]": {
 		"editor.defaultFormatter": "redhat.java"
 	},
+	"[jsonc]": {
+		"prettier.trailingComma": "none"
+	},
 	"[markdown]": {
-		"editor.unicodeHighlight.ambiguousCharacters": true,
-		"gitlens.codeLens.scopes": ["document"]
+		"editor.unicodeHighlight.ambiguousCharacters": true
 	},
 	"[phoenix-heex]": {
 		"editor.defaultFormatter": "JakeBecker.elixir-ls"
@@ -43,11 +45,6 @@
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
 	"chat.agent.maxRequests": 500,
-	"chat.agentsControl.clickBehavior": "default",
-	"chat.commandCenter.triStateToggle": false,
-	"chat.editing.alwaysSaveWithGeneratedChanges": true,
-	"chat.edits2.enabled": true,
-	"chat.focusWindowOnConfirmation": false,
 	"chat.mcp.autostart": "newAndOutdated",
 	"chat.tools.terminal.autoApprove": {
 		"/^npm\\s+(ls|list|outdated|view|info|show|explain|why|root|prefix|bin|search|doctor|fund|repo|bugs|docs|home|help(-search)?)\\b/": false,
@@ -56,8 +53,7 @@
 		"/^npm\\s+config\\s+(list|get)\\b/": false,
 		"/^npm\\s+pkg\\s+get\\b/": false,
 		"/^pnpm i$/": true,
-		"/^pnpm\\s+(--filter=.+\\s+)?(install|run|test)\\b/": true,
-		"/^pnpm\\s+(--prefix=.+\\s+)?(install|run|test)\\b/": true,
+		"/^pnpm\\s+(--(filter|prefix)(=|\\s).+\\s+)?(install|run|test)\\b/": true,
 		"npm ci": false
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
@@ -83,6 +79,9 @@
 	"codesnap.realLineNumbers": true,
 	"codesnap.showWindowTitle": true,
 	"codesnap.transparentBackground": true,
+	"containers.containers.description": ["Status"],
+	"containers.containers.groupBy": "Compose Project Name",
+	"containers.containers.label": "ContainerName",
 	"csharpier.dev.customPath": "/home/nato/.dotnet/tools",
 	"css.format.maxPreserveNewLines": 1,
 	"dart.checkForSdkUpdates": false,
@@ -98,8 +97,8 @@
 	"dart.showTodos": false,
 	"dart.triggerSignatureHelpAutomatically": true,
 	"dart.warnWhenEditingFilesOutsideWorkspace": false,
-	"debug.javascript.usePreview": true,
 	"diffEditor.codeLens": true,
+	"diffEditor.diffAlgorithm": "legacy",
 	"diffEditor.ignoreTrimWhitespace": false,
 	"discord.idleTimeout": 900,
 	"dotnet.formatting.organizeImportsOnFormat": true,
@@ -131,7 +130,9 @@
 	"editor.inlineSuggest.minShowDelay": 1000,
 	"editor.insertSpaces": false,
 	"editor.lightbulb.enabled": "onCode",
+	"editor.linkedEditing": true,
 	"editor.minimap.showMarkSectionHeaders": false,
+	"editor.renderWhitespace": "trailing",
 	"editor.semanticHighlighting.enabled": true,
 	"editor.smoothScrolling": true,
 	"editor.suggestSelection": "first",
@@ -140,6 +141,7 @@
 		"“": false,
 		"”": false,
 		"×": true,
+		"∪": true,
 		"➕": true,
 		"➖": true
 	},
@@ -182,18 +184,8 @@
 	"explorer.openEditors.sortOrder": "alphabetical",
 	"extensions.allowOpenInModalEditor": false,
 	"extensions.autoRestart": true,
-	"extensions.trustedPublishers": [
-		"bradlc",
-		"dart-code",
-		"eamodio",
-		"gitlab",
-		"jakebecker",
-		"prisma",
-		"redhat",
-		"rust-lang",
-		"traycer",
-		"usernamehw"
-	],
+	"extensions.experimental.deferredStartupFinishedActivation": true,
+	"extensions.requestTimeout": 1000,
 	"files.associations": {
 		".env": "env",
 		".env.*": "env",
@@ -231,11 +223,11 @@
 		"vendor": true
 	},
 	"files.insertFinalNewline": true,
+	"files.participants.timeout": 1000,
 	"files.restoreUndoStack": false,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"formatContextMenu.closeAfterSave": true,
-	"formattingToggle.affects": ["formatOnSave"],
 	"git.addAICoAuthor": "chatAndAgent",
 	"git.allowForcePush": true,
 	"git.alwaysSignOff": true,
@@ -261,8 +253,6 @@
 		"/home/nato/.copilot/skills"
 	],
 	"github.copilot.chat.agent.autoFix": true,
-	"github.copilot.chat.agent.thinkingTool": true,
-	"github.copilot.chat.agentHistorySummarizationWithPromptCache": true,
 	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
 	"github.copilot.chat.alternateGptPrompt.enabled": true,
 	"github.copilot.chat.anthropic.tools.websearch.enabled": true,
@@ -272,7 +262,6 @@
 		"timezone": "America/Toronto"
 	},
 	"github.copilot.chat.askAgent.additionalTools": [],
-	"github.copilot.chat.backgroundCompaction": true,
 	"github.copilot.chat.cloudAgent.enabled": false,
 	"github.copilot.chat.codeGeneration.instructions": [
 		{
@@ -282,17 +271,14 @@
 	"github.copilot.chat.codesearch.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
 		{
-			"text": "**Using emojis** on **commit messages** provides an **easy way** of **identifying the purpose or intention of a commit** with only looking at the emojis used.\n\n## Specification\n\nA gitmoji commit message consists is composed using the following pieces:\n\n- **intention**: The intention you want to express with the commit, using an emoji from the [list](assets/gitmojis.yaml).\n- **scope**: An optional string that adds contextual information for the scope of the change.\n- **message**: A brief explanation of the change.\n\n```\n<intention> [scope?][:?] <message>\n```\n\n## Examples\n\n- ⚡️ Lazyload home screen images.\n- 🐛 Fix `onClick` event handler\n- 🔖 Bump version `1.2.0`\n- ♻️ (components): Transform classes to hooks\n- 📈 Add analytics to the dashboard\n- 🌐 Support Japanese language\n- ♿️ (account): Improve modals a11y"
+			"text": "**Using emojis** on **commit messages** provides an **easy way** of **identifying the purpose or intention of a commit** with only looking at the emojis used.\n\n## Specification\n\nA gitmoji commit message consists is composed using the following pieces:\n\n- **intention**: The intention you want to express with the commit, using an emoji from the [list](assets/gitmojis.yaml).\n- **message**: A brief explanation of the change.\n\n```\n<intention> <message>\n```\n\n## Examples\n\n- ⚡️ Lazyload home screen images.\n- 🐛 Fix `onClick` event handler\n- 🔖 Bump version `1.2.0`\n- ♻️ Transform classes to hooks\n- 📈 Add analytics to the dashboard\n- 🌐 Support Japanese language\n- ♿️ Improve modals a11y"
 		},
 		{
 			"text": "🎨: Improve structure / format of the code.\n⚡️: Improve performance.\n🔥: Remove code or files.\n🐛: Fix a bug.\n🚑️: Critical hotfix.\n✨: Introduce new features.\n📝: Add or update documentation.\n🚀: Deploy stuff.\n💄: Add or update the UI and style files.\n🎉: Begin a project.\n✅: Add, update, or pass tests.\n🔒️: Fix security or privacy issues.\n🔐: Add or update secrets.\n🔖: Release / Version tags.\n🚨: Fix compiler / linter warnings.\n🚧: Work in progress.\n💚: Fix CI Build.\n⬇️: Downgrade dependencies.\n⬆️: Upgrade dependencies.\n📌: Pin dependencies to specific versions.\n👷: Add or update CI build system.\n📈: Add or update analytics or track code.\n♻️: Refactor code.\n➕: Add a dependency.\n➖: Remove a dependency.\n🔧: Add or update configuration files.\n🔨: Add or update development scripts.\n🌐: Internationalization and localization.\n✏️: Fix typos.\n💩: Write bad code that needs to be improved.\n⏪️: Revert changes.\n🔀: Merge branches.\n📦️: Add or update compiled files or packages.\n👽️: Update code due to external API changes.\n🚚: Move or rename resources (files, paths, routes).\n📄: Add or update license.\n💥: Introduce breaking changes.\n🍱: Add or update assets.\n♿️: Improve accessibility.\n💡: Add or update comments in source code.\n🍻: Write code drunkenly.\n💬: Add or update text and literals.\n🗃️: Perform database related changes.\n🔊: Add or update logs.\n🔇: Remove logs.\n👥: Add or update contributor(s).\n🚸: Improve user experience / usability.\n🏗️: Make architectural changes.\n📱: Work on responsive design.\n🤡: Mock things.\n🥚: Add or update an easter egg.\n🙈: Add or update a .gitignore file.\n📸: Add or update snapshots.\n⚗️: Perform experiments.\n🔍️: Improve SEO.\n🏷️: Add or update types.\n🌱: Add or update seed files.\n🚩: Add, update, or remove feature flags.\n🥅: Catch errors.\n💫: Add or update animations and transitions.\n🗑️: Deprecate code that needs to be cleaned up.\n🛂: Work on code related to authorization, roles and permissions.\n🩹: Simple fix for a non-critical issue.\n🧐: Data exploration/inspection.\n⚰️: Remove dead code.\n🧪: Add a failing test.\n👔: Add or update business logic.\n🩺: Add or update healthcheck.\n🧱: Infrastructure related changes.\n🧑‍💻: Improve developer experience.\n💸: Add sponsorships or money related infrastructure.\n🧵: Add or update code related to multithreading or concurrency.\n🦺: Add or update code related to validation.\n✈️: Improve offline support.\n🦖: Code that adds backwards compatibility."
 		}
 	],
-	"github.copilot.chat.editor.temporalContext.enabled": true,
-	"github.copilot.chat.edits.codesearch.enabled": true,
 	"github.copilot.chat.edits.gemini3MultiReplaceString": true,
 	"github.copilot.chat.enableUserPreferences": true,
-	"github.copilot.chat.generateTests.codeLens": true,
 	"github.copilot.chat.localeOverride": "en-CA",
 	"github.copilot.chat.newWorkspace.useContext7": true,
 	"github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
@@ -302,7 +288,6 @@
 	],
 	"github.copilot.chat.reviewSelection.instructions": [],
 	"github.copilot.chat.scopeSelection": true,
-	"github.copilot.chat.search.semanticTextResults": true,
 	"github.copilot.chat.searchSubagent.enabled": true,
 	"github.copilot.chat.searchSubagent.model": "gemma4:12b",
 	"github.copilot.chat.searchSubagent.thoroughnessEnabled": true,
@@ -328,37 +313,22 @@
 	"githubPullRequests.createDefaultBaseBranch": "createdFromBranch",
 	"githubPullRequests.defaultMergeMethod": "squash",
 	"githubPullRequests.experimental.chat": true,
-	"githubPullRequests.experimental.notificationsView": true,
 	"githubPullRequests.pullBranch": "never",
 	"githubPullRequests.pullRequestDescription": "template",
 	"githubPullRequests.pushBranch": "always",
 	"githubPullRequests.remotes": ["origin"],
-	"gitlens.advanced.messages": {
-		"suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true,
-		"suppressIntegrationRequestTimedOutWarning": true
-	},
-	"gitlens.ai.model": "vscode",
-	"gitlens.defaultDateFormat": "D MMMM YYYY h:mma",
-	"gitlens.defaultDateLocale": "en-CA",
-	"gitlens.defaultDateShortFormat": "D MMM YYYY",
-	"gitlens.defaultTimeFormat": "h:mma",
-	"gitlens.plusFeatures.enabled": false,
-	"gitlens.showWelcomeOnInstall": false,
-	"gitlens.showWhatsNewAfterUpgrades": false,
-	"gitlens.views.searchAndCompare.files.layout": "tree",
+	"gitmoji.addCustomEmoji": [
+		{
+			"description": "Changes related to AI agents",
+			"emoji": "🦾"
+		},
+		{
+			"description": "Changes related to Docker",
+			"emoji": "🐋"
+		}
+	],
 	"gitmoji.autoMatch": true,
 	"gitmoji.showEmojiCode": true,
-	"gitpod.showReleaseNotes": false,
-	"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
-	"gitProjectManager.ignoredFolders": [
-		"build",
-		"deps",
-		"dist",
-		"docs",
-		"node_modules"
-	],
-	"gitProjectManager.storeRepositoriesBetweenSessions": true,
-	"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
 	"go.inlayHints.constantValues": true,
 	"go.inlayHints.functionTypeParameters": true,
 	"go.toolsManagement.autoUpdate": true,
@@ -366,7 +336,6 @@
 	"gopls": {
 		"formatting.gofumpt": true
 	},
-	"holiday.gearIconStyle": "santa hat",
 	"html.format.indentHandlebars": true,
 	"html.format.maxPreserveNewLines": 1,
 	"html.format.templating": true,
@@ -408,7 +377,6 @@
 	"liveshare.presence": true,
 	"liveshare.showInStatusBar": "whileCollaborating",
 	"markdown.editor.pasteUrlAsFormattedLink.enabled": "never",
-	"markdown.extension.print.theme": "dark",
 	"markdownlint.config": {
 		"first-line-heading": false,
 		"line-length": false,
@@ -429,7 +397,9 @@
 	"material-icon-theme.languages.associations": {
 		"dotenv": "tune"
 	},
+	"mergeEditor.diffAlgorithm": "legacy",
 	"npm.packageManager": "pnpm",
+	"oxc.lint.run": "onSave",
 	"oxc.typeAware": true,
 	"path-intellisense.extensionOnImport": true,
 	"platformSettings.autoLoad": true,
@@ -447,8 +417,6 @@
 				"github.copilot.chat.additionalReadAccessPaths": [
 					"/home/nato/.copilot/skills"
 				],
-				"gitProjectManager.baseProjectsFolders": ["/home/nato/Code"],
-				"gitProjectManager.unversionedProjects": ["/home/nato/Code/localhost"],
 				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-27-jep401ea3+1-1",
 				"js/ts.tsserver.node.path": "/home/nato/.asdf/shims/bun",
 				"js/ts.tsserver.npm.path": "/home/nato/.asdf/shims/bun",
@@ -457,11 +425,7 @@
 		},
 		"win32": {
 			"nodes": {
-				"git.scanRepositories": ["C:\\Users\\natob\\Code"],
-				"gitProjectManager.baseProjectsFolders": ["C:\\Users\\natob\\Code"],
-				"gitProjectManager.unversionedProjects": [
-					"C:\\Users\\natob\\Code\\localhost"
-				]
+				"git.scanRepositories": ["C:\\Users\\natob\\Code"]
 			}
 		}
 	},
@@ -524,8 +488,6 @@
 		"eslint.nodePath",
 		"git.scanRepositories",
 		"github.copilot.chat.additionalReadAccessPaths",
-		"gitProjectManager.baseProjectsFolders",
-		"gitProjectManager.unversionedProjects",
 		"java.jdt.ls.java.home",
 		"js/ts.tsserver.node.path",
 		"js/ts.tsserver.npm.path",
@@ -567,14 +529,12 @@
 	"terminal.integrated.suggest.enabled": true,
 	"terminal.integrated.tabs.focusMode": "singleClick",
 	"terminal.integrated.tabStopWidth": 2,
-	"traycer.commentIndicator": "Hover",
 	"tsco.addPublicModifierIfMissing": false,
 	"tsco.useRegions": false,
 	"update.mode": "manual",
 	"vim.easymotion": true,
 	"vitest.nodeExecutable": "/home/nato/.asdf/shims/node",
 	"vscode-edge-devtools.mirrorEdits": true,
-	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"window.dialogStyle": "custom",
 	"window.restoreFullscreen": true,
 	"window.titleBarStyle": "custom",
@@ -596,7 +556,6 @@
 		}
 	},
 	"workbench.colorTheme": "Nord",
-	"workbench.editor.allowOpenInModalEditor": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.revealIfOpen": true,
