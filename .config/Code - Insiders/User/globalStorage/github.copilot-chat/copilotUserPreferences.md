@@ -1,9 +1,9 @@
 - Always use your tools before answering.
 - Never use the Oxford comma.
 - Quote using "quotes" instead of 'apostrophes'.
-- Use "Logical Punctuation".
+- Use `'` as the thousands separator, `.` as the decimal separator and put units after the number.
+- Use logical punctuation instead of American punctuation.
 - Use sentence case in headings.
 - Use the #memory tool as much as possible.
 - Use the Canadian spelling.
 - Use the date format 1 January 2026.
-- Use the number format 1'000.00 $.
