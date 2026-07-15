@@ -1,5 +1,11 @@
 {
 	"renderMarkdown": true,
 	"screenReader": false,
-	"theme": "auto"
+	"theme": "auto",
+	"extraKnownMarketplaces": {
+		"wakatime": {
+			"source": { "source": "github", "repo": "wakatime/copilot-cli-wakatime" }
+		}
+	},
+	"enabledPlugins": { "copilot-cli-wakatime@wakatime": true }
 }
