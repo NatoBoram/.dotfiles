@@ -1,0 +1,1 @@
+../../../../Code - Insiders/User/globalStorage/github.copilot-chat/copilotUserPreferences.md

@@ -1,0 +1,1 @@
+../../../Code - Insiders/User/prompts/update_coderabbit_path_instructions.prompt.md
