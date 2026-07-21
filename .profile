@@ -51,6 +51,7 @@ PATH="$HOME/Applications/elixir/bin:$PATH"
 PATH="$HOME/.mix/escripts:$PATH"
 
 # Go
+export GOAMD64=v3
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 PATH="$GOBIN:$PATH"
