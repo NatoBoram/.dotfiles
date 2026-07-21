@@ -358,7 +358,7 @@
 	"js/ts.preferences.preferTypeOnlyAutoImports": true,
 	"js/ts.tsserver.maxMemory": 8192,
 	"js/ts.tsserver.node.path": "/home/nato/.asdf/shims/bun",
-	"js/ts.tsserver.npm.path": "/home/nato/.asdf/shims/bun",
+	"js/ts.tsserver.npm.path": "/home/nato/.asdf/shims/pnpm",
 	"js/ts.updateImportsOnFileMove.enabled": "always",
 	"js/ts.updateImportsOnPaste.enabled": false,
 	"json.schemaDownload.trustedDomains": {
@@ -419,7 +419,7 @@
 				],
 				"java.jdt.ls.java.home": "/home/nato/.asdf/installs/java/openjdk-27-jep401ea3+1-1",
 				"js/ts.tsserver.node.path": "/home/nato/.asdf/shims/bun",
-				"js/ts.tsserver.npm.path": "/home/nato/.asdf/shims/bun",
+				"js/ts.tsserver.npm.path": "/home/nato/.asdf/shims/pnpm",
 				"vitest.nodeExecutable": "/home/nato/.asdf/shims/node"
 			}
 		},
@@ -509,6 +509,13 @@
 		"sortJSONValues": false,
 		"sortJSONValuesReverse": false
 	},
+	"sqltools.dependencyManager": {
+		"autoAccept": false,
+		"installArgs": ["install"],
+		"packageManager": "pnpm",
+		"runScriptArgs": ["dlx"]
+	},
+	"sqltools.highlightQuery": false,
 	"svelte.enable-ts-plugin": true,
 	"svelte.plugin.svelte.note-new-transformation": false,
 	"task.allowAutomaticTasks": "on",
@@ -574,6 +581,13 @@
 	"workbench.settings.useSplitJSON": true,
 	"workbench.startupEditor": "none",
 	"xml.format.preservedNewlines": 1,
-	"yaml.disableSchemaDetection": [],
+	"yaml.disableSchemaDetection": [
+		"**/.github/workflows/*.yml",
+		"**/.github/workflows/*.yaml",
+		"**/.gitea/workflows/*.yml",
+		"**/.gitea/workflows/*.yaml",
+		"**/.forgejo/workflows/*.yml",
+		"**/.forgejo/workflows/*.yaml"
+	],
 	"zenMode.hideActivityBar": false
 }
