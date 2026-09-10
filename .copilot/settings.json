@@ -1,11 +1,12 @@
 {
-	"renderMarkdown": true,
-	"screenReader": false,
-	"theme": "auto",
+	"enabledPlugins": { "copilot-cli-wakatime@wakatime": true },
 	"extraKnownMarketplaces": {
 		"wakatime": {
-			"source": { "source": "github", "repo": "wakatime/copilot-cli-wakatime" }
+			"source": { "repo": "wakatime/copilot-cli-wakatime", "source": "github" }
 		}
 	},
-	"enabledPlugins": { "copilot-cli-wakatime@wakatime": true }
+	"model": "auto",
+	"renderMarkdown": true,
+	"screenReader": false,
+	"theme": "auto"
 }

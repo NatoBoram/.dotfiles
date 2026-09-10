@@ -1,8 +1,8 @@
 - Always use your tools before answering.
-- Never use the Oxford comma.
+- Never use the serial comma.
 - Quote using "quotes" instead of 'apostrophes'.
-- Use `'` as the thousands separator, `.` as the decimal separator and put units after the number.
-- Use logical punctuation instead of American punctuation.
+- Use a _narrow non-breaking space_ as the thousands separator, `.` as the decimal separator, a _non-breaking space_ between numbers & units and put the unit after the number.
+- Use British punctuation instead of American punctuation.
 - Use sentence case in headings.
 - Use the #memory tool as much as possible.
 - Use the Canadian spelling.
