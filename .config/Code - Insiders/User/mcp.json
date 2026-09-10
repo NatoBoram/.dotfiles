@@ -6,18 +6,7 @@
 			"password": true,
 			"type": "promptString"
 		},
-		{
-			"description": "CircleCI API Token",
-			"id": "circleci-token",
-			"password": true,
-			"type": "promptString"
-		},
-		{
-			"default": "https://circleci.com",
-			"description": "CircleCI Base URL",
-			"id": "circleci-base-url",
-			"type": "promptString"
-		},
+
 		{
 			"description": "Context7 API Key",
 			"id": "context7_api_key",
@@ -26,19 +15,6 @@
 		}
 	],
 	"servers": {
-		"circleci": {
-			"args": ["@circleci/mcp-server-circleci@latest"],
-			"command": "bunx",
-			"env": {
-				"CIRCLECI_BASE_URL": "${input:circleci-base-url}",
-				"CIRCLECI_TOKEN": "${input:circleci-token}"
-			},
-			"type": "stdio"
-		},
-		"coderabbit-docs": {
-			"type": "http",
-			"url": "https://docs.coderabbit.ai/mcp"
-		},
 		"context7": {
 			"gallery": "https://api.mcp.github.com",
 			"headers": {
@@ -68,35 +44,18 @@
 			"type": "http",
 			"url": "https://mcp.grep.app"
 		},
-		"linear": {
-			"type": "http",
-			"url": "https://mcp.linear.app/mcp"
-		},
+
 		"mdn": {
 			"type": "http",
 			"url": "https://mcp.mdn.mozilla.net"
 		},
-		"memory": {
-			"args": ["@modelcontextprotocol/server-memory@latest"],
-			"command": "bunx",
-			"type": "stdio"
-		},
+
 		"playwright": {
 			"args": ["@playwright/mcp@latest"],
 			"command": "bunx",
 			"type": "stdio"
 		},
-		"sentry": {
-			"gallery": "https://api.mcp.github.com",
-			"type": "http",
-			"url": "https://mcp.sentry.dev/mcp",
-			"version": "1.0.0"
-		},
-		"sequential-thinking": {
-			"args": ["@modelcontextprotocol/server-sequential-thinking@latest"],
-			"command": "bunx",
-			"type": "stdio"
-		},
+
 		"stackoverflow": {
 			"gallery": "https://api.mcp.github.com",
 			"type": "http",
