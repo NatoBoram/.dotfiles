@@ -59,7 +59,7 @@ PATH="$GOBIN:$PATH"
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
 PATH="$PNPM_HOME:$PATH"
-export NODE_OPTIONS=--max-old-space-size=4096
+export NODE_OPTIONS=--max-old-space-size=8192
 
 # Python
 export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
