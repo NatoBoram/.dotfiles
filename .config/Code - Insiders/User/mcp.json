@@ -23,6 +23,11 @@
 			"url": "https://mcp.context7.com/mcp",
 			"version": "1.0.0"
 		},
+		"dart": {
+			"args": ["mcp-server"],
+			"command": "dart",
+			"type": "stdio"
+		},
 		"deepwiki": {
 			"gallery": "https://api.mcp.github.com",
 			"type": "http",
@@ -39,9 +44,19 @@
 			"url": "https://api.githubcopilot.com/mcp",
 			"version": "0.13.0"
 		},
+		"go": {
+			"args": ["mcp"],
+			"command": "gopls",
+			"type": "stdio"
+		},
 		"grep": {
 			"type": "http",
 			"url": "https://mcp.grep.app"
+		},
+		"markitdown": {
+			"args": ["run", "markitdown-mcp"],
+			"command": "pipx",
+			"type": "stdio"
 		},
 		"mdn": {
 			"type": "http",
@@ -58,6 +73,11 @@
 			"type": "http",
 			"url": "https://mcp.stackoverflow.com",
 			"version": "1.1.3"
+		},
+		"svelte": {
+			"tools": ["*"],
+			"type": "http",
+			"url": "https://mcp.svelte.dev/mcp"
 		},
 		"tavily": {
 			"args": ["tavily-mcp@latest"],

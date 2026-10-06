@@ -1,10 +1,19 @@
 {
 	"mcpServers": {
+		"better-auth": {
+			"type": "http",
+			"url": "https://mcp.better-auth.com/mcp"
+		},
 		"context7": {
 			"headers": {},
 			"tools": ["*"],
 			"type": "http",
 			"url": "https://mcp.context7.com/mcp"
+		},
+		"dart": {
+			"args": ["mcp-server"],
+			"command": "dart",
+			"type": "stdio"
 		},
 		"deepwiki": {
 			"tools": ["*"],
@@ -53,9 +62,19 @@
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp"
 		},
+		"go": {
+			"args": ["mcp"],
+			"command": "gopls",
+			"type": "stdio"
+		},
 		"grep": {
 			"type": "http",
 			"url": "https://mcp.grep.app"
+		},
+		"markitdown": {
+			"args": ["run", "markitdown-mcp"],
+			"command": "pipx",
+			"type": "stdio"
 		},
 		"mdn": {
 			"type": "http",
@@ -66,6 +85,11 @@
 			"command": "bunx",
 			"tools": ["*"],
 			"type": "local"
+		},
+		"svelte": {
+			"tools": ["*"],
+			"type": "http",
+			"url": "https://mcp.svelte.dev/mcp"
 		}
 	}
 }
