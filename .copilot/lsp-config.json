@@ -12,11 +12,6 @@
 			"command": "bunx",
 			"fileExtensions": { ".svelte": "svelte" }
 		},
-		"turbo": {
-			"args": ["turbo@latest", "daemon"],
-			"command": "bunx",
-			"fileExtensions": { ".json": "json" }
-		},
 		"typescript": {
 			"args": ["--lsp", "--stdio"],
 			"command": "tsgo",
