@@ -45,7 +45,14 @@
 	"accessibility.openChatEditedFiles": false,
 	"bloc.checkForUpdates": false,
 	"chat.agent.maxRequests": 500,
+	"chat.agent.sandbox.enabled": "off",
+	"chat.defaultConfiguration": {
+		"approvals": "assisted"
+	},
 	"chat.mcp.autostart": "newAndOutdated",
+	"chat.sessionSync.enabled": true,
+	"chat.tips.enabled": false,
+	"chat.titleBar.openInAgentsWindow.enabled": false,
 	"chat.tools.terminal.autoApprove": {
 		"/^npm\\s+(ls|list|outdated|view|info|show|explain|why|root|prefix|bin|search|doctor|fund|repo|bugs|docs|home|help(-search)?)\\b/": false,
 		"/^npm\\s+audit$/": false,
@@ -54,12 +61,16 @@
 		"/^npm\\s+pkg\\s+get\\b/": false,
 		"/^pnpm i$/": true,
 		"/^pnpm\\s+(--(filter|prefix)(=|\\s).+\\s+)?(install|run|test)\\b/": true,
-		"npm ci": false
+		"npm ci": false,
+		"true": true
 	},
 	"chat.tools.terminal.outputLocation": "terminal",
 	"chat.tools.urls.autoApprove": {
+		"https://api.github.com": true,
+		"https://camellia-sinensis.com": true,
 		"https://code.visualstudio.com": true,
 		"https://coderabbit.ai": true,
+		"https://davidstea.com": true,
 		"https://docs.github.com": true,
 		"https://docs.gitlab.com": true,
 		"https://docs.openwebui.com": true,
@@ -69,6 +80,7 @@
 		"https://modelcontextprotocol.io": true,
 		"https://raw.githubusercontent.com": true,
 		"https://shields.io": true,
+		"https://typescript-eslint.io": true,
 		"https://www.gnu.org": true,
 		"https://www.npmjs.com": true,
 		"https://www.reddit.com": true,
@@ -108,6 +120,7 @@
 			"path": "/home/nato/.asdf/shims/dotnet"
 		}
 	],
+	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "always",
@@ -138,6 +151,7 @@
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
 	"editor.unicodeHighlight.allowedCharacters": {
+		" ": false,
 		"“": false,
 		"”": false,
 		"×": true,
@@ -170,7 +184,7 @@
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
 		"*.mjs": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs.map",
 		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
-		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts, ${capture}.bench.ts",
+		"*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.stories.svelte, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts, ${capture}.bench.ts",
 		"*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js, ${capture}.bench.ts",
 		"compose.yaml": "compose.override.yaml, *.compose.yaml, *.compose.override.yaml",
 		"minepkg.toml": ".minepkg-lock.toml",
@@ -279,17 +293,24 @@
 	],
 	"github.copilot.chat.edits.gemini3MultiReplaceString": true,
 	"github.copilot.chat.enableUserPreferences": true,
-	"github.copilot.chat.localeOverride": "en-CA",
+	"github.copilot.chat.executionSubagent.model": "auto",
+	"github.copilot.chat.exploreAgent.model": "auto",
+	"github.copilot.chat.implementAgent.model": "auto",
+	"github.copilot.chat.languageContext.fix.typescript.enabled": true,
+	"github.copilot.chat.languageContext.inline.typescript.enabled": true,
+	"github.copilot.chat.languageContext.typescript.includeDocumentation": true,
+	"github.copilot.chat.languageContext.typescript7.enabled": true,
 	"github.copilot.chat.newWorkspace.useContext7": true,
 	"github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
 		{
 			"file": ".github/pull_request_template.md"
 		}
 	],
+	"github.copilot.chat.rateLimitAutoSwitchToAuto": true,
 	"github.copilot.chat.reviewSelection.instructions": [],
 	"github.copilot.chat.scopeSelection": true,
 	"github.copilot.chat.searchSubagent.enabled": true,
-	"github.copilot.chat.searchSubagent.model": "gemma4:12b",
+	"github.copilot.chat.searchSubagent.model": "auto",
 	"github.copilot.chat.searchSubagent.thoroughnessEnabled": true,
 	"github.copilot.chat.searchSubagent.toolCallLimit": 8,
 	"github.copilot.chat.skillTool.enabled": true,
@@ -307,6 +328,7 @@
 		"plaintext": true
 	},
 	"github.copilot.nextEditSuggestions.enabled": false,
+	"github.copilot.selectedCompletionModel": "auto",
 	"github.gitProtocol": "ssh",
 	"githubPullRequests.assignCreated": "${user}",
 	"githubPullRequests.commentExpandState": "collapseAll",
@@ -364,6 +386,8 @@
 	"json.schemaDownload.trustedDomains": {
 		"https://biomejs.dev": true,
 		"https://developer.microsoft.com/json-schemas/": true,
+		"https://docs.renovatebot.com": true,
+		"https://inlang.com": true,
 		"https://json-schema.org/": true,
 		"https://json.schemastore.org/": true,
 		"https://jsr.io": true,
@@ -371,8 +395,17 @@
 		"https://raw.githubusercontent.com/devcontainers/spec/": true,
 		"https://raw.githubusercontent.com/microsoft/vscode/": true,
 		"https://schemastore.azurewebsites.net/": true,
+		"https://spec.openapis.org/": true,
 		"https://www.schemastore.org/": true
 	},
+	"json.schemas": [
+		{
+			"fileMatch": ["**/*.jsonc"],
+			"schema": {
+				"allowTrailingCommas": true
+			}
+		}
+	],
 	"liveshare.featureSet": "insiders",
 	"liveshare.presence": true,
 	"liveshare.showInStatusBar": "whileCollaborating",
@@ -525,7 +558,7 @@
 		"zsh: correct 'test' to 'tests' [nyae]?": "n"
 	},
 	"terminal.integrated.defaultProfile.linux": "zsh",
-	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	"terminal.integrated.fontFamily": "Fira Mono, monospace, MesloLGS NF, Noto Color Emoji",
 	"terminal.integrated.hideOnStartup": "whenEmpty",
 	"terminal.integrated.initialHint": false,
@@ -545,7 +578,9 @@
 	"window.dialogStyle": "custom",
 	"window.restoreFullscreen": true,
 	"window.titleBarStyle": "custom",
+	"workbench.accounts.showAvatar": false,
 	"workbench.activityBar.location": "default",
+	"workbench.browser.searchEngine": "google",
 	"workbench.colorCustomizations": {
 		"[Nord]": {
 			"editorBracketHighlight.foreground1": "#EBCB8B",
@@ -555,6 +590,8 @@
 			"editorBracketHighlight.foreground5": "#B48EAD",
 			"editorBracketHighlight.foreground6": "#88C0D0",
 			"editorBracketHighlight.unexpectedBracket.foreground": "#BF616A",
+			"editorUnicodeHighlight.background": "#4c566a",
+			"editorUnicodeHighlight.border": "#EBCB8B10",
 			"errorLens.errorBackground": "#BF616A1B",
 			"errorLens.errorForeground": "#BF616A",
 			"errorLens.warningBackground": "#EBCB8B1B",
@@ -572,7 +609,6 @@
 	"workbench.editorAssociations": {
 		"*.bin": "hexEditor.hexedit"
 	},
-	"workbench.iconTheme": "material-icon-theme",
 	"workbench.list.smoothScrolling": true,
 	"workbench.secondarySideBar.defaultVisibility": "hidden",
 	"workbench.settings.editor": "json",
