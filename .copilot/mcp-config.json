@@ -6,6 +6,16 @@
 			"type": "http",
 			"url": "https://mcp.context7.com/mcp"
 		},
+		"deepwiki": {
+			"tools": ["*"],
+			"type": "http",
+			"url": "https://mcp.deepwiki.com/mcp"
+		},
+		"exa": {
+			"tools": ["*"],
+			"type": "http",
+			"url": "https://mcp.exa.ai/mcp"
+		},
 		"github": {
 			"headers": {},
 			"oauthClientId": "Iv23li3Y2ZC8uztHXFAM",
@@ -42,6 +52,20 @@
 			],
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp"
+		},
+		"grep": {
+			"type": "http",
+			"url": "https://mcp.grep.app"
+		},
+		"mdn": {
+			"type": "http",
+			"url": "https://mcp.mdn.mozilla.net"
+		},
+		"playwright": {
+			"args": ["@playwright/mcp@latest"],
+			"command": "bunx",
+			"tools": ["*"],
+			"type": "local"
 		}
 	}
 }

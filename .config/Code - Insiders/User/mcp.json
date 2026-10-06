@@ -6,7 +6,6 @@
 			"password": true,
 			"type": "promptString"
 		},
-
 		{
 			"description": "Context7 API Key",
 			"id": "context7_api_key",
@@ -27,7 +26,7 @@
 		"deepwiki": {
 			"gallery": "https://api.mcp.github.com",
 			"type": "http",
-			"url": "https://mcp.deepwiki.com/sse",
+			"url": "https://mcp.deepwiki.com/mcp",
 			"version": "1.0.0"
 		},
 		"exa": {
@@ -44,18 +43,16 @@
 			"type": "http",
 			"url": "https://mcp.grep.app"
 		},
-
 		"mdn": {
 			"type": "http",
 			"url": "https://mcp.mdn.mozilla.net"
 		},
-
 		"playwright": {
 			"args": ["@playwright/mcp@latest"],
 			"command": "bunx",
+			"tools": ["*"],
 			"type": "stdio"
 		},
-
 		"stackoverflow": {
 			"gallery": "https://api.mcp.github.com",
 			"type": "http",
