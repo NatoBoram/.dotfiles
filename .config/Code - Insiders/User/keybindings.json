@@ -87,6 +87,11 @@
 		"when": "!activeEditorGroupEmpty"
 	},
 	{ "command": "-editor.action.codeAction", "key": "ctrl+alt+i" },
+	{
+		"command": "-markdown.togglePreview",
+		"key": "ctrl+shift+v",
+		"when": "!terminalFocus && activeCustomEditorId == 'vscode.markdown.preview.editor' || editorFocus && !notebookEditorFocused && !terminalFocus && resourceLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+	},
 	{ "command": "-workbench.action.quit", "key": "ctrl+q" },
 	{ "command": "deleteRight", "key": "delete", "when": "textInputFocus" },
 	{ "command": "editor.action.inlineSuggest.trigger", "key": "alt+c" }
