@@ -2,7 +2,6 @@
 	"mcpServers": {
 		"context7": {
 			"headers": {},
-			"source": "user",
 			"tools": ["*"],
 			"type": "http",
 			"url": "https://mcp.context7.com/mcp"
@@ -43,12 +42,6 @@
 			],
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp"
-		},
-		"tavily": {
-			"source": "user",
-			"tools": ["*"],
-			"type": "http",
-			"url": "https://mcp.tavily.com/mcp"
 		}
 	}
 }
