@@ -1,4 +1,12 @@
 {
+	"allowedUrls": [
+		"https://api.github.com",
+		"https://github.com",
+		"https://gitlab.freedesktop.org",
+		"https://raw.githubusercontent.com",
+		"https://steamcommunity.com",
+		"https://www.reddit.com"
+	],
 	"enabledPlugins": { "copilot-cli-wakatime@wakatime": true },
 	"extraKnownMarketplaces": {
 		"wakatime": {
