@@ -55,7 +55,6 @@
 		"@vitest/ui": "latest",
 		"ava": "latest",
 		"clipboard-cli": "latest",
-		"corepack": "latest",
 		"dprint": "latest",
 		"dts-gen": "latest",
 		"eslint": "latest",
